@@ -4,9 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { useLanguage } from "./providers/LanguageProvider";
 import Navi from "./components/Navi.jsx";
+import Content from "./components/Content.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
   const { t, lang, setLang } = useLanguage();
 
   return (
@@ -20,20 +20,7 @@ function App() {
       <p>Şu anki dil: {lang}</p>
       <br />
             <Navi />
-      <main>
-        <section id="home">
-          <h1>Hoş geldiniz 👋</h1>
-        </section>
-        <section id="about">
-          <h2>Hakkımda</h2>
-        </section>
-        <section id="projects">
-          <h2>Projeler</h2>
-        </section>
-        <section id="contact">
-          <h2>İletişim</h2>
-        </section>
-      </main>
+            <Content />
 
     </>
   );
