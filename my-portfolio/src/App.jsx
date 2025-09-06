@@ -6,18 +6,19 @@ import { useLanguage } from "./providers/LanguageProvider";
 import Navi from "./components/Navi.jsx";
 import Content from "./components/Content.jsx";
 
+
 function App() {
   const { t, lang, setLang } = useLanguage();
 
   return (
     <>
-      <div className="card">
-      </div>
-      <p className="read-the-docs">{t("click")}</p>
+     {/* //yabancı dil ayar */}
+      {/* <p className="read-the-docs">{t("click")}</p>
       <button onClick={() => setLang("tr")}>🇹🇷 Türkçe</button>
       <button onClick={() => setLang("en")}>🇬🇧 English</button>
+      <p>Şu anki dil: {lang}</p> */}
 
-      <p>Şu anki dil: {lang}</p>
+
       <br />
             <Navi />
             <Content />

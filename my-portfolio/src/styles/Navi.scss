@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: flex-start;
 
-  position: absolute;
+  // position: absolute;
+
+  position: fixed;
   left: 20px;
   top: 20px;
   width: 300x;
@@ -22,7 +24,7 @@
   background-origin: padding-box;
   background-size: auto;
 
-  color: rgb(50, 25, 160);  //font rengi
+  color: rgb(50, 25, 160); //font rengi
   font-family: "StabilGrotesk", sans-serif;
   font-feature-settings: "ss02";
   unicode-bidi: isolate;
@@ -87,7 +89,7 @@
     background-color: #a83838;
 
     .navi__item:hover {
-    //   background-color: #887777; // opsiyonel hover efekti
+      //   background-color: #887777; // opsiyonel hover efekti
       flex: 3;
     }
   }
@@ -99,8 +101,8 @@
   display: block;
   text-align: center;
 }
-    .navi__item:hover {
-      background-color: transparent; // opsiyonel hover efekti
-      border: solid 1px white;
-    //   flex: 3;
-    }
+.navi__item:hover {
+  background-color: transparent; // opsiyonel hover efekti
+  border: solid 1px white;
+  //   flex: 3;
+}

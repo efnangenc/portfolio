@@ -1,11 +1,14 @@
-import "../styles/Content.scss"
+// import "../styles/Content.scss";
+import About from "../pages/About.jsx";
+import Projects from "../pages/Projects.jsx";
+import Home from "../pages/Home.jsx";
 
 function Content() {
   return (
     <div className="content">
-      <div className="content__item">
-        <a href="#home">Ana Sayfa</a>
-      </div>
+      <Home/>
+      <About />
+      <Projects />
     </div>
   );
 }
