@@ -1,5 +1,11 @@
 {
   "hello": "Merhaba",
   "projects": "Projelerim",
-  "click": "Tıkla"
+  "click": "Tıkla",
+  "Home": "Anasayfa",
+  "About": "Hakkında",
+  "Work": "Projeler",
+  "Talent": "Yetenekler",
+  "Career": "Tecrübe",
+  "Contact": "İletişim"
 }

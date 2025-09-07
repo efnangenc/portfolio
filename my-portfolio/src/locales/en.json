@@ -1,5 +1,11 @@
 {
   "hello": "Hello",
   "projects": "My Projects",
-  "click": "Click"
+  "click": "Click",
+  "Home": "Home",
+  "About": "About",
+  "Work": "Work",
+  "Talent": "Talent",
+  "Career": "Career",
+  "Contact": "Contact"
 }

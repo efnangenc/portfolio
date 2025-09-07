@@ -86,21 +86,10 @@ function App() {
   const [active, setActive] = useState("home");
   const [isVisible, setIsVisible] = useState("home");
 
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     if(entry.isIntersecting){
-  //       console.log(entry.target)
-  //     }
-  //   })
-  // }, {});
-
-  // const todoElements = document.querySelector(".todo")
-  // todoElements.forEach(el => observer.observe(el))
-
   return (
     <>
       {/* //yabancı dil ayar */}
-      <p className="read-the-docs">{t("click")}</p>
+      <p>{t("click")}</p>
       <button className="langButton" onClick={() => setLang("tr")}>
         🇹🇷 Türkçe
       </button>
