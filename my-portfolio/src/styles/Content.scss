@@ -1,5 +1,21 @@
-.content{
-     background-color: red;
+.container {
+  //   background-color: red;
+  //   width: 900px;
+  //   height: 700px;
+ 
+  .acontent {
+    background-color: red;
     width: 900px;
     height: 700px;
+  }
+  .bcontent {
+    background-color: green;
+    width: 900px;
+    height: 700px;
+  }
+  .ccontent {
+    background-color: blue;
+    width: 900px;
+    height: 700px;
+  }
 }

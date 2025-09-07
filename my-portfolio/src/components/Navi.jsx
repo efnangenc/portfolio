@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navi.scss";
+import menuItems from "../data/menuItems.js";
 
 // function Navi() {
 //   const [active, setActive] = useState("#home"); // default seçili olan
@@ -43,30 +44,24 @@ import "../styles/Navi.scss";
 // }
 // export default Navi;
 
-function Navi() {
-  const [active, setActive] = useState("#home"); // default seçili olan
-
-  const menuItems = [
-    { id: "#home", label: "Ana Sayfa" },
-    { id: "#about", label: "Hakkımda" },
-    { id: "#projects", label: "Projeler" },
-    { id: "#experience", label: "Tecrübeler" },
-    { id: "#skills", label: "Yetenekler" },
-    { id: "#contact", label: "İletişim" },
-  ];
+function Navi({ active, setActive }) {
+  // const [active, setActive] = useState("#home"); // default seçili olan
 
   return (
     <nav className="navi">
       {menuItems.map((item) => (
         <div
-          key={item.id}
-          // to={item.id}
-          // href={item.id}
-          className={`navi__item ${active === item.id ? "active" : ""}`}
+          key={item.id} //home
+          className={`navi__item  ${
+            active === item.id && item.id !== "home" ? "active" : ""
+          }`}
           onClick={() => {
             setActive(item.id);
-            window.location.hash = item.id;
+            document
+              .getElementById(item.id)
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
+          href={`#${item.id}`}
         >
           {/* <a href={item.id}>{item.label}</a> */}
           <a>{item.label}</a>

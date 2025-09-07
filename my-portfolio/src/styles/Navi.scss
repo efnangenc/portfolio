@@ -4,21 +4,15 @@
   align-items: center;
   justify-content: flex-start;
 
-  // position: absolute;
-
   position: fixed;
   left: 20px;
   top: 20px;
-  width: 300x;
+  width: 200px;
   height: 900px;
   z-index: 1200;
   overflow-y: auto;
 
-  //   background-color: red;
   background-image: none;
-  //   background-repeat: repeat;
-  //   background-position-x: 0%;
-  //   background-position-y: 0%;
   background-attachment: scroll;
   background-clip: border-box;
   background-origin: padding-box;
@@ -44,7 +38,7 @@
 
   position: relative;
   box-sizing: border-box;
-  cursor: pointe;
+  cursor: pointer;
   //   pointer-events: all;  //Bu elemanın tıklanabilir olmasını sağlar. Normalde varsayılan auto zaten bunu yapar.
 
   width: 200px;
@@ -52,12 +46,7 @@
   min-height: 104px;
 
   background-color: rgb(255, 255, 255);
-
-  //   border-top: 1px solid rgba(0, 0, 0, 0);
-  //   border-right: 1px solid rgba(0, 0, 0, 0);
-  //   border-bottom: 1px solid rgba(0, 0, 0, 0);
-  //   border-left: 1px solid rgba(0, 0, 0, 0);
-
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 16px;
 
   //   font-kerning: auto;
@@ -81,19 +70,18 @@
   //   transition-behavior: normal, normal, normal, normal;
 
   flex: 1;
-  height: 100%;
   // transition: all 0.5s ease;
 
   &.active {
     flex: 3;
-    background-color: #a83838;
+    background-color: #92a746;
 
-    .navi__item:hover {
-      //   background-color: #887777; // opsiyonel hover efekti
-      flex: 3;
-    }
   }
+  // &:hover{
+  //   flex:3
+  // }
 }
+
 .navi__item a {
   //   text-decoration: none;
   color: rgb(14, 14, 14);
@@ -106,3 +94,5 @@
   border: solid 1px white;
   //   flex: 3;
 }
+
+
