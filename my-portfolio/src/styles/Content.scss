@@ -1,21 +1,14 @@
-.container {
-  //   background-color: red;
-  //   width: 900px;
-  //   height: 700px;
- 
-  .acontent {
-    background-color: red;
-    width: 900px;
-    height: 700px;
-  }
-  .bcontent {
-    background-color: green;
-    width: 900px;
-    height: 700px;
-  }
-  .ccontent {
-    background-color: blue;
-    width: 900px;
-    height: 700px;
+.content {
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // padding: 2rem;
+  // text-align: center;
+  .content__item {
+    position: relative;
+    background-color: midnightblue;
+    width: 85vw;
+    // height: 95vh;
+    left: -60px;
+    border-radius: 3rem;
   }
 }

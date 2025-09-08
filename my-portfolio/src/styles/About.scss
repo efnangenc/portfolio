@@ -1,5 +1,37 @@
-.about{
-    background-color: green;
-    // width: 900px;
-    height: 700px;
+.about {
+  // height: 700px;
+  border-radius: 2rem;
+  background-color: rgba(255, 0, 0, 0.781);
+  z-index: 3;
+  
+  .about-hello {
+    // width: 700px;
+    height: 240px;
+    background-color: rgba(222, 184, 135, 0.425);
+  }
+  .about-banner {
+    height: 240px;
+    background-color: rgba(128, 98, 59, 0.479);
+  }
+  .about-text {
+    height: 240px;
+    background-color: rgb(133, 87, 27);
+  }
+  .about-video {
+    height: 240px;
+    background-color: rgba(135, 222, 139, 0.466);
+  }
+  .card-sims {
+    display: flex;
+    height: 640px;
+    background-color: rgba(196, 124, 30, 0.527);
+    .about-card {
+      width: 54vw;
+      background-color: rgba(77, 45, 4, 0.411);
+    }
+    .sims {
+      width: 31vw;
+      background-color: rgba(222, 184, 135, 0.425);
+    }
+  }
 }

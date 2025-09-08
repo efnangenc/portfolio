@@ -20,6 +20,12 @@ function Navi({ active, setActive }) {
               .getElementById(item.id)
               ?.scrollIntoView({ behavior: "smooth" });
           }}
+           style={{
+                backgroundColor: item.color
+                // fontFamily: item.fontFamily,
+                // Active state için border rengi
+                // borderBottomColor: activeItem === item.id ? item.color : 'transparent'
+              }}
           href={`#${item.id}`}
         >
           {/* <a href={item.id}>{item.label}</a> */}

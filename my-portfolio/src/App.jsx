@@ -88,19 +88,21 @@ function App() {
 
   return (
     <>
-      {/* //yabancı dil ayar */}
-      <p>{t("click")}</p>
-      <button className="langButton" onClick={() => setLang("tr")}>
-        🇹🇷 Türkçe
-      </button>
-      <button className="langButton" onClick={() => setLang("en")}>
-        🇬🇧 English
-      </button>
-      <p>Şu anki dil: {lang}</p>
+      <div className="languageCont">
+        {/* //yabancı dil ayar */}
+        <p>{t("click")}</p>
+        <button className="langButton" onClick={() => setLang("tr")}>
+          🇹🇷 Türkçe
+        </button>
+        <button className="langButton" onClick={() => setLang("en")}>
+          🇬🇧 English
+        </button>
+        <p>Şu anki dil: {lang}</p>
+      </div>
 
       <br />
       <Navi active={isVisible} setActive={setActive} />
-      <Content setIsVisible = {setIsVisible}/>
+      <Content setIsVisible={setIsVisible} />
     </>
   );
 }
