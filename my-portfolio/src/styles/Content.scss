@@ -1,14 +1,14 @@
 .content {
-  // max-width: 1280px;
-  // margin: 0 auto;
-  // padding: 2rem;
-  // text-align: center;
+  // background-color: red;
+  position: relative;
+  top:-20px;
   .content__item {
-    position: relative;
-    background-color: midnightblue;
-    width: 85vw;
+    position: relative;   //İçindeki bir child position: absolute; ise ve bu parent’a göre konumlanacak
+    // background-color: rgba(25, 25, 112, 0.219);
+    width: 82vw;
     // height: 95vh;
-    left: -60px;
+    left: -19px;
     border-radius: 3rem;
+    
   }
 }

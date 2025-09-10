@@ -5,13 +5,13 @@
   justify-content: flex-start;
 
   position: fixed;
-  left: 20px;
-  top: 20px;
-  width: 200px;
-  height: 900px;
-  z-index: 1200;
-  overflow-y: auto;
+  margin: 5px 0px 0px 30px;
+  left: 0px;
+  width: 230px;
+  // height: 900px;
+  height: 94vh;
 
+  // background-color: red;
   background-image: none;
   background-attachment: scroll;
   background-clip: border-box;
@@ -24,9 +24,6 @@
   unicode-bidi: isolate;
 
   gap: 15px;
-
-  display: flex;
-  overflow: hidden;
 }
 
 // Tıklanabilir link / buton
@@ -41,13 +38,13 @@
   cursor: pointer;
   //   pointer-events: all;  //Bu elemanın tıklanabilir olmasını sağlar. Normalde varsayılan auto zaten bunu yapar.
 
-  width: 200px;
+  width: 230px;
   height: 114px;
   min-height: 104px;
 
-  // background-color: rgb(255, 255, 255);
   border: 1px solid rgb(219, 219, 219);
   border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
 
   //   font-kerning: auto;
   //   font-optical-sizing: auto;
@@ -75,7 +72,6 @@
   &.active {
     flex: 3;
     background-color: #92a746;
-
   }
   // &:hover{
   //   flex:3
@@ -94,5 +90,3 @@
   border: solid 1px white;
   //   flex: 3;
 }
-
-

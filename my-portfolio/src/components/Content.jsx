@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
 
-function Content({setIsVisible}) {
+function Content({ setIsVisible }) {
   const itemRefs = useRef([]); // tüm section’ları saklayacağız
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function Content({setIsVisible}) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             console.log(entry.target);
-            setIsVisible(entry.target.id);
+            setIsVisible(entry.target.id); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
           }
         });
       },
@@ -21,11 +21,23 @@ function Content({setIsVisible}) {
     );
 
     itemRefs.current.forEach((el) => {
-      if (el) observer.observe(el);
+      if (el) observer.observe(el); //izlediklerimi observer değişkenine ekle
     });
 
-    return () => observer.disconnect();
+    return () => observer.disconnect(); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
   }, [setIsVisible]);
+
+  // ✅ Doğru - callback ref kullan
+  const setRef = (id) => (el) => {
+    if (el) {
+      const index = itemRefs.current.findIndex((item) => item?.id === id);
+      if (index === -1) {
+        itemRefs.current.push(el);
+      } else {
+        itemRefs.current[index] = el;
+      }
+    }
+  };
 
   return (
     <div className="content">
@@ -35,7 +47,8 @@ function Content({setIsVisible}) {
           <div
             key={item.id}
             id={item.id}
-            ref={(el) => (itemRefs.current[index] = el)}
+            // ref={(el) => (itemRefs.current[index] = el)}
+            ref={setRef(item.id)}
             className="content__item"
           >
             <h2>{item.label}</h2>
