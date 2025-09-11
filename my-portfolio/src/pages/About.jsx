@@ -1,15 +1,16 @@
 import "../styles/About.scss";
+import CardHead from "../components/CardHead";
+import menuItems from "../data/menuItems.js";
 
 function About() {
+  const aboutItem = menuItems.find((item) => item.id === "about");
+
   return (
     <div className="container">
-      <div className="about-hello">
-        <p className="number">1</p>
-        <p className="text">HELLO</p>
-      </div>
+      <CardHead item={aboutItem} />
       <div className="about">
-        <div className="about-banner">I am bilmemne</div>
-        <h1>deneme</h1>
+        <div className="about-banner">EFnan Genç</div>
+        <h1>Fullstack Software Developer</h1>
         <div className="about-text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. A velit
           suscipit error aperiam aspernatur, odit unde nihil quo facere nostrum!

@@ -2,6 +2,9 @@
   // background-color: red;
   position: relative;
   top:-20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   .content__item {
     position: relative;   //İçindeki bir child position: absolute; ise ve bu parent’a göre konumlanacak
     // background-color: rgba(25, 25, 112, 0.219);

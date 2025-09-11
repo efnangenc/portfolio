@@ -16,7 +16,7 @@ function Content({ setIsVisible }) {
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.1,
       }
     );
 
