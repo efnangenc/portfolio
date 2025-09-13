@@ -1,5 +1,6 @@
 .container {
   .header {
+    position: relative;
     // color: rgba(50, 50, 131, 0.705);
     color: #f3efd3;
     text-shadow: rgba(104, 103, 103, 0.603) 1px 2px 3px;
@@ -10,18 +11,21 @@
     border-radius: 2rem;
     background-color: #e1e3da;
     box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
-    margin-bottom: 40px;
+    margin-bottom: 40pöx;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     padding-left: 60px;
     .number {
-      font-size: 90px;
+      font-size: 5vw;
+      line-height: 1;
     }
     .text {
-      font-size: 200px;
+      position: sticky;
+      font-size: 13.8vw;
       font-weight: 800;
+      line-height: 0.8;
     }
   }
 }

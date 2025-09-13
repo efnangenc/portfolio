@@ -1,5 +1,100 @@
-.talent{
-    // background-color: yellow;
-    // width: 900px;
-    // height: 700px;
+.talent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .slogan {
+    height: 25vh;
+    background-color: #8d5e5e;
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+  }
+  .talent-container {
+    margin-top: 1vh;
+    position: relative;
+    color: #f3efd3;
+    height: 63vh;
+    // margin-bottom: 2vh;
+    border-radius: 2rem;
+    background-color: #798b36;
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    // padding-left: 60px;
+
+    .tabs {
+      position: relative;
+      // top: 0vh;
+      display: flex;
+      // gap: 1rem;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      height: 5vh;
+      .tabs {
+        flex: 1;
+        text-align: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        background: #8d5e5e;
+        border-radius: 1rem 1rem 0 0;
+        transition: all 0.3s ease;
+      }
+
+      .active-tabs {
+        background: #af7d4b;
+        color: rgb(2, 2, 2);
+        font-weight: bold;
+      }
+    }
+    .content-tabs {
+      display: grid;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      // background-color: yellow;
+      // border-radius: 2rem;
+      // padding: 20px;
+      overflow-y: auto;
+      // margin-top: 20px;
+      .content {
+        display: none;
+      }
+
+      .active-content {
+        display: grid;
+        // justify-content: center;
+        // align-items: center;
+        place-items: center;
+        grid-column: 1 / -1; /* gridin tamamını kaplasın */
+        grid-row: 1 / -1;
+        width: 100%;
+        text-align: center;
+        display: block;
+        color: black;
+        animation: fadeIn 0.3s ease-in-out;
+        background-color: yellow;
+        p {
+          text-align: center;
+          // background-color: yellow;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
