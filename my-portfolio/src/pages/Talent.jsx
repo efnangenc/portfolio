@@ -33,7 +33,7 @@ function Talent() {
         {Object.keys(skillsData).map((key, i) => (
           <div key={i} className="content-tabs">
             {toggleState === i && (
-              <div className="conten active-content">
+              <div className="content active-content">
                 <div className="skill-card">
                   <p>
                     {skillsData[key].skills.map((item, index) => (

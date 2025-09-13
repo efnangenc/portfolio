@@ -16,7 +16,7 @@ const messages = { tr, en };
 // 3) Provider bileşeni: uygulamanın hangi kısmının bu dili kullanacağını sarmalıyor
 export function LanguageProvider({ children }) {
   // 4) lang state'i: hangi dilin seçili olduğunu tutar (başlangıç 'tr')
-  const [lang, setLang] = useState("tr");
+  const [lang, setLang] = useState("en");
 
   // 5) t fonksiyonu: verilen anahtara (key) göre çeviri döndürüyor
   //    messages[lang][key] yoksa key'i geri döndürüyor (basit fallback)

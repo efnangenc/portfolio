@@ -8,7 +8,8 @@ function Career() {
   return (
     <div className="career">
       <CardHead item={careerItem} />
-      <p>Career</p>
+      <div className="career-plan">Plan</div>
+      <div className="career-route">Yol</div>
     </div>
   );
 }
