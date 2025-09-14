@@ -18,9 +18,40 @@
   // padding-left: 60px;
   //   margin-top: 40px;
 }
-.career-route {
-  height: 95vh;
+video {
+  height: 50vh;
+  width: 100%;
   border-radius: 2rem;
-  background-color: #968187b4;
+  background-color: #92a15c;
   box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+  object-fit: fill;
+  filter: sepia(65%) saturate(1.1)  brightness(0.9)
+    hue-rotate(5deg) ;
+
+
+}
+.career-route {
+  position: relative;
+  height: auto;
+  border-radius: 2rem;
+  background-color: #1f1e1e;
+  box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+  img {
+    height: 100vh;
+  }
+
+  .item-as.smth {
+    position: absolute;
+    top: 0px;
+    background-color: yellow;
+    z-index: 5;
+    color: white;
+    &:nth-child(1) {
+      position: absolute;
+      top: 10px;
+      background-color: yellow;
+      z-index: 5;
+      color: white;
+    }
+  }
 }

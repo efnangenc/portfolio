@@ -7,7 +7,13 @@ function Contact() {
 
   return (
     <div className="contact">
-      <CardHead item={contactItem}/>
+      <CardHead item={contactItem} />
+      <div className="cont-text">
+        <span className="lets">Lets</span><hr />
+        <span className="talk">Talk About</span><hr />
+        <span className="buss">Bussines</span>
+      </div>
+      <div className="cont-from"></div>
       <p>Contact</p>
     </div>
   );

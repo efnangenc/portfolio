@@ -1,5 +1,70 @@
-.contact{
-    // background-color: green;
-    // width: 900px;
-    // height: 700px;
+.contact {
+  // background-color: green;
+  // width: 900px;
+  // height: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .cont-text {
+    color: #292825;
+    font-size: xx-large;
+    height: 95vh;
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 0px;
+    .lets {
+      position: relative;
+      top: -30px;
+      align-self: flex-start;
+      font-size: 12rem;
+      // font-weight: bold;
+      //   margin-top: 20px;
+      margin-left: 80px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 7px;
+    }
+    .talk {
+      position: relative;
+      top: -60px;
+      align-self: center;
+      font-size: 12rem;
+      // font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 7px;
+    }
+    .buss {
+      position: relative;
+      top: -80px;
+      align-self: flex-end;
+      font-size: 12rem;
+      // font-weight: bold;
+      //   margin-bottom: 20px;
+      margin-right: 80px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 7px;
+    }
+    hr {
+      position: relative;
+      top: -40px;
+      width: 95%;
+    //   height: 0px;
+      border: solid 1px ;
+    }
+  }
+  .cont-from{
+ color: #292825;
+    font-size: xx-large;
+    height: 95vh;
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
