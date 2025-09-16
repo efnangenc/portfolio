@@ -1,17 +1,29 @@
 .content {
   // background-color: red;
   position: relative;
-  top:-20px;
+  top: -15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   .content__item {
-    position: relative;   //İçindeki bir child position: absolute; ise ve bu parent’a göre konumlanacak
+    position: relative; //İçindeki bir child position: absolute; ise ve bu parent’a göre konumlanacak
     // background-color: rgba(25, 25, 112, 0.219);
     width: 82vw;
     // height: 95vh;
     left: -19px;
     border-radius: 3rem;
-    
+    h2 {
+      height: 5vh;
+      border-radius: 2rem;
+      text-align: left;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center; /* dikey ortala */
+      justify-content: space-between; /* biri sola, biri sağa yaslanır */
+      p {
+        padding-right: 30px;
+      }
+    }
   }
 }

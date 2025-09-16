@@ -12,16 +12,18 @@ function Career() {
     <div className="career">
       <CardHead item={careerItem} />
       <div className="career-plan">Plan</div>
-      {/* <video
-        // controls
-        autoPlay
-        muted
-        loop
-        // poster="path/to/thumbnail.jpg" // Eğer thumbnail varsa
-      >
-        <source src={video} type="video/mp4" />
-        Tarayıcınız video elementini desteklemiyor.
-      </video> */}
+      <div className="video-wrapper">
+        <video
+          // controls
+          autoPlay
+          muted
+          loop
+          // poster="path/to/thumbnail.jpg" // Eğer thumbnail varsa
+        >
+          <source src={video} type="video/mp4" />
+          Tarayıcınız video elementini desteklemiyor.
+        </video>
+      </div>
       <div className="career-route">
         <img type="png" src={path}></img>
         {careerItems.map((item) => (

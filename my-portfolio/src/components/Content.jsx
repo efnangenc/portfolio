@@ -10,13 +10,15 @@ function Content({ setIsVisible }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(entry.target);
+            // console.log(entry.target);
+            console.log(entry.target.id, entry.intersectionRatio);
             setIsVisible(entry.target.id); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
           }
         });
       },
       {
-        threshold: 0.3,
+        // threshold: 0.3,
+         threshold: [0, 0.25, 0.5, 0.75, 1.0]
       }
     );
 
@@ -51,7 +53,12 @@ function Content({ setIsVisible }) {
             ref={setRef(item.id)}
             className="content__item"
           >
-            <h2>{item.label}</h2>
+              {item.id !== "home" && (
+          <h2 style={{ backgroundColor: item.color }}>
+            Şu an buradasınız -- {item.label} Section
+            <p>{item.no}</p>
+          </h2>
+        )}
             <Component />
           </div>
         );
@@ -60,7 +67,6 @@ function Content({ setIsVisible }) {
   );
 }
 export default Content;
-
 
 // import { useEffect, useRef, useState } from "react";
 // import menuItems from "../data/menuItems.js";

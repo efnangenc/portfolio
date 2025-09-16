@@ -2,6 +2,7 @@ const workItems = {
   1: {
     id: "item1",
     title: "E-Commerce Platform",
+    bigtitle: "BEAM",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
     tabs: {
@@ -41,6 +42,7 @@ const workItems = {
   2: {
     id: "item2",
     title: "Mobile Dashboard",
+    bigtitle: "BEAM",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
     tabs: {
@@ -79,6 +81,7 @@ const workItems = {
   3: {
     id: "item3",
     title: "AI Content Tool",
+    bigtitle: "BEAM",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
     tabs: {
