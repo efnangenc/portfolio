@@ -93,7 +93,7 @@ function Work() {
                       <div className="tabs">
                         {Object.keys(project.tabs).map((tabKey, tabIndex) => (
                           <div
-                            // key={tabIndex}
+                            key={tabIndex}
                             className={
                               activeTab[projectId] === tabIndex
                                 ? "tab-item active-tab"

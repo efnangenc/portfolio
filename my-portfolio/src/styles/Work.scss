@@ -180,11 +180,14 @@
           }
         }
         .big-title {
-          // background-color: #764ba2;
+          background-color: #764ba2;
           border-radius: 2rem;
           height: 55vh;
           a {
-            font-size: 510px;
+            // font-size: 510px;
+            font-size: 26vw;
+            // font-size: clamp(4rem, 26vw, 520px);
+
             overflow: hidden;
             word-break: break-all;
             font-weight: 800;

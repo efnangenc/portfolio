@@ -54,6 +54,14 @@ const menuItems = [
     color: "#C7C2D0",
     Component: ContactPage,
   },
+  // {
+  //   id: "contact2",
+  //   no: "062",
+  //   label: "Contact2",
+  //   // color: "#A2B08B",
+  //   color: "#C7C2D0",
+  //   Component: ContactPage,
+  // },
 ];
 
 export default menuItems;

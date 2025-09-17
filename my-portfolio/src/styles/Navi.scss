@@ -1,92 +1,184 @@
 .navi {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  // align-items: center;
+  // justify-content: flex-start;
 
-  position: fixed;
-  margin: 5px 0px 0px 30px;
-  left: 0px;
-  width: 230px;
+  // position: fixed;
+  // margin: 5px 0px 0px 30px;
+  // left: -10vh;
+  // width: 230px;
+  // width: 22%;
   // height: 900px;
   height: 94vh;
 
+  top: 2vh;
+  left: 3vh; // Sola yapışması için
   // background-color: red;
-  background-image: none;
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-origin: padding-box;
-  background-size: auto;
+  // background-image: none;
+  // background-attachment: scroll;
+  // background-clip: border-box;
+  // background-origin: padding-box;
+  // background-size: auto;
 
   color: rgb(50, 25, 160); //font rengi
   font-family: "StabilGrotesk", sans-serif;
   font-feature-settings: "ss02";
   unicode-bidi: isolate;
 
-  gap: 15px;
-}
+  gap: 1rem;
 
-// Tıklanabilir link / buton
-.navi__item {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: flex-start;
-  //   justify-content: space-between;
+  // Tıklanabilir link / buton
+  .navi__item {
+    display: flex;
+    //   flex-direction: column;
+    align-items: center;
+    //   justify-content: space-between;
 
-  position: relative;
-  box-sizing: border-box;
-  cursor: pointer;
-  //   pointer-events: all;  //Bu elemanın tıklanabilir olmasını sağlar. Normalde varsayılan auto zaten bunu yapar.
+    // position: relative;
+    // box-sizing: border-box;
+    cursor: pointer;
+    pointer-events: all; //Bu elemanın tıklanabilir olmasını sağlar. Normalde varsayılan auto zaten bunu yapar.
+    padding: 1rem 2rem;
+    gap: 1rem;
 
-  width: 230px;
-  height: 114px;
-  min-height: 104px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: none;
 
-  //   font-kerning: auto;
-  //   font-optical-sizing: auto;
-  font-size: 13px;
-  //   font-style: normal;
-  font-weight: 400;
-  //   line-height: normal;
-  //   letter-spacing: normal;
-  text-align: center;
-  //   text-indent: 0;
-  //   text-transform: none;
-  //   text-rendering: auto;
-  text-shadow: none;
-  //   word-spacing: 0;
+    transition: all 0.3s ease-in-out;
 
-  //   transition-property: background, border, color, filter;
-  //   transition-duration: 0.3s, 0.3s, 0.3s, 0.3s;
-  transition: all 0.3s ease-in-out;
-  //   transition-delay: 0s, 0s, 0s, 0s;
-  //   transition-behavior: normal, normal, normal, normal;
+    flex: 1;
+    // transition: all 0.5s ease;
 
-  flex: 1;
-  // transition: all 0.5s ease;
+    &.active {
+      flex: 3;
+      background-color: #92a746;
+    }
+    &:hover {
+      // flex:3
+      border-left-color: red;
+    }
 
-  &.active {
-    flex: 3;
-    background-color: #92a746;
+    .navi__item a {
+      //   text-decoration: none;
+      // color: rgb(14, 14, 14);
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
   }
-  // &:hover{
-  //   flex:3
-  // }
+  .navi__item:hover {
+    background-color: transparent; // opsiyonel hover efekti
+    border: solid 1px white;
+    //   flex: 3;
+  }
 }
+// Küçük ekranlarda ayarlamalar
+@media (max-width: 768px) {
+  // // gap: rem;
+  // background-color: yellow;
 
-.navi__item a {
-  //   text-decoration: none;
-  // color: rgb(14, 14, 14);
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-.navi__item:hover {
-  background-color: transparent; // opsiyonel hover efekti
-  border: solid 1px white;
-  //   flex: 3;
+  // left: 0;
+  // right: 0;
+  // bottom: 2rem;
+  // top: auto;
+
+  // // width: 100vw;
+  // height: 25vh;
+  // flex-direction: row;
+  // justify-content: flex-start; //center
+  // align-items: stretch;
+  // // gap:0;
+  // padding: 0 2rem 1.3rem 2rem;
+  // color: green;
+  .navi {
+    // background-color: #764ba2;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    top: auto;
+
+    width: 100%;
+    height: 25vh;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    padding: 0 1rem 1.3rem 1rem;
+    // gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Kaydırma çubuğunu gizle */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+
+    .navi__item {
+      // flex: 1;
+      // height: 100%;
+      // // min-width: 0;
+      // // padding: 1rem;
+      // // background-color: aqua;
+      // width: 50vw;
+      // // padding: 1rem;
+      // text-align: center;
+      // // border-left: none;
+      // flex-direction: column;
+      // justify-content: center;
+      // // gap: 0.5rem;
+      // opacity: 0.5;
+
+      // flex: none; /* Flex büyüme/küçülme iptal */
+      min-width: 80vw; /* Sabit genişlik */
+      height: 100%;
+      // padding: 1rem 0.5rem;
+      text-align: center;
+      border-left: none;
+      border-top: none;
+      flex-direction: column;
+      justify-content: center;
+      // gap: 0.5rem;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      white-space: nowrap;
+      // min-width: 120px; /* Minimum genişlik */
+
+      &.active {
+        //   flex: 3;
+        //   background-color: #92a746;
+        //   transform: translateY(-5px);
+
+        flex: 5;
+        width: 120vw; /* Aktif item daha geniş */
+        min-width: 129vw;
+        background-color: #92a746;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .navi-item:hover {
+      // flex: 3;
+      // background: rgba(255, 255, 255, 0.1);
+      // border-left: none;
+      // border-top-color: #fff;
+      // transform: translateY(-2px);
+
+      width: 150px; /* Hover'da orta genişlik */
+      min-width: 150px;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .navi::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
 }

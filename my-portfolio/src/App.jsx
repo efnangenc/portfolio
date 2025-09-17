@@ -76,7 +76,7 @@
 // export default App;
 
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import { useLanguage } from "./providers/LanguageProvider";
 import Navi from "./components/Navi.jsx";
 import Content from "./components/Content.jsx";
@@ -101,8 +101,10 @@ function App() {
       </div>
 
       <br />
-      <Navi active={isVisible} setActive={setActive} />
-      <Content setIsVisible={setIsVisible} />
+      <div className="layout">
+        <Navi className="navi" active={isVisible} setActive={setActive} />
+        <Content className="content" setIsVisible={setIsVisible} />
+      </div>
     </>
   );
 }
