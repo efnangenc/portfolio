@@ -227,7 +227,7 @@
       display: flex;
       // background-color: #396999;
       // border-bottom: 10px solid #e9ecef;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       .tab-item {
         flex: 1;
@@ -235,7 +235,7 @@
         text-align: center;
         cursor: pointer;
         background: #9babbb;
-        color: #6c757d;
+        color: #787b7e;
         font-weight: 500;
         transition: all 0.3s ease;
         position: relative;
@@ -247,7 +247,7 @@
         }
 
         &.active-tab {
-          background: rgba(86, 139, 89, 0.377);
+          background: rgba(143, 179, 145, 0.541);
           color: #495057;
           font-weight: 600;
         }
@@ -265,25 +265,32 @@
           background-color: purple;
         }
 
-        &:first-child {
-          // border-radius: 0 0 0 0;
-        }
+        // &:first-child {
+        //   // border-radius: 0 0 0 0;
+        // }
 
-        &:last-child {
-          // border-radius: 0 0 0 0;
-        }
+        // &:last-child {
+        //   // border-radius: 0 0 0 0;
+        // }
       }
     }
   }
 
   /* Tab Content */
   .tab-content {
-    min-height: 200px;
+    height: auto;
+    max-height: 50dvh;
+    background-color: rgba(255, 255, 0, 0.274);
+    margin: 2rem 0 0 0;
+    border-radius: 2rem;
   }
 
   .content-panel {
     .content {
       padding: 30px;
+      display: flex;
+      align-items: stretch;
+      justify-content: first baseline;
 
       &.active-content {
         animation: fadeInUp 0.4s ease;
@@ -294,15 +301,15 @@
   .content-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 2rem;
   }
 
   .content-item {
     background: linear-gradient(45deg, #f8f9fa, #e9ecef);
     padding: 10px 16px;
-    border-radius: 25px;
+    border-radius: 2rem;
     color: #495057;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     border: 1px solid #dee2e6;
     transition: all 0.2s ease;
