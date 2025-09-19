@@ -1,9 +1,10 @@
-import "../styles/Home.scss"
+import "../styles/Home.scss";
+import path from "../assets/oO.png"
 
 function Home() {
   return (
     <div className="home">
-      <p>Home2</p>
+      <img type="png" src={path}></img>
     </div>
   );
 }

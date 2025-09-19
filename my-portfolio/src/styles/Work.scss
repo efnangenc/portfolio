@@ -197,20 +197,22 @@
           }
         }
         .slider {
-          background-color: yellow;
+          // background-color: yellow;
           display: flex;
-          gap: 20px;
-          height: 95vh;
+          gap: 1dvw;
+          height: 95dvh;
           .slider-item {
-             flex: 1;
+            flex: 1;
             background-color: rgba(134, 134, 172, 0.534);
             border-radius: 2rem;
+            text-align: center;
           }
         }
       }
     }
   }
 
+  //burası baştaki kısık fotolu butonun hover'ı
   .project-card:hover .project-image img {
     transform: scale(1.05);
   }

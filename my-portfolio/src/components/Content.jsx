@@ -2,32 +2,97 @@ import { useEffect, useRef } from "react";
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
 
-function Content({ setIsVisible }) {
+function Content({
+  setIsVisible,
+  setMobileIsVisible,
+  BarRef,
+  setProgressWidth,
+}) {
   const itemRefs = useRef([]); // tüm section’ları saklayacağız
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    let observer;
+    let mobileObserver;
+
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
             // console.log(entry.target);
             console.log(entry.target.id, entry.intersectionRatio);
-            setIsVisible(entry.target.id); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
+
+            if (window.innerWidth > 768) setIsVisible(sectionId); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
           }
         });
       },
       {
-        // threshold: 0.3,
-         threshold: [0, 0.25, 0.5, 0.75, 1.0]
+        threshold: 0.3,
+        // threshold: [0, 0.25, 0.5, 0.75, 1.0],
+        rootMargin: "0px",
+        scrollMargin: "0px",
+      }
+    );
+
+    mobileObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+
+            if (window.innerWidth <= 768) {
+              setMobileIsVisible(sectionId);
+
+              // Navbar scroll hesaplama - sadece mobilde
+              const currentIndex = menuItems.findIndex(
+                (item) => item.id === sectionId
+              );
+              const totalItems = menuItems.length;
+
+              // Navbar'ın scroll edilebilir genişliğini hesapla
+              if (navbarRef?.current) {
+                const navbar = navbarRef.current;
+                const maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
+                const scrollPosition =
+                  (currentIndex / (totalItems - 1)) * maxScrollLeft;
+
+                // Navbar'ı smooth scroll et
+                navbar.scrollTo({
+                  left: scrollPosition,
+                  behavior: "smooth",
+                });
+
+                console.log(
+                  `Mobile Active: ${sectionId}, Navbar Scroll: ${scrollPosition}px`
+                );
+              }
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1,
       }
     );
 
     itemRefs.current.forEach((el) => {
-      if (el) observer.observe(el); //izlediklerimi observer değişkenine ekle
+      if (el) {
+        observer.observe(el); //izlediklerimi observer değişkenine ekle
+        mobileObserver.observe(el);
+      }
     });
 
-    return () => observer.disconnect(); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
-  }, [setIsVisible]);
+    return () => {
+      observer?.disconnect(); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
+      mobileObserver?.disconnect();
+    };
+  }, [setIsVisible, setMobileIsVisible, BarRef, setProgressWidth]);
+
+  //   useEffect(() => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollLeft = scrollAmount;
+  //   }
+  // }, [scrollAmount]);
 
   // ✅ Doğru - callback ref kullan
   const setRef = (id) => (el) => {
@@ -53,12 +118,12 @@ function Content({ setIsVisible }) {
             ref={setRef(item.id)}
             className="content__item"
           >
-              {item.id !== "home" && (
-          <h2 style={{ backgroundColor: item.color }}>
-            Şu an buradasınız -- {item.label} Section
-            <p>{item.no}</p>
-          </h2>
-        )}
+            {item.id !== "home" && (
+              <h2 style={{ backgroundColor: item.color }}>
+                Şu an buradasınız -- {item.label} Section
+                <p>{item.no}</p>
+              </h2>
+            )}
             <Component />
           </div>
         );
@@ -67,117 +132,3 @@ function Content({ setIsVisible }) {
   );
 }
 export default Content;
-
-// import { useEffect, useRef, useState } from "react";
-// import menuItems from "../data/menuItems.js";
-// import "../styles/Content.scss";
-
-// function Content({ setIsVisible }) {
-//   const itemRefs = useRef([]);
-//   const observerRef = useRef(null);
-//   const [loadedVideos, setLoadedVideos] = useState(new Set());
-
-//   // Observer'ı yeniden başlat
-//   const reinitializeObserver = () => {
-//     if (observerRef.current) {
-//       observerRef.current.disconnect();
-//     }
-
-//     observerRef.current = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             console.log(entry.target);
-//             setIsVisible(entry.target.id);
-//           }
-//         });
-//       },
-//       {
-//         threshold: 0.3,
-//         rootMargin: '50px' // Biraz daha erken tetikleme
-//       }
-//     );
-
-//     itemRefs.current.forEach((el) => {
-//       if (el) observerRef.current.observe(el);
-//     });
-//   };
-
-//   // Video yüklendiğinde observer'ı yenile
-//   const handleVideoLoad = (itemId) => {
-//     setLoadedVideos(prev => {
-//       const newSet = new Set(prev);
-//       newSet.add(itemId);
-//       return newSet;
-//     });
-//   };
-
-//   useEffect(() => {
-//     // İlk observer'ı başlat
-//     reinitializeObserver();
-
-//     return () => {
-//       if (observerRef.current) {
-//         observerRef.current.disconnect();
-//       }
-//     };
-//   }, [setIsVisible]);
-
-//   // Videolar yüklendiğinde observer'ı yenile
-//   useEffect(() => {
-//     if (loadedVideos.size > 0) {
-//       // Kısa bir delay ile observer'ı yenile
-//       const timeout = setTimeout(() => {
-//         reinitializeObserver();
-//       }, 100);
-
-//       return () => clearTimeout(timeout);
-//     }
-//   }, [loadedVideos]);
-
-//   const setRef = (id) => (el) => {
-//     if (el) {
-//       const index = itemRefs.current.findIndex((item) => item?.id === id);
-//       if (index === -1) {
-//         itemRefs.current.push(el);
-//       } else {
-//         itemRefs.current[index] = el;
-//       }
-
-//       // Element eklendiğinde observer'a ekle
-//       if (observerRef.current) {
-//         observerRef.current.observe(el);
-//       }
-//     }
-//   };
-
-//   return (
-//     <div className="content">
-//       {menuItems.map((item, index) => {
-//         const Component = item.Component;
-//         return (
-//           <div
-//             key={item.id}
-//             id={item.id}
-//             ref={setRef(item.id)}
-//             className="content__item"
-//             // Video yüklenme event'lerini dinle
-//             onLoad={() => handleVideoLoad(item.id)}
-//             onTransitionEnd={() => handleVideoLoad(item.id)}
-//           >
-//             <h2>{item.label}</h2>
-//             <div
-//               // Video içeren component'ler için
-//               onLoadedMetadata={() => handleVideoLoad(item.id)}
-//               onCanPlay={() => handleVideoLoad(item.id)}
-//             >
-//               <Component />
-//             </div>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
-
-// export default Content;

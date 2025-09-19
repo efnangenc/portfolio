@@ -25,7 +25,7 @@ function Career() {
         </video>
       </div>
       <div className="career-route">
-        <img type="png" src={path}></img>
+        {/* <img type="png" src={path}></img> */}
         {careerItems.map((item) => (
           <div key={item.id} className={`item-${item.id}`}>
             {/* className="item" */}

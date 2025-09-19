@@ -11,7 +11,8 @@ const menuItems = [
     no: "01",
     // label: "Home",
     // color: "#99999C",
-    color: "#98B0B6",
+    // color: "#98B0B6",
+    color: "#2F6352",
     Component: HomePage,
   },
   {
@@ -19,7 +20,8 @@ const menuItems = [
     no: "02",
     label: "About",
     // color: "#2E2B22",
-    color: "#E1E3DA",
+    // color: "#E1E3DA",
+    color: "#98B092",
     Component: AboutPage,
   },
   {
@@ -27,7 +29,8 @@ const menuItems = [
     no: "03",
     label: "Work",
     // color: "#A2B08B",
-    color: "#FCE9C5",
+    // color: "#FCE9C5",
+    color: "#78776C",
     Component: WorkPage,
   },
   {
@@ -35,7 +38,8 @@ const menuItems = [
     no: "04",
     label: "Talent",
     // color: "#DAD7C6",
-    color: "#D8D9BC",
+    // color: "#D8D9BC",
+    color: "#AFB59D",
     Component: TalentPage,
   },
   {
@@ -43,7 +47,8 @@ const menuItems = [
     no: "05",
     label: "Career",
     // color: "#887F73",
-    color: "#D7AB77",
+    // color: "#D7AB77",
+    color: "#55738D",
     Component: CareerPage,
   },
   {
@@ -51,7 +56,8 @@ const menuItems = [
     no: "06",
     label: "Contact",
     // color: "#A2B08B",
-    color: "#C7C2D0",
+    // color: "#C7C2D0",
+    color: "#889BAE",
     Component: ContactPage,
   },
   // {

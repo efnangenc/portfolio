@@ -82,9 +82,9 @@ function Work() {
                     </div>
 
                     <div className="slider">
-                      <div className="slider-item">A</div>
-                      <div className="slider-item">A</div>
-                      <div className="slider-item">A</div>
+                      <div className="slider-item">Yazarım illaki bişey buraya</div>
+                      <div className="slider-item">Yazarım illaki bişey buraya</div>
+                      <div className="slider-item">Ya zarım illaki bişey buraya</div>
                     </div>
 
                     {/* Tab Content */}

@@ -3,14 +3,15 @@ import "../styles/Navi.scss";
 import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Navi({ active, setActive }) {
- const { t, lang, setLang } = useLanguage();
+function Navi({ active, setActive, BarRef }) {
+  const { t, lang, setLang } = useLanguage();
 
   return (
-    <nav className="navi">
+    <nav className="navi" ref={BarRef}>
       {menuItems.map((item) => (
         <div
           key={item.id} //home
+          // ref={BarRef}
           className={`navi__item  ${
             active === item.id && item.id !== "home" ? "active" : ""
           }`}
@@ -20,16 +21,17 @@ function Navi({ active, setActive }) {
               .getElementById(item.id)
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-           style={{
-                backgroundColor: item.color
-                // fontFamily: item.fontFamily,
-                // Active state için border rengi
-                // borderBottomColor: activeItem === item.id ? item.color : 'transparent'
-              }}
+          style={{
+            backgroundColor: item.color,
+            // fontFamily: item.fontFamily,
+            // Active state için border rengi
+            // borderBottomColor: activeItem === item.id ? item.color : 'transparent'
+          }}
           href={`#${item.id}`}
         >
           {/* <a href={item.id}>{item.label}</a> */}
-          <a>{t(item.label)}</a>
+          <a className="no">{t(item.no)}</a>
+          <a className="text">{t(item.label)}</a>
         </div>
       ))}
     </nav>
