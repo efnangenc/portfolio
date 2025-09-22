@@ -16,20 +16,20 @@
     padding-left: 60px;
     
     .number {
-      font-size: 5vw;
+      font-size: 5dvw;
       line-height: 1;
     }
     
     .text {
       position: sticky;
-      font-size: 13.8vw;
+      font-size: 13.8dvw;
       font-weight: 800;
       line-height: 0.8;
     }
 
     // Mobil görünümü (480px - 768px)
     @media (max-width: 768px) {
-      height: 85vh;
+      height: 85dvh;
       // padding-left: 30px;
       // padding-right: 20px;
       

@@ -9,14 +9,13 @@ function App() {
   const [active, setActive] = useState("home");
   const [isVisible, setIsVisible] = useState("home");
   const [isMobileVisible, setMobileIsVisible] = useState("home");
-  const [progressWidth, setProgressWidth] = useState(0);
-
+  
+  // Sadece navbar ref'i gerekli
   const BarRef = useRef(null);
 
   return (
     <>
       <div className="languageCont">
-        {/* //yabancı dil ayar */}
         <p>{t("click")}</p>
         <button className="langButton" onClick={() => setLang("tr")}>
           🇹🇷 Türkçe
@@ -40,7 +39,6 @@ function App() {
           setIsVisible={setIsVisible}
           setMobileIsVisible={setMobileIsVisible}
           BarRef={BarRef}
-          setProgressWidth={setProgressWidth}
         />
       </div>
     </>

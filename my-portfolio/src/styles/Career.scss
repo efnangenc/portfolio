@@ -1,72 +1,627 @@
+// .career {
+//   // background-color: purple;
+//   // width: 900px;
+//   // height: 700px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 40px;
+// }
+// .career-plan {
+//   height: 95dvh;
+//   border-radius: 2rem;
+//   background-color: #92a15c;
+//   box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+//   // display: flex;
+//   // flex-direction: column;
+//   // justify-content: space-between;
+//   // align-items: flex-start;
+//   // padding-left: 60px;
+//   //   margin-top: 40px;
+// }
+// .video-wrapper {
+//   position: relative;
+//   video {
+//     height: 50dvh;
+//     width: 100%;
+//     border-radius: 2rem;
+//     object-fit: cover;
+//     display: block;
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     border-radius: 2rem;
+//     background: #f3efd34b; // siyah yarı saydam bir katman
+//     opacity: 0.7;
+//     z-index: 1;
+//     // filter:  brightness(0.9);
+
+
+
+//   }
+// }
+// .career-route {
+//   position: relative;
+//   height: auto;
+//   border-radius: 2rem;
+//   background-color: #1f1e1e;
+//   box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+//   img {
+//     height: 100dvh;
+//   }
+
+//   .item-as.smth {
+//     position: absolute;
+//     top: 0px;
+//     background-color: yellow;
+//     z-index: 5;
+//     color: white;
+//     &:nth-child(1) {
+//       position: absolute;
+//       top: 10px;
+//       background-color: yellow;
+//       z-index: 5;
+//       color: white;
+//     }
+//   }
+// }
+
+
+
 .career {
-  // background-color: purple;
-  // width: 900px;
-  // height: 700px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-.career-plan {
-  height: 95vh;
-  border-radius: 2rem;
-  background-color: #92a15c;
-  box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-items: flex-start;
-  // padding-left: 60px;
-  //   margin-top: 40px;
-}
-.video-wrapper {
-  position: relative;
-  video {
-    height: 50vh;
-    width: 100%;
+
+  // Enhanced Career Plan Section
+  .career-plan {
+    height: 95vh;
     border-radius: 2rem;
-    object-fit: cover;
-    display: block;
-  }
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 2rem;
-    background: #f3efd34b; // siyah yarı saydam bir katman
-    opacity: 0.7;
-    z-index: 1;
-    // filter:  brightness(0.9);
-
-
-
-  }
-}
-.career-route {
-  position: relative;
-  height: auto;
-  border-radius: 2rem;
-  background-color: #1f1e1e;
-  box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
-  img {
-    height: 100vh;
-  }
-
-  .item-as.smth {
-    position: absolute;
-    top: 0px;
-    background-color: yellow;
-    z-index: 5;
-    color: white;
-    &:nth-child(1) {
+    &::before {
+      content: '';
       position: absolute;
-      top: 10px;
-      background-color: yellow;
-      z-index: 5;
-      color: white;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+      animation: float 20s infinite linear;
+    }
+
+    .plan-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      z-index: 2;
+
+      .plan-header {
+        flex: 1;
+        color: white;
+
+        h2 {
+          font-size: clamp(3rem, 6vw, 5rem);
+          font-weight: 800;
+          margin: 0 0 1rem 0;
+          text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+          font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+          opacity: 0.9;
+          margin: 0;
+          font-weight: 300;
+        }
+      }
+
+      .plan-visual {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .growth-chart {
+          display: flex;
+          align-items: end;
+          gap: 2rem;
+          height: 300px;
+          padding: 2rem;
+
+          .chart-bar {
+            width: 60px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            transition: height 2s ease-out;
+            backdrop-filter: blur(10px);
+
+            &[data-height="30%"] { height: 30%; }
+            &[data-height="60%"] { height: 60%; }
+            &[data-height="90%"] { height: 90%; }
+            &[data-height="100%"] { height: 100%; }
+
+            &.future {
+              background: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8));
+              animation: pulse 2s infinite ease-in-out;
+            }
+
+            .bar-label {
+              position: absolute;
+              bottom: -30px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: white;
+              font-weight: 600;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Enhanced Video Section
+  .video-wrapper {
+    position: relative;
+    
+    video {
+      height: 50vh;
+      width: 100%;
+      border-radius: 2rem;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2rem;
+      background: linear-gradient(45deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+
+      .video-text {
+        text-align: center;
+        color: white;
+
+        h3 {
+          font-size: clamp(2rem, 4vw, 3rem);
+          font-weight: 700;
+          margin: 0 0 1rem 0;
+          text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+          font-size: clamp(1rem, 2vw, 1.3rem);
+          opacity: 0.9;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Enhanced Career Route - Timeline
+  .career-route {
+    position: relative;
+    min-height: 100vh;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
+    padding: 3rem;
+    overflow: hidden;
+
+    .timeline-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+
+      // Timeline Line
+      .timeline-line {
+        position: absolute;
+        left: 50px;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, #667eea, #764ba2, #667eea);
+        border-radius: 2px;
+        z-index: 1;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ecf0f1;
+        margin-bottom: 3rem;
+        text-align: center;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 3px;
+          background: linear-gradient(90deg, #667eea, #764ba2);
+          border-radius: 2px;
+        }
+      }
+
+      // Experience Items
+      .timeline-item {
+        position: relative;
+        margin-bottom: 4rem;
+        margin-left: 100px;
+
+        .timeline-marker {
+          position: absolute;
+          left: -74px;
+          top: 20px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+          .marker-icon {
+            font-size: 1.5rem;
+            color: white;
+          }
+
+          &.future-marker {
+            opacity: 0.8;
+            animation: pulse 2s infinite ease-in-out;
+          }
+        }
+
+        .timeline-content {
+          .timeline-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+              background: rgba(255, 255, 255, 0.15);
+            }
+
+            &.future-card {
+              opacity: 0.9;
+              border-left: 4px solid;
+            }
+
+            .card-header {
+              padding: 2rem 2rem 1rem 2rem;
+              border-left: 4px solid;
+              position: relative;
+
+              .job-info {
+                .job-title, .goal-title {
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: #ecf0f1;
+                  margin: 0 0 0.5rem 0;
+                }
+
+                .company-info {
+                  display: flex;
+                  gap: 1rem;
+                  margin-bottom: 0.5rem;
+
+                  .company {
+                    font-weight: 600;
+                    color: #3498db;
+                    font-size: 1.1rem;
+                  }
+
+                  .job-type {
+                    background: rgba(52, 152, 219, 0.2);
+                    color: #3498db;
+                    padding: 0.25rem 0.75rem;
+                    border-radius: 12px;
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  }
+                }
+
+                .duration-location {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.25rem;
+                  font-size: 0.9rem;
+                  color: #bdc3c7;
+
+                  .duration {
+                    font-weight: 500;
+                  }
+                }
+
+                .goal-timeline {
+                  font-size: 1rem;
+                  color: #f39c12;
+                  font-weight: 600;
+                  background: rgba(243, 156, 18, 0.2);
+                  padding: 0.25rem 0.75rem;
+                  border-radius: 12px;
+                  display: inline-block;
+                }
+              }
+            }
+
+            .card-body {
+              padding: 0 2rem 2rem 2rem;
+
+              .description, .goal-description {
+                line-height: 1.6;
+                color: #ecf0f1;
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
+              }
+
+              .achievements {
+                margin-bottom: 1.5rem;
+
+                h5 {
+                  color: #2ecc71;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  margin-bottom: 0.75rem;
+                }
+
+                ul {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+
+                  li {
+                    color: #bdc3c7;
+                    margin-bottom: 0.5rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+
+                    &::before {
+                      content: '✓';
+                      position: absolute;
+                      left: 0;
+                      color: #2ecc71;
+                      font-weight: bold;
+                    }
+                  }
+                }
+              }
+
+              .skills-used {
+                h5 {
+                  color: #e67e22;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  margin-bottom: 0.75rem;
+                }
+
+                .skill-tags {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 0.5rem;
+
+                  .skill-tag {
+                    color: white;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    opacity: 0.9;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Career Stats
+      .career-stats {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+
+        .stats-container {
+          display: flex;
+          justify-content: center;
+          gap: 4rem;
+
+          .stat-item {
+            text-align: center;
+
+            .stat-number {
+              display: block;
+              font-size: 3rem;
+              font-weight: 800;
+              color: #667eea;
+              line-height: 1;
+            }
+
+            .stat-label {
+              display: block;
+              font-size: 1rem;
+              color: #bdc3c7;
+              margin-top: 0.5rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    .career-plan {
+      .plan-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+
+        .plan-visual .growth-chart {
+          height: 200px;
+          gap: 1.5rem;
+
+          .chart-bar {
+            width: 40px;
+          }
+        }
+      }
+    }
+
+    .career-route {
+      .timeline-container {
+        .timeline-line {
+          left: 30px;
+        }
+
+        .timeline-item {
+          margin-left: 80px;
+
+          .timeline-marker {
+            left: -54px;
+            width: 36px;
+            height: 36px;
+
+            .marker-icon {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .career-stats .stats-container {
+          gap: 2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+
+    .career-plan {
+      height: 50vh;
+      
+      .plan-content .plan-visual {
+        display: none;
+      }
+    }
+
+    .video-wrapper {
+      video {
+        height: 30vh;
+      }
+    }
+
+    .career-route {
+      padding: 2rem 1rem;
+
+      .timeline-container {
+        .timeline-line {
+          left: 20px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .timeline-item {
+          margin-left: 60px;
+          margin-bottom: 3rem;
+
+          .timeline-marker {
+            left: -44px;
+            width: 32px;
+            height: 32px;
+
+            .marker-icon {
+              font-size: 1rem;
+            }
+          }
+
+          .timeline-content .timeline-card {
+            .card-header {
+              padding: 1.5rem;
+
+              .job-info {
+                .job-title, .goal-title {
+                  font-size: 1.3rem;
+                }
+
+                .company-info {
+                  flex-direction: column;
+                  gap: 0.5rem;
+                }
+              }
+            }
+
+            .card-body {
+              padding: 0 1.5rem 1.5rem 1.5rem;
+
+              .skills-used .skill-tags .skill-tag {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+              }
+            }
+          }
+        }
+
+        .career-stats .stats-container {
+          flex-wrap: wrap;
+          gap: 1.5rem;
+
+          .stat-item .stat-number {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Animations
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+    50% { 
+      opacity: 0.7; 
+      transform: scale(1.05); 
     }
   }
 }

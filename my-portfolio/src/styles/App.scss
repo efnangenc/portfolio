@@ -7,7 +7,7 @@
 .layout {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100dvw;
   min-height: 95dvh;
 
   .navi {
@@ -18,7 +18,7 @@
 
   .content {
     margin-left: 16%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 3rem;
     flex-grow: 1;
     overflow-x: hidden;
@@ -39,9 +39,9 @@
       width: 100%;
       margin: 0 0 0 1rem;
       padding: 0;
-      min-height: 100vh;
+      min-height: 100dvh;
       padding: 1rem;
-      // height: 90vh;
+      // height: 90dvh;
       // gap:2rem;
       // margin-left: 2rem;
       // padding-bottom: 70px; /* navinin yüksekliği kadar boşluk bırak ki üstüne binmesin */

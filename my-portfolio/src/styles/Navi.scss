@@ -5,9 +5,9 @@
   // justify-content: flex-start;
 
   // position: fixed;
-  height: 94vh;
-  top: 2vh;
-  left: 3vh; 
+  height: 94dvh;
+  top: 2dvh;
+  left: 3dvh; 
 
   color: #CBC8C4; //font rengi
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -75,10 +75,10 @@
     bottom: 2rem;
     top: auto;
 
-    width: 100%;
-    height: 15vh;
+    width: 100vw;
+    height: 15dvh;
 
-
+    position: fixed;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
@@ -96,7 +96,8 @@
     // background-color: yellow;
     .navi__item {
       // flex: none; /* Flex büyüme/küçülme iptal */
-      min-width: 80vw; /* Sabit genişlik */
+      min-width: 70dvw;
+      // width: 120dvw; /* Sabit genişlik */
       height: 100%;
       // padding: 1rem 0.5rem;
       text-align: center;
@@ -117,8 +118,8 @@
         //   transform: translateY(-5px);
 
         // flex: 5;
-        // width: 120vw; /* Aktif item daha geniş */
-        // min-width: 129vw;
+        // width: 120dvw; /* Aktif item daha geniş */
+        // min-width: 129dvw;
         background-color: #92a746;
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
