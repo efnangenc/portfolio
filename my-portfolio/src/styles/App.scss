@@ -7,7 +7,7 @@
 .layout {
   display: flex;
   flex-direction: row;
-  width: 100dvw;
+  width: 99dvw;
   min-height: 95dvh;
 
   .navi {
@@ -17,36 +17,55 @@
   }
 
   .content {
-    margin-left: 16%;
+    margin-left: 17.5%;
     min-height: 100dvh;
     padding: 3rem;
     flex-grow: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .layout {
     // flex-direction: column;
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: yellow;
+    // margin: 2rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
 
     .navi{
       width: 100%;
+      box-sizing: border-box;
     }
     .content {
       /* artık solda boşluk bırakma */
+      // width: 90%;
+      padding: 3rem 0.5rem;
+      position: absolute;
+      left: 2px;
+      margin: 0 0 0 0rem;
       width: 100%;
-      margin: 0 0 0 1rem;
-      padding: 0;
-      min-height: 100dvh;
-      padding: 1rem;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      // min-height: 100dvh;
+      // padding: 1rem;
       // height: 90dvh;
       // gap:2rem;
       // margin-left: 2rem;
       // padding-bottom: 70px; /* navinin yüksekliği kadar boşluk bırak ki üstüne binmesin */
     
       .content-item{
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 2rem;
+        margin: 0;
         // padding: 2rem;
       }
     }
