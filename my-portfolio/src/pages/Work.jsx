@@ -228,39 +228,42 @@ function Work() {
 
                     {/* Enhanced Project Cards */}
                     <div className="project-showcase">
-                      {/* Overview Card */}
-                      <div className="showcase-card overview-card">
+                     
+                      {/* Features Card */}
+                      <div className="showcase-card features-card">
                         <div className="card-header">
                           {/* <div className="card-icon">
                             <svg viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
                           </div> */}
-                          <h3>Project Overview</h3>
+                          <h3>Key Features</h3>
                         </div>
                         <div className="card-content">
-                          <div className="project-timeline">
-                            <span className="timeline-period">Nov 2024 - Present</span>
-                            <span className="timeline-company">Associated with BilgeAdam Boost</span>
-                          </div>
-                          <p className="project-description">
-                            I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. 
-                            Utilizing the MVC architecture, I designed a scalable application framework and developed an 
-                            intuitive front-end using modern web technologies. Through seamless API integration, I created 
-                            a robust multi-vendor platform, focusing on efficient data communication and user experience.
-                          </p>
-                          <div className="project-highlights">
-                            <div className="highlight-item">
-                              <span className="highlight-icon">⚡</span>
-                              <span>High Performance Architecture</span>
+                          <div className="features-list">
+                            <div className="feature-item">
+                              <div className="feature-bullet"></div>
+                              <div className="feature-text">
+                                <strong>Multi-Vendor Platform:</strong> Complete marketplace solution with vendor management
+                              </div>
                             </div>
-                            <div className="highlight-item">
-                              <span className="highlight-icon">🔐</span>
-                              <span>Secure Payment Integration</span>
+                            <div className="feature-item">
+                              <div className="feature-bullet"></div>
+                              <div className="feature-text">
+                                <strong>MVC Architecture:</strong> Scalable and maintainable code structure
+                              </div>
                             </div>
-                            <div className="highlight-item">
-                              <span className="highlight-icon">📱</span>
-                              <span>Responsive Mobile Design</span>
+                            <div className="feature-item">
+                              <div className="feature-bullet"></div>
+                              <div className="feature-text">
+                                <strong>Cloud Integration:</strong> Azure DevOps for seamless deployment and scaling
+                              </div>
+                            </div>
+                            <div className="feature-item">
+                              <div className="feature-bullet"></div>
+                              <div className="feature-text">
+                                <strong>API Development:</strong> RESTful services with HttpClient optimization
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -307,41 +310,39 @@ function Work() {
                         </div>
                       </div>
 
-                      {/* Features Card */}
-                      <div className="showcase-card features-card">
+                      
+                      <div className="showcase-card overview-card">
                         <div className="card-header">
                           {/* <div className="card-icon">
                             <svg viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                             </svg>
                           </div> */}
-                          <h3>Key Features</h3>
+                          <h3>Project Overview</h3>
                         </div>
                         <div className="card-content">
-                          <div className="features-list">
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>Multi-Vendor Platform:</strong> Complete marketplace solution with vendor management
-                              </div>
+                          <div className="project-timeline">
+                            <span className="timeline-period">Nov 2024 - Present</span>
+                            <span className="timeline-company">Associated with BilgeAdam Boost</span>
+                          </div>
+                          <p className="project-description">
+                            I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. 
+                            Utilizing the MVC architecture, I designed a scalable application framework and developed an 
+                            intuitive front-end using modern web technologies. Through seamless API integration, I created 
+                            a robust multi-vendor platform, focusing on efficient data communication and user experience.
+                          </p>
+                          <div className="project-highlights">
+                            <div className="highlight-item">
+                              <span className="highlight-icon">⚡</span>
+                              <span>High Performance Architecture</span>
                             </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>MVC Architecture:</strong> Scalable and maintainable code structure
-                              </div>
+                            <div className="highlight-item">
+                              <span className="highlight-icon">🔐</span>
+                              <span>Secure Payment Integration</span>
                             </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>Cloud Integration:</strong> Azure DevOps for seamless deployment and scaling
-                              </div>
-                            </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>API Development:</strong> RESTful services with HttpClient optimization
-                              </div>
+                            <div className="highlight-item">
+                              <span className="highlight-icon">📱</span>
+                              <span>Responsive Mobile Design</span>
                             </div>
                           </div>
                         </div>

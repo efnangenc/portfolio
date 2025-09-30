@@ -157,8 +157,8 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
       },
       {
         threshold: 0.3,
-        rootMargin: "0px",
-        scrollMargin: "0px",
+        // rootMargin: "0px",
+        // scrollMargin: "0px",
       }
     );
 

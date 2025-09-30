@@ -78,9 +78,18 @@ function About() {
               </div>
             </div>
             <div className="banner-visual">
-              <img src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg" alt="foto1" />
-              <img src="https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg" alt="foto2" />
-              <img src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg" alt="foto3" />
+              <img
+                src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg"
+                alt="foto1"
+              />
+              <img
+                src="https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg"
+                alt="foto2"
+              />
+              <img
+                src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
+                alt="foto3"
+              />
             </div>
           </div>
         </div>
@@ -102,21 +111,21 @@ function About() {
         {/* Interactive Showcase */}
         <div className="mission-block">
           <div className="mission-sidebar">
-            <div>Our Mission</div>
+            <div className="step">Mission</div>
             <div className="step">
-              <span className="step-number">01</span>
+              {/* <span className="step-number">01</span> */}
               Challenge
             </div>
             <div className="step">
-              <span className="step-number">02</span>
+              {/* <span className="step-number">02</span> */}
               Goal
             </div>
           </div>
 
           <div className="mission-content">
-            <div className="mission-header">
-              <h2>We are building</h2>
-              <h1>Raw Materials to:</h1>
+            <div className="mission-section">
+              <h3>I am building</h3>
+              <p>Raw Materials to:</p>
             </div>
 
             <div className="mission-section">
