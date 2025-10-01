@@ -146,17 +146,24 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
 
     observer = new IntersectionObserver(
       (entries) => {
+        let maxRatio = 0;
+        let mostVisible = null;
+
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            mostVisible = entry.target;
             const sectionId = entry.target.id;
             console.log(entry.target.id, entry.intersectionRatio);
 
-            if (window.innerWidth > 768) setIsVisible(sectionId);
+            // if (window.innerWidth > 768) setIsVisible(sectionId);
           }
         });
+        if (mostVisible) setIsVisible(sectionId);
       },
       {
-        threshold: 0.3,
+        // threshold: [0, 0.25, 0.5, 0.75, 1],
+        threshold: [0.5],
         // rootMargin: "0px",
         // scrollMargin: "0px",
       }
