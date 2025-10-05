@@ -413,253 +413,307 @@
   //     }
   //   }
   // }
+  // ========================================
+  // MOBILE RESPONSIVE - TALENT SECTION
+  // Sadece 320px - 767px arası
+  // ========================================
+}
+// @media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
+  .talent {
+    gap: 1.5rem;
 
-  @media (min-width: 320px) and (max-width: 768px)  {
-    // gap: 2rem;
+    // ========================================
+    // SLOGAN SECTION - Mobile
+    // ========================================
 
     .slogan {
       height: 30dvh;
+      border-radius: 1rem;
+      padding: 1rem;
 
-      .slogan-content .slogan-visual {
-        display: none;
+      .slogan-content {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+
+        .slogan-text {
+          .slogan-title {
+            font-size: clamp(1.5rem, 6vw, 2rem);
+            margin: 0 0 0.5rem 0;
+          }
+
+          .slogan-subtitle {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+          }
+        }
+
+        // Slogan visual'ı gizle
+        .slogan-visual {
+          display: none;
+        }
       }
     }
 
     .talent-container {
+      border-radius: 1rem;
+
       .tabs {
-        // flex-direction: column;
+        display: flex;
+        flex-direction: row; // Yatay sıralama
+        justify-content: space-around;
+        padding: 0.75rem 0.5rem;
         gap: 0.5rem;
+        border-radius: 1rem 1rem 0 0;
+        overflow-x: auto; // Çok fazla tab varsa scroll
+        -webkit-overflow-scrolling: touch;
+
+        // Scrollbar gizle
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        scrollbar-width: none;
 
         .tab-item {
+          flex: 0 0 auto; // Sabit boyut, sıkışmasın
           margin: 0;
+          padding: 0.75rem;
+          border-radius: 0.75rem;
+          width: 2rem; // Minimum dokunma alanı
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .talent-container .tabs .tab-item &.active-tab {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+          }
 
           .tab-content {
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            color: red;
-            min-height: 3dvh;
-            position: absolute;
-            opacity: 0;
+            gap: 0.25rem;
+
+            // TAB İSİMLERİNİ GİZLE - Sadece icon görünsün
+            .tab-text {
+              display: none; // İsimleri gizle
+            }
+
+            // Icon varsa göster (emoji veya svg)
+            .tab-icon {
+              font-size: 1.5rem;
+              display: block;
+            }
           }
         }
       }
 
-      .skills-grid {
-            display: flex;
-            // gap: 2rem;
-            // margin-bottom: 3rem;
+      // ========================================
+      // CONTENT TABS
+      // ========================================
 
-            .skill-card {
+      .content-tabs {
+        padding: 1rem 0.5rem;
+        display: none;
+
+        .active-content {
+          display: block;
+          width: 100%;
+
+          .skill-section {
+            // Section Title
+            .section-title {
               position: relative;
-              // display: flex;
-              // justify-content: center;
-              background: rgba(255, 255, 255, 0.1);
-              backdrop-filter: blur(10px);
-              border-radius: 1.5rem;
-              padding: 2rem;
-              position: relative;
-              overflow: hidden;
-              transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              min-height: 10dvh;
-              transition: all 0.5s ease;
+              top: 0px;
+              text-align: center;
+              font-size: clamp(2rem, 4vw, 3rem);
+              font-weight: 700;
+              color: #ecf0f1; //başlık
+              margin-bottom: 1.5rem;
+            }
 
-              // &::before {
-              //   content: "";
-              //   position: absolute;
-              //   top: 0;
-              //   left: 0;
-              //   right: 0;
-              //   height: 3px;
-              //   background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
-              //   background-size: 200% 100%;
-              //   animation: gradient-flow 3s linear infinite;
-              // }
+            // ========================================
+            // SKILLS GRID - Column Layout (Dikey)
+            // ========================================
 
-              &:hover {
+            .skills-grid {
+              // Grid yerine column layout
+              display: flex;
+              flex-direction: column; // Dikey sıralama
+              gap: 1rem;
+              grid-template-columns: none; // Grid'i iptal et
+              margin-bottom: 2rem;
+
+              // ========================================
+              // SKILL CARD - Simplified Mobile Version
+              // ========================================
+
+              .skill-card {
+                // Basit kart tasarımı
+                display: flex;
+                flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                transform: translateY(-8px) scale(1.02);
-                background: rgba(255, 255, 255, 0.15);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-                transition: all 0.5s ease; // smooth geçiş
+                padding: 1.25rem;
+                border-radius: 1rem;
+                min-height: auto; // Min height kaldır
 
-                .skill-details {
-                  opacity: 1;
-                  transform: translateY(0);
+                // Hover yerine basit static tasarım
+                &:hover {
+                  transform: none; // Hover efektini kaldır
                 }
+
+                // // Gradient bar - daha ince
+                // &::before {
+                //   height: 2px;
+                //   animation: none; // Animasyonu kapat
+                // }
+
+                // ========================================
+                // SKILL HEADER - Compact
+                // ========================================
+
                 .skill-header {
-                  transition: all 0.5s ease; // smooth geçiş
-                }
-              }
-
-              .skill-header {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                // margin-bottom: 1.5rem;
-
-                .skill-icon {
-                  width: 50px;
-                  height: 50px;
-                  background: linear-gradient(135deg, #667eea, #764ba2);
-                  border-radius: 50%;
                   display: flex;
                   align-items: center;
-                  justify-content: center;
-                  font-size: 1.5rem;
-                }
+                  gap: 0.75rem;
+                  width: 100%;
 
-                .skill-info {
-                  flex: 1;
-
-                  .skill-name {
+                  .skill-icon {
+                    width: 40px;
+                    height: 40px;
                     font-size: 1.2rem;
-                    font-weight: 700;
-                    color: #ecf0f1;
-                    margin: 0 0 0.25rem 0;
+                    flex-shrink: 0; // Sıkışmasın
+                  }
+
+                  .skill-info {
+                    flex: 1;
+
+                    .skill-name {
+                      font-size: 1rem;
+                      margin: 0;
+                      line-height: 1.3;
+                    }
+
+                    // Eğer level varsa
+                    .skill-level {
+                      font-size: 0.75rem;
+                      color: #95a5a6;
+                      margin-top: 0.25rem;
+                    }
                   }
                 }
-              }
 
-              // .skill-progress {
-              //   width: 100%;
-              //   height: 6px;
-              //   background: rgba(255, 255, 255, 0.1);
-              //   border-radius: 3px;
-              //   overflow: hidden;
-              //   margin-bottom: 1rem;
+                // ========================================
+                // SKILL DETAILS - GİZLE (Mobile'da yok)
+                // ========================================
 
-              //   .progress-bar {
-              //     height: 100%;
-              //     background: linear-gradient(90deg, #667eea, #764ba2);
-              //     border-radius: 3px;
-              //     transition: width 1s ease-out 0.3s;
-              //     position: relative;
+                .skill-details {
+                  display: none; // Tamamen gizle
+                  color: blue;
 
-              //     &::after {
-              //       content: "";
-              //       position: absolute;
-              //       top: 0;
-              //       left: 0;
-              //       right: 0;
-              //       bottom: 0;
-              //       background: linear-gradient(
-              //         90deg,
-              //         transparent,
-              //         rgba(255, 255, 255, 0.3),
-              //         transparent
-              //       );
-              //       animation: shimmer 2s infinite;
-              //     }
-              //   }
-              // }
-
-              // .skill-experience {
-              //   text-align: right;
-              //   margin-bottom: 1rem;
-
-              //   .experience-text {
-              //     font-size: 0.85rem;
-              //     color: #95a5a6;
-              //     font-weight: 500;
-              //   }
-              // }
-
-              .skill-details {
-                position: absolute;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: flex-end;
-                // align-items: flex-start;
-                bottom: 1rem;
-                left: 1.5rem;
-                right: 1.5rem;
-                opacity: 0;
-                transform: translateY(-10px);
-                transition: all 0.3s ease;
-
-                .skill-description {
-                  // justify-content: flex-end;
-                  font-size: 0.9rem;
-                  // color: #bdc3c7;
-                  color: red;
-                  line-height: 1.5;
-                  // margin-bottom: 0.1rem;
-                }
-
-                .skill-projects {
-                  font-size: 0.8rem;
-                  color: #667eea;
-                  font-weight: 600;
+                  // Veya sadece opacity ile gizle
+                  // opacity: 0 !important;
+                  // position: static;
+                  // transform: none;
+                  // pointer-events: none;
                 }
               }
             }
+
+            // ========================================
+            // CATEGORY SUMMARY - Mobile Layout
+            // ========================================
+
+            // .category-summary {
+            //   margin-top: 2rem;
+
+            //   .summary-stats {
+            //     display: flex;
+            //     flex-direction: column; // Dikey sıralama
+            //     gap: 1.25rem;
+            //     align-items: center;
+
+            //     .stat-item {
+            //       text-align: center;
+            //       padding: 1rem;
+            //       background: rgba(255, 255, 255, 0.05);
+            //       border-radius: 0.75rem;
+            //       width: 100%;
+            //       max-width: 300px;
+
+            //       .stat-number {
+            //         font-size: 2rem;
+            //         display: block;
+            //       }
+
+            //       .stat-label {
+            //         font-size: 0.85rem;
+            //         margin-top: 0.25rem;
+            //       }
+            //     }
+            //   }
+            // }
           }
-
-      .category-summary .summary-stats {
-        flex-direction: column;
-        gap: 1.5rem;
-
-        .stat-item .stat-number {
-          font-size: 2rem;
         }
       }
     }
   }
+}
 
-
-  // Animations
-  @keyframes fadeInScale {
-    from {
-      opacity: 0;
-      transform: scale(0.95) translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
+// Animations
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
   }
-
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
+}
 
-  @keyframes pulse {
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
-
-  @keyframes gradient-flow {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 200% 0%;
-    }
+  50% {
+    transform: translateY(-10px);
   }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
