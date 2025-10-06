@@ -1,31 +1,7 @@
-// import CardHead from "../components/CardHead";
-// import menuItems from "../data/menuItems";
-// import "../styles/Contact.scss";
-
-// function Contact() {
-//   const contactItem = menuItems.find((item) => item.id === "contact");
-
-//   return (
-//     <div className="contact">
-//       <CardHead item={contactItem} />
-//       <div className="cont-text">
-//         <span className="lets">Lets</span><hr />
-//         <span className="talk">Talk About</span><hr />
-//         <span className="buss">Bussines</span>
-//       </div>
-//       <div className="cont-from"></div>
-//       <p>Contact</p>
-//     </div>
-//   );
-// }
-
-// export default Contact;
-
-
-
 import { useState } from "react";
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
+import socialLinks from "../data/contactItems";
 import "../styles/Contact.scss";
 
 function Contact() {
@@ -67,32 +43,7 @@ function Contact() {
     }, 2000);
   };
 
-  const socialLinks = [
-    {
-      name: "GitHub",
-      url: "https://github.com/efnangenc",
-      icon: "💻",
-      color: "#333"
-    },
-    {
-      name: "LinkedIn", 
-      url: "https://linkedin.com/in/efnangenc",
-      icon: "💼",
-      color: "#0077b5"
-    },
-    {
-      name: "Email",
-      url: "mailto:efnan@example.com",
-      icon: "📧", 
-      color: "#ea4335"
-    },
-    {
-      name: "Portfolio",
-      url: "#", 
-      icon: "🌐",
-      color: "#667eea"
-    }
-  ];
+
 
   return (
     <div className="contact">
@@ -116,12 +67,12 @@ function Contact() {
         </div>
         
         {/* Animated Elements */}
-        <div className="floating-elements">
+        {/* <div className="floating-elements">
           <div className="float-item">💡</div>
           <div className="float-item">🚀</div>
           <div className="float-item">💻</div>
           <div className="float-item">🎯</div>
-        </div>
+        </div> */}
       </div>
 
       {/* Contact Form Section */}
@@ -134,7 +85,7 @@ function Contact() {
 
           <div className="contact-form">
             <div className="form-row">
-              <div className="input-group">
+              <div className="input-group top">
                 <div className="input-label">Your Name *</div>
                 <input
                   type="text"
@@ -146,7 +97,7 @@ function Contact() {
                 />
               </div>
               
-              <div className="input-group">
+              <div className="input-group top">
                 <div className="input-label">Email Address *</div>
                 <input
                   type="email"
@@ -159,7 +110,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="input-group">
+            <div className="input-group sub">
               <div className="input-label">Subject</div>
               <input
                 type="text"
@@ -171,7 +122,7 @@ function Contact() {
               />
             </div>
 
-            <div className="input-group">
+            <div className="input-group sub">
               <div className="input-label">Message *</div>
               <textarea
                 name="message"
@@ -197,7 +148,7 @@ function Contact() {
               )}
             </div>
 
-            {submitStatus === 'success' && (
+            {/* {submitStatus === 'success' && (
               <div className="status-message success">
                 <span className="status-icon">✅</span>
                 Message sent successfully! I'll get back to you soon.
@@ -209,7 +160,7 @@ function Contact() {
                 <span className="status-icon">❌</span>
                 Please fill in all required fields.
               </div>
-            )}
+            )} */}
           </div>
         </div>
 
