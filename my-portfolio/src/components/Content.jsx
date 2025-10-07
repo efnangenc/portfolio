@@ -136,9 +136,11 @@
 import { useEffect, useRef } from "react";
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
   const itemRefs = useRef([]);
+  const { t, lang, setLang } = useLanguage();
 
   useEffect(() => {
     let observer;
@@ -148,12 +150,13 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
       (entries) => {
         let maxRatio = 0;
         let mostVisible = null;
+        let sectionId = null;
 
         entries.forEach((entry) => {
           if (entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
             mostVisible = entry.target;
-            const sectionId = entry.target.id;
+            sectionId = entry.target.id;
             console.log(entry.target.id, entry.intersectionRatio);
 
             // if (window.innerWidth > 768) setIsVisible(sectionId);
@@ -251,7 +254,7 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
           >
             {item.id !== "home" && (
               <h2 style={{ backgroundColor: item.color }}>
-                Şu an buradasınız -- {item.label} Section
+                {t("YoureHere")} -- {t(item.label)} {t("Section")}
                 <p>{item.no}</p>
               </h2>
             )}

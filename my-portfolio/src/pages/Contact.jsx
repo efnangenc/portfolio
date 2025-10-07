@@ -3,9 +3,11 @@ import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
 import socialLinks from "../data/contactItems";
 import "../styles/Contact.scss";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Contact() {
   const contactItem = menuItems.find((item) => item.id === "contact");
+  const { t, lang, setLang } = useLanguage();
   
   const [formData, setFormData] = useState({
     name: "",

@@ -7,5 +7,75 @@
   "Work": "Projeler",
   "Talent": "Yetenekler",
   "Career": "Tecrübe",
-  "Contact": "İletişim"
+  "Contact": "İletişim",
+  "AboutText": "Tutkulu bir geliştirici olarak, modern teknolojilerle kullanıcı odaklı çözümler üretiyorum. Frontend'den backend'e, tasarımdan deployment'a kadar her aşamada kaliteli kod yazıyorum.",
+  "YoureHere": "Şu an buradasınız.",
+  "Section": "Bölümü",
+
+  "experiences": [
+    {
+      "title": "Yazılım Geliştirme Stajyeri",
+      "company": "BilgeAdam Teknoloji",
+      "type": "Tam zamanlı",
+      "duration": "Haz 2024 - Mar 2025 · 10 ay",
+      "location": "Ankara, Türkiye · Ofiste",
+      "description": "ASP.NET Core ve Entity Framework Core kullanarak Back-End uygulamaları geliştirdim. HTML5, CSS3 ve JavaScript ile modern ve dinamik kullanıcı arayüzleri tasarladım. Nesne Yönelimli Programlama (OOP) prensipleri ve SOLID tasarım kalıplarını uygulayarak kaliteli ve sürdürülebilir yazılım çözümleri ürettim.",
+      "skills": [
+        "C#",
+        "JavaScript",
+        "ASP.NET Core",
+        "Entity Framework",
+        "MSSQL",
+        "Azure",
+        "HTML",
+        "CSS",
+        "OOP",
+        "SOLID Prensipleri"
+      ],
+      "achievements": [
+        "5'ten fazla full-stack web uygulaması geliştirildi",
+        "SOLID prensipleri ile kod kalitesi artırıldı",
+        "Çevik geliştirme ortamında işbirliği yapıldı"
+      ]
+    },
+    {
+      "title": "Mühendis Stajyeri",
+      "company": "RHI Magnesita",
+      "type": "Staj",
+      "duration": "Oca 2023 - Şub 2023 · 2 ay",
+      "location": "Eskişehir, Türkiye · Ofiste",
+      "description": "Verimliliği artıran ve duruş sürelerini azaltan yeni bir üretim takip sistemi geliştirilmesine katkıda bulundum. Üretim süreçlerini iyileştirmek için çapraz fonksiyonel ekiplerle işbirliği yaptım.",
+      "skills": [
+        "Arduino IDE",
+        "Bakım ve Onarım",
+        "Üretim Sistemleri",
+        "Takım Çalışması"
+      ],
+      "achievements": [
+        "Üretim verimliliğinde %15 artış sağlandı",
+        "Sistem duruşları önemli ölçüde azaltıldı",
+        "Başarılı elektriksel arıza tespiti gerçekleştirildi"
+      ]
+    },
+    {
+      "title": "Mühendis Stajyeri",
+      "company": "ENTES Elektronik",
+      "type": "Staj",
+      "duration": "Tem 2022 - Ağu 2022 · 2 ay",
+      "location": "İstanbul, Türkiye · Ofiste",
+      "description": "Katı kalite kontrol önlemleri uygulayarak ilk ay içinde ürün hatalarını azalttım. PCB kartlarında teknik sorunları teşhis edip çözdüm, üretim duruşlarında %20 azalma sağladım.",
+      "skills": [
+        "Analog Devre Tasarımı",
+        "PCB Tasarımı",
+        "Kalite Kontrol",
+        "5S Kaizen",
+        "Üretim Optimizasyonu"
+      ],
+      "achievements": [
+        "İlk ayda ürün hataları azaltıldı",
+        "Üretim duruşlarında %20 azalma sağlandı",
+        "Kaizen prensipleriyle süreçler iyileştirildi"
+      ]
+    }
+  ]
 }

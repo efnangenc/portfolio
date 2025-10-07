@@ -1,101 +1,83 @@
-const experiences = [
-  {
-    id: 1,
-    title: "Software Development Intern",
-    company: "BilgeAdam Teknoloji",
-    type: "Full-time",
-    duration: "Jun 2024 - Mar 2025 · 10 months",
-    location: "Ankara, Türkiye · On-site",
-    description:
-      "Developed Back-End applications using ASP.NET Core and Entity Framework Core, while designing modern and dynamic user interfaces with HTML5, CSS3, and JavaScript. Applied Object-Oriented Programming (OOP) principles and SOLID design patterns to deliver high-quality and maintainable software solutions.",
-    skills: [
-      "C#",
-      "JavaScript",
-      "ASP.NET Core",
-      "Entity Framework",
-      "MSSQL",
-      "Azure",
-      "Html",
-      "Css",
-      "OOP",
-      "Solid Principles",
-    ],
-    achievements: [
-      "Delivered 5+ full-stack web applications",
-      "Improved code quality by implementing SOLID principles",
-      "Collaborated in agile development environment",
-    ],
-    color: "#667eea",
-    icon: "💻",
-  },
-  {
-    id: 2,
-    title: "Engineer Intern",
-    company: "RHI Magnesita",
-    type: "Internship",
-    duration: "Jan 2023 - Feb 2023 · 2 months",
-    location: "Eskişehir, Türkiye · On-site",
-    description:
-      "Collaborated with colleagues to implement a new production tracking system that increased efficiency and reduced downtime. Cooperated with cross-functional teams to streamline production processes.",
-    skills: [
-      "Arduino IDE",
-      "Maintenance and Repair",
-      "Production Systems",
-      "Team Collaboration",
-    ],
-    achievements: [
-      "Increased production efficiency by 15%",
-      "Reduced system downtime significantly",
-      "Successful electrical troubleshooting",
-    ],
-    color: "#f39c12",
-    icon: "⚙️",
-  },
-  {
-    id: 3,
-    title: "Engineer Intern",
-    company: "ENTES Elektronik",
-    type: "Internship",
-    duration: "Jul 2022 - Aug 2022 · 2 months",
-    location: "İstanbul, Türkiye · On-site",
-    description:
-      "Implemented rigorous quality control measures, reducing product defects within the first month. Diagnosed and resolved technical issues on PCB boards, resulting in a 20% reduction in production downtime.",
-    skills: [
-      "Analog Circuit Design",
-      "PCB Design",
-      "Quality Control",
-      "5S Kaizen",
-      "Production Optimization",
-    ],
-    achievements: [
-      "Reduced product defects in first month",
-      "20% reduction in production downtime",
-      "Streamlined operations with Kaizen principles",
-    ],
-    color: "#e74c3c",
-    icon: "🔧",
-  },
-];
+import { useLanguage } from "../providers/LanguageProvider";
 
-const futureGoals = [
-  {
-    title: "Senior Full Stack Developer",
-    timeline: "2025-2026",
-    description: "Lead complex projects and mentor junior developers",
-    color: "#2ecc71",
-  },
-  {
-    title: "Tech Lead / Solution Architect",
-    timeline: "2027-2028",
-    description: "Design scalable systems and guide technical decisions",
-    color: "#9b59b6",
-  },
-  {
-    title: "Engineering Manager",
-    timeline: "2029+",
-    description: "Build and lead high-performing development teams",
-    color: "#34495e",
-  },
-];
+export default function useExperiencesData() {
+  const { t } = useLanguage();
 
-export default experiences;
+  const experiences = [
+    {
+      id: 1,
+      title: t("experiences[0]title"),
+      company: t("experience.0.company"),
+      type: t("experience.0.type"),
+      duration: t("experience.0.duration"),
+      location: t("experience.0.location"),
+      description: t("experience.0.description"),
+      skills: [
+        "C#",
+        "JavaScript",
+        "ASP.NET Core",
+        "Entity Framework",
+        "MSSQL",
+        "Azure",
+        "HTML",
+        "CSS",
+        "OOP",
+        "SOLID",
+      ],
+      achievements: [
+        t("experience.0.achievement1"),
+        t("experience.0.achievement2"),
+        t("experience.0.achievement3"),
+      ],
+      color: "#667eea",
+      icon: "💻",
+    },
+    {
+      id: 2,
+      title: t("experience.1.title"),
+      company: t("experience.1.company"),
+      type: t("experience.1.type"),
+      duration: t("experience.1.duration"),
+      location: t("experience.1.location"),
+      description: t("experience.1.description"),
+      skills: [
+        "Arduino IDE",
+        "Maintenance and Repair",
+        "Production Systems",
+        "Team Collaboration",
+      ],
+      achievements: [
+        t("experience.1.achievement1"),
+        t("experience.1.achievement2"),
+        t("experience.1.achievement3"),
+      ],
+      color: "#f39c12",
+      icon: "⚙️",
+    },
+    {
+      id: 3,
+      title: t("experience.2.title"),
+      company: t("experience.2.company"),
+      type: t("experience.2.type"),
+      duration: t("experience.2.duration"),
+      location: t("experience.2.location"),
+      description: t("experience.2.description"),
+      skills: [
+        "Analog Circuit Design",
+        "PCB Design",
+        "Quality Control",
+        "5S Kaizen",
+        "Production Optimization",
+      ],
+      achievements: [
+        t("experience.2.achievement1"),
+        t("experience.2.achievement2"),
+        t("experience.2.achievement3"),
+      ],
+      color: "#e74c3c",
+      icon: "🔧",
+    },
+  ];
+
+  return { experiences };
+}

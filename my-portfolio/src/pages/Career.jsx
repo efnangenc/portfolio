@@ -1,12 +1,18 @@
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
-import experiences from "../data/careerItems";
+import useExperiencesData from "../data/careerItems";
 import "../styles/Career.scss";
 import path from "../assets/eman.png";
 import video from "../assets/SPACE TYPE GENERATOR - Google Chrome 2025-09-14 19-45-47.mp4.mp4";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Career() {
   const careerItem = menuItems.find((item) => item.id === "career");
+  const { t, lang, setLang } = useLanguage();
+  const { experiences } = useExperiencesData();
+
+  console.log("EXPERIENCES TYPE:", typeof experiences, Array.isArray(experiences), experiences);
+
 
   // const futureGoals = [
   //   {
@@ -31,7 +37,7 @@ function Career() {
 
   return (
     <div className="career">
-      <CardHead item={careerItem} />
+      <CardHead item={t(careerItem)} />
 
       {/* Career Plan Section */}
       <div className="career-plan">
@@ -81,7 +87,7 @@ function Career() {
 
           {/* Experience Items */}
           <div className="experiences-section">
-            <h3 className="section-title">Professional Experience</h3>
+            <h3 className="section-title">{t("ProfessionalExperience")}</h3>
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}

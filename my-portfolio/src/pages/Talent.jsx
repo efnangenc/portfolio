@@ -3,10 +3,12 @@ import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
 import skillsData from "../data/skillsData";
 import "../styles/Talent.scss";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Talent() {
   const talentItem = menuItems.find((item) => item.id === "talent");
   const [toggleState, setToggleState] = useState(1);
+  const { t, lang, setLang } = useLanguage();
 
   const toggleTab = (index) => {
     setToggleState(index);

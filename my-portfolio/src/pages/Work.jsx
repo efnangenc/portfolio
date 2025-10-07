@@ -151,11 +151,13 @@ import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
 import projectsData from "../data/workItems";
 import "../styles/Work.scss";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Work() {
   const workItem = menuItems.find((item) => item.id === "work");
   const [openItem, setOpenItem] = useState(null);
   const [activeTab, setActiveTab] = useState({});
+  const { t, lang, setLang } = useLanguage();
 
   const toggleItem = (itemId) => {
     const idStr = String(itemId);
