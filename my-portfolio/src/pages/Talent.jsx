@@ -78,22 +78,26 @@ function Talent() {
               <div className="active-content">
                 <div className="skill-section">
                   {/* Section Header */}
-                    <h3 className="section-title">{skillsData[key].title}</h3>
-                  {/* <div className="section-header"> */}
-                    {/* <p className="section-description">
-                      {i === 0 && "Frontend technologies for creating beautiful, interactive user interfaces"}
-                      {i === 1 && "Design tools and frameworks for creating stunning visual experiences"} 
-                      {i === 2 && "Backend technologies and databases for robust server-side development"}
-                      {i === 3 && "Mobile and cross-platform development solutions"}
-                    </p> */}
-                  {/* </div> */}
+                  <h3 className="section-title">{skillsData[key].title}</h3>
+                  {/* <div className="section-header">
+                    <p className="section-description">
+                      {i === 0 &&
+                        "Frontend technologies for creating beautiful, interactive user interfaces"}
+                      {i === 1 &&
+                        "Design tools and frameworks for creating stunning visual experiences"}
+                      {i === 2 &&
+                        "Backend technologies and databases for robust server-side development"}
+                      {i === 3 &&
+                        "Mobile and cross-platform development solutions"}
+                    </p>
+                  </div> */}
 
                   {/* Skills Grid */}
                   <div className="skills-grid">
                     {skillsData[key].skills.map((item, index) => (
                       <div key={index} className="skill-card">
                         <div className="skill-header">
-                          <div className="skill-icon">{item.icon}</div>
+                          {/* <div className="skill-icon">{item.icon}</div> */}
                           <div className="skill-info">
                             <h4 className="skill-name">{item.name}</h4>
                           </div>
