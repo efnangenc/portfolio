@@ -18,10 +18,14 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: |
+         cd my-portfolio
+         npm install
 
       - name: Build project
-        run: npm run build
+        run: |
+         cd my-portfolio
+         npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
