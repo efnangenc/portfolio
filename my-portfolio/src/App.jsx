@@ -16,14 +16,14 @@ function App() {
   return (
     <>
       <div className="languageCont">
-        <p>{t("click")}</p>
+        {/* <p>{t("click")}</p> */}
         <button className="langButton" onClick={() => setLang("tr")}>
           🇹🇷 Türkçe
         </button>
         <button className="langButton" onClick={() => setLang("en")}>
           🇬🇧 English
         </button>
-        <p>Şu anki dil: {lang}</p>
+        {/* <p>Şu anki dil: {lang}</p> */}
       </div>
 
       <br />
