@@ -1,32 +1,42 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
 import socialLinks from "../data/contactItems";
 import "../styles/Contact.scss";
 import { useLanguage } from "../providers/LanguageProvider";
+import { sendEmail } from "../services/mailService";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   const contactItem = menuItems.find((item) => item.id === "contact");
-  const { t, lang, setLang } = useLanguage();
-  
+  const { t } = useLanguage();
+  const formRef = useRef();
+  const [captchaValue, setCaptchaValue] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const recapthcaValue = recapthcaRef.current.getValue();
+    if (!recapthcaValue) {
+      alert("Please verify that you are not a robot.");
+      return;
+    }
     if (!formData.name || !formData.email || !formData.message) {
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus(null), 3000);
@@ -34,24 +44,25 @@ function Contact() {
     }
 
     setIsSubmitting(true);
-    
-    // EmailJS implementation burada olacak
-    setTimeout(() => {
-      console.log("Form data:", formData);
+
+    const result = await sendEmail(formRef, captchaValue);
+
+    if (result.success) {
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }, 2000);
+      formRef.current.reset();
+    } else {
+      setSubmitStatus("error");
+    }
+
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus(null), 5000);
   };
-
-
 
   return (
     <div className="contact">
       <CardHead item={contactItem} />
-      
-      {/* Hero Text Section */}
+
       <div className="cont-text">
         <div className="text-container">
           <div className="text-line">
@@ -67,7 +78,6 @@ function Contact() {
             <div className="text-decoration"></div>
           </div>
         </div>
-        
         {/* Animated Elements */}
         {/* <div className="floating-elements">
           <div className="float-item">💡</div>
@@ -77,15 +87,17 @@ function Contact() {
         </div> */}
       </div>
 
-      {/* Contact Form Section */}
       <div className="contact-form-section">
         <div className="form-container">
           <div className="form-header">
             <h2>Get In Touch</h2>
-            <p>Ready to start your next project? Let's create something amazing together!</p>
+            <p>
+              Ready to start your next project? Let's create something amazing
+              together!
+            </p>
           </div>
 
-          <div className="contact-form">
+          <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
               <div className="input-group top">
                 <div className="input-label">Your Name *</div>
@@ -94,11 +106,12 @@ function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   className="form-input"
+                  required
                 />
               </div>
-              
+
               <div className="input-group top">
                 <div className="input-label">Email Address *</div>
                 <input
@@ -106,8 +119,9 @@ function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="john@example.com"
+                  placeholder="your_email@example.com"
                   className="form-input"
+                  required
                 />
               </div>
             </div>
@@ -119,7 +133,7 @@ function Contact() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                placeholder="Project Discussion"
+                placeholder="Subject"
                 className="form-input"
               />
             </div>
@@ -130,50 +144,55 @@ function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Tell me about your project, ideas, or just say hello!"
+                placeholder="Message"
                 rows="6"
-                className="form-textarea"
+                className="form-input"
+                required
               />
             </div>
 
-            <div 
-              className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
-              onClick={!isSubmitting ? handleSubmit : undefined}
-            >
-              {isSubmitting ? (
-                <>
-                  <span className="spinner"></span>
-                  Sending...
-                </>
-              ) : (
-                'Send Message'
-              )}
+            {/* <ReCAPTCHA
+              sitekey={import.meta.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              onChange={(value) => setCaptchaValue(value)}
+            /> */}
+            <div className="button">
+              <button
+                type="submit"
+                className={`submit-btn ${isSubmitting ? "submitting" : ""}`}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="spinner"></span>
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
+              </button>
             </div>
-
-            {/* {submitStatus === 'success' && (
+            {submitStatus === "success" && (
               <div className="status-message success">
                 <span className="status-icon">✅</span>
                 Message sent successfully! I'll get back to you soon.
               </div>
             )}
 
-            {submitStatus === 'error' && (
+            {submitStatus === "error" && (
               <div className="status-message error">
                 <span className="status-icon">❌</span>
-                Please fill in all required fields.
+                Please fill in all required fields or try again later.
               </div>
-            )} */}
-          </div>
+            )}
+          </form>
         </div>
 
-        {/* Contact Info & Social Links */}
         <div className="contact-info">
           <div className="info-section">
             <h3>Let's Connect</h3>
             <p>
-              I'm always interested in new opportunities, exciting projects, 
-              and meeting fellow developers. Whether you have a project in mind 
-              or just want to chat about technology, feel free to reach out!
+              I'm always interested in new opportunities, exciting projects, and
+              meeting fellow developers. Feel free to reach out!
             </p>
           </div>
 
@@ -187,7 +206,7 @@ function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
-                  style={{ '--accent-color': link.color }}
+                  style={{ "--accent-color": link.color }}
                 >
                   <div className="social-icon">{link.icon}</div>
                   <span className="social-name">{link.name}</span>

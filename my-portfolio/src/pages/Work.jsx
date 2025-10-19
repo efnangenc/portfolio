@@ -26,8 +26,6 @@ function Work() {
     setActiveTab((prev) => ({ ...prev, [idStr]: tabIndex }));
   };
 
-  
-
   return (
     <div className="work">
       <CardHead item={workItem} />
@@ -35,7 +33,7 @@ function Work() {
         {Object.keys(projectsData).map((key) => {
           const project = projectsData[key];
           const projectId = String(project.id);
-          
+
           return (
             <div key={projectId} className={`project-item ${projectId}`}>
               <div
@@ -55,7 +53,7 @@ function Work() {
                     </div>
                   </div>
                 </div>
-                
+
                 {openItem === projectId && (
                   <>
                     <div className="project-ss">
@@ -84,125 +82,102 @@ function Work() {
 
                     {/* Enhanced Project Cards */}
                     <div className="project-showcase">
-                     
-                      {/* Features Card */}
-                      <div className="showcase-card features-card">
-                        <div className="card-header">
-                          {/* <div className="card-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                          </div> */}
-                          <h3>Key Features</h3>
-                        </div>
-                        <div className="card-content">
-                          <div className="features-list">
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>Multi-Vendor Platform:</strong> Complete marketplace solution with vendor management
-                              </div>
-                            </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>MVC Architecture:</strong> Scalable and maintainable code structure
-                              </div>
-                            </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>Cloud Integration:</strong> Azure DevOps for seamless deployment and scaling
-                              </div>
-                            </div>
-                            <div className="feature-item">
-                              <div className="feature-bullet"></div>
-                              <div className="feature-text">
-                                <strong>API Development:</strong> RESTful services with HttpClient optimization
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      {Object.keys(project.showcase).map(
+                        (cardKey, cardIndex) => {
+                          const card = project.showcase[cardKey];
 
-                      {/* Tech Stack Card */}
-                      <div className="showcase-card tech-card">
-                        <div className="card-header">
-                          {/* <div className="card-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                            </svg>
-                          </div> */}
-                          <h3>Technologies Used</h3>
-                        </div>
-                        <div className="card-content">
-                          <div className="tech-grid">
-                            <div className="tech-category">
-                              <h4>Frontend</h4>
-                              <div className="tech-items">
-                                <span className="tech-item react">React</span>
-                                <span className="tech-item html">HTML5</span>
-                                <span className="tech-item css">CSS3</span>
-                                <span className="tech-item js">JavaScript</span>
+                          // Eğer card "technologiesused" ise farklı işleyelim
+                          if (cardKey === "technologiesused") {
+                            return (
+                              <div
+                                key={cardIndex}
+                                className="showcase-card tech-card"
+                              >
+                                <div className="card-header">
+                                  <h3>{card.title}</h3>
+                                </div>
+                                <div className="card-content">
+                                  <div className="tech-grid">
+                                    {card.content.map((techGroup, i) => (
+                                      <div key={i} className="tech-category">
+                                        <h4>{techGroup.part}</h4>
+                                        <div className="tech-items">
+                                          {techGroup.cont.map((tech, j) => (
+                                            <span key={j} className="tech-item">
+                                              {tech}
+                                            </span>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                            <div className="tech-category">
-                              <h4>Backend</h4>
-                              <div className="tech-items">
-                                <span className="tech-item csharp">C#</span>
-                                <span className="tech-item dotnet">.NET Core</span>
-                                <span className="tech-item api">REST API</span>
-                              </div>
-                            </div>
-                            <div className="tech-category">
-                              <h4>Database & Cloud</h4>
-                              <div className="tech-items">
-                                <span className="tech-item azure">Azure</span>
-                                <span className="tech-item sql">SQL Server</span>
-                                <span className="tech-item devops">DevOps</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                            );
+                          }
 
-                      
-                      <div className="showcase-card overview-card">
-                        <div className="card-header">
-                          {/* <div className="card-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                          </div> */}
-                          <h3>Project Overview</h3>
-                        </div>
-                        <div className="card-content">
-                          <div className="project-timeline">
-                            <span className="timeline-period">Nov 2024 - Present</span>
-                            <span className="timeline-company">Associated with BilgeAdam Boost</span>
-                          </div>
-                          <p className="project-description">
-                            I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. 
-                            Utilizing the MVC architecture, I designed a scalable application framework and developed an 
-                            intuitive front-end using modern web technologies. Through seamless API integration, I created 
-                            a robust multi-vendor platform, focusing on efficient data communication and user experience.
-                          </p>
-                          <div className="project-highlights">
-                            <div className="highlight-item">
-                              <span className="highlight-icon">⚡</span>
-                              <span>High Performance Architecture</span>
+                          // Eğer card "overview" ise farklı işleyelim
+                          if (cardKey === "overview") {
+                            return (
+                              <div
+                                key={cardIndex}
+                                className="showcase-card overview-card"
+                              >
+                                <div className="card-header">
+                                  <h3>{card.title}</h3>
+                                </div>
+                                <div className="card-content">
+                                  <div className="project-timeline">
+                                    <span className="timeline-period">
+                                      {card.timeline}
+                                    </span>
+                                    <span className="timeline-company">
+                                      {card.company}
+                                    </span>
+                                  </div>
+                                  <p className="project-description">
+                                    {card.description}
+                                  </p>
+                                  <div className="project-highlights">
+                                    {card.highlights.map((highlight, i) => (
+                                      <div key={i} className="highlight-item">
+                                        <span className="highlight-icon">
+                                          ⚡
+                                        </span>
+                                        <span>{highlight}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          }
+
+                          // Default: features gibi düz liste
+                          return (
+                            <div
+                              key={cardIndex}
+                              className="showcase-card features-card"
+                            >
+                              <div className="card-header">
+                                <h3>{card.title}</h3>
+                              </div>
+                              <div className="card-content">
+                                <div className="features-list">
+                                  {card.content.map((feature, i) => (
+                                    <div key={i} className="feature-item">
+                                      <div className="feature-bullet"></div>
+                                      <div className="feature-text">
+                                        {feature}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
-                            <div className="highlight-item">
-                              <span className="highlight-icon">🔐</span>
-                              <span>Secure Payment Integration</span>
-                            </div>
-                            <div className="highlight-item">
-                              <span className="highlight-icon">📱</span>
-                              <span>Responsive Mobile Design</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          );
+                        }
+                      )}
                     </div>
 
                     {/* Tab Container */}

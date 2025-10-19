@@ -143,91 +143,104 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
   const { t, lang, setLang } = useLanguage();
 
   useEffect(() => {
-    let observer;
     let mobileObserver;
 
-    observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         let maxRatio = 0;
         let mostVisible = null;
-        let sectionId = null;
+        // let sectionId = null;
 
         entries.forEach((entry) => {
           if (entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
             mostVisible = entry.target;
-            sectionId = entry.target.id;
+            // sectionId = entry.target.id;
             console.log(entry.target.id, entry.intersectionRatio);
+            console.warn(mostVisible.id);
 
             // if (window.innerWidth > 768) setIsVisible(sectionId);
           }
         });
-        if (mostVisible) setIsVisible(sectionId);
+        if (mostVisible) setIsVisible(mostVisible.id);
       },
       {
         // threshold: [0, 0.25, 0.5, 0.75, 1],
-        threshold: [0.5],
-        // rootMargin: "0px",
+        threshold: 0.3,
+        rootMargin: "0px 0px -20% 0px",
         // scrollMargin: "0px",
       }
     );
 
-    mobileObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
+    const timer = setTimeout(() => {
+      itemRefs.current.forEach((el) => observer.observe(el));
 
-            if (window.innerWidth <= 768) {
-              setMobileIsVisible(sectionId);
-
-              // Navbar scroll hesaplama - sadece mobilde
-              const currentIndex = menuItems.findIndex(
-                (item) => item.id === sectionId
-              );
-              const totalItems = menuItems.length;
-
-              if (BarRef?.current) {
-                const navbar = BarRef.current;
-                const maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
-                const scrollPosition =
-                  (currentIndex / (totalItems - 1)) * maxScrollLeft;
-
-                navbar.scrollTo({
-                  left: scrollPosition,
-                  behavior: "smooth",
-                });
-
-                console.log(
-                  `Mobile Active: ${sectionId}, Navbar Scroll: ${scrollPosition}px`
-                );
-                console.log("Window width:", window.innerWidth);
-                console.log(
-                  "Content items:",
-                  document.querySelectorAll(".content__item").length
-                );
-                console.log("Navbar ref:", document.querySelector(".navi"));
-              }
-            }
-          }
+      const images = document.querySelectorAll(".about-banner img");
+      images.forEach((img) => {
+        img.addEventListener("load", () => {
+          observer.disconnect();
+          itemRefs.current.forEach((el) => observer.observe(el));
         });
-      },
-      {
-        threshold: 0.4,
-      }
-    );
+      });
+      return () => {
+        clearTimeout(timer);
+        observer?.disconnect();
+        mobileObserver?.disconnect();
+      };
+    }, 300);
+    return () => clearTimeout(timer);
 
-    itemRefs.current.forEach((el) => {
-      if (el) {
-        observer.observe(el);
-        mobileObserver.observe(el);
-      }
-    });
+    // mobileObserver = new IntersectionObserver(
+    //   (entries) => {
+    //     entries.forEach((entry) => {
+    //       if (entry.isIntersecting) {
+    //         const sectionId = entry.target.id;
 
-    return () => {
-      observer?.disconnect();
-      mobileObserver?.disconnect();
-    };
+    //         if (window.innerWidth <= 768) {
+    //           setMobileIsVisible(sectionId);
+
+    //           // Navbar scroll hesaplama - sadece mobilde
+    //           const currentIndex = menuItems.findIndex(
+    //             (item) => item.id === sectionId
+    //           );
+    //           const totalItems = menuItems.length;
+
+    //           if (BarRef?.current) {
+    //             const navbar = BarRef.current;
+    //             const maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
+    //             const scrollPosition =
+    //               (currentIndex / (totalItems - 1)) * maxScrollLeft;
+
+    //             navbar.scrollTo({
+    //               left: scrollPosition,
+    //               behavior: "smooth",
+    //             });
+
+    //             console.log(
+    //               `Mobile Active: ${sectionId}, Navbar Scroll: ${scrollPosition}px`
+    //             );
+    //             console.log("Window width:", window.innerWidth);
+    //             console.log(
+    //               "Content items:",
+    //               document.querySelectorAll(".content__item").length
+    //             );
+    //             console.log("Navbar ref:", document.querySelector(".navi"));
+    //           }
+    //         }
+    //       }
+    //     });
+    //   },
+    //   {
+    //     threshold: 0.4,
+    //   }
+    // );
+
+    // itemRefs.current.forEach((el) => {
+    //   if (el) {
+    //     observer.observe(el);
+    //     mobileObserver.observe(el);
+    //   }
+    // });
   }, [setIsVisible, setMobileIsVisible, BarRef]);
 
   const setRef = (id) => (el) => {

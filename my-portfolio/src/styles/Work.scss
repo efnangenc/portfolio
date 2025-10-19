@@ -16,6 +16,13 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        transition: all 0.5s ease;
+
+        min-height: 10dvh;
+        // background-color: red;
+        &.expanded {
+          max-height: 300dvh;
+        }
 
         .project-header {
           cursor: pointer;
@@ -66,7 +73,8 @@
           border-radius: 2rem;
           overflow: hidden;
           position: relative;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          transition: opacity 0.3s ease, transform 0.3s ease;
 
           img {
             width: 100%;
@@ -108,6 +116,13 @@
             }
           }
         }
+        &.collapsed {
+          pointer-events: none;
+          opacity: 0.8;
+        }
+        &:hover .project-image img {
+          transform: scale(1.05);
+        }
 
         .big-title {
           // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -136,13 +151,16 @@
             // position: relative;
 
             h1 {
-              font-size: clamp(4rem, 17vw, 13rem);
+              font-size: clamp(5rem, 20dvw, 20rem);
               font-weight: 800;
               color: white;
               margin: 0;
               text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
               // letter-spacing: -0.05em;
               line-height: 0.9;
+              color: transparent; // içi boş, sadece kenar çizgisi olacak
+              -webkit-text-stroke: 2px white; // çizgi kalınlığı ve rengi
+              text-shadow: none; // gölgeyi kapatalım ki çizgi net görünsün
             }
 
             // .title-decoration {
@@ -235,7 +253,7 @@
               display: flex;
               // align-items: center;
               // gap: 2rem;
-              margin-bottom: 2rem;
+              margin-bottom: 1rem;
               padding-bottom: 2rem;
               border-bottom: 2px solid #dbdee0;
               justify-content: center;
@@ -294,6 +312,7 @@
                 line-height: 1.7;
                 color: #495057;
                 margin-bottom: 1.5rem;
+                text-align: justify;
               }
 
               .project-highlights {
@@ -316,26 +335,29 @@
               // Tech Grid
               .tech-grid {
                 .tech-category {
-                  margin-bottom: 1.5rem;
-
+                  // margin-bottom: rem;
+                  padding-top: 0rem;
                   h4 {
                     color: #2c3e50;
-                    margin-bottom: 0.75rem;
-                    font-size: 1rem;
+                    // margin-bottom: 1rem;
+                    font-size: 1.3rem;
                     font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
+                    display: flex;
+                    justify-content: center;
                   }
 
                   .tech-items {
                     display: flex;
+                    justify-content: center;
                     flex-wrap: wrap;
                     gap: 0.5rem;
 
                     .tech-item {
                       padding: 1rem 1.5rem;
-                      border-radius: 2rem;
-                      font-size: 1rem;
+                      border-radius: 1.3rem;
+                      font-size: 1.2rem;
                       font-weight: 600;
                       color: black;
                       // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.349);
@@ -537,10 +559,10 @@
         }
 
         .big-title {
-          height: 40vh;
+          height: 30dvh;
 
           .title-content h1 {
-            font-size: clamp(6rem, 10dvw, 5rem);
+            font-size: clamp(5rem, 10dvw, 5rem);
           }
         }
 
@@ -591,11 +613,55 @@
             // flex-shrink: 0;
             flex: 0 0 auto;
             min-height: 70dvh;
-            width: 75%;
+            max-height: 70dvh;
+            width: 80%;
             // min-width: 0;
-            max-width: 75%;
+            // max-width: 80%;
             // overflow-y: hidden;
             overflow-x: hidden;
+            padding: 1rem;
+            .card-header {
+              padding: 1rem;
+              margin-bottom: 1rem;
+            }
+            .card-content {
+              padding: 0;
+              .project-timeline {
+                display: flex;
+                justify-content: center;
+                // text-align: center;
+                .timeline-company {
+                  display: none;
+                }
+                .project-description {
+                  padding: 0.5rem;
+                }
+              }
+              .tech-grid {
+                .tech-category {
+                  margin-bottom: 0;
+                  h4 {
+                    font-size: 1rem;
+                  }
+                  .tech-items {
+                    .tech-item {
+                      padding: 0.5rem 1rem;
+                      font-size: 0.7rem;
+                      border-radius: 0.9rem;
+                    }
+                  }
+                }
+              }
+              .features-list {
+                .feature-item {
+                  padding: 1rem 0.5rem;
+                  // gap: 2rem;
+                  .feature-text {
+                    line-height: 1.5;
+                  }
+                }
+              }
+            }
           }
         }
 

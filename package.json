@@ -3,6 +3,7 @@
     "sass": "^1.92.0"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "react-intersection-observer": "^9.16.0"
   }
 }

@@ -5,6 +5,46 @@ const workItems = {
     bigtitle: "EFEF",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+    showcase: {
+      keyfeatures: {
+        title: "Key Features",
+        content: [
+          "Multi-Vendor Platform: Complete marketplace solution with vendor management",
+          "MVC Architecture: Scalable and maintainable code structure",
+          "Cloud Integration: Azure DevOps for seamless deployment and scaling",
+          "API Development: RESTful services with HttpClient optimization",
+        ],
+      },
+      technologiesused: {
+        title: "Technologies Used",
+        content: [
+          {
+            part: "Frontend",
+            cont: ["React", "HTML5", "CSS3", "JS", "Bootstrap"],
+          },
+          {
+            part: "BackEnd",
+            cont: ["C#", ".Net Core", "Rest API"],
+          },
+          {
+            part: "Database & Clousd",
+            cont: ["Azure", "SQL Server", "Devops"],
+          },
+        ],
+      },
+      overview: {
+        title: "Project Overview",
+        timeline: "Jan 2025 - Feb 2025",
+        company: "Associated with Bilgeadam",
+        description:
+          "I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
+        highlights: [
+          "High Performance Architecture",
+          "Secure Payment Integration",
+          "Responsive Mobile Design",
+        ],
+      },
+    },
     tabs: {
       technologies: {
         title: "Technologies",
@@ -45,6 +85,46 @@ const workItems = {
     bigtitle: "EFEF",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
+    showcase: {
+      keyfeatures: {
+        title: "Key Features",
+        content: [
+          "Multi-Vendor Platform: Complete marketplace solution with vendor management",
+          "MVC Architecture: Scalable and maintainable code structure",
+          "Cloud Integration: Azure DevOps for seamless deployment and scaling",
+          "API Development: RESTful services with HttpClient optimization",
+        ],
+      },
+      technologiesused: {
+        title: "Technologies Used",
+        content: [
+          {
+            part: "Frontend",
+            cont: ["React", "HTML5", "CSS3", "JS"],
+          },
+          {
+            part: "BackEnd",
+            cont: ["C#", ".Net Core", "Rest API"],
+          },
+          {
+            part: "Database & Clousd",
+            cont: ["Azure", "SQL Server", "Devops"],
+          },
+        ],
+      },
+      overview: {
+        title: "Project Overview",
+        timeline: "Jan 2025 - Feb 2025",
+        company: "Associated with Bilgeadam",
+        description:
+          "I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
+        highlights: [
+          "High Performance Architecture",
+          "Secure Payment Integration",
+          "Responsive Mobile Design",
+        ],
+      },
+    },
     tabs: {
       technologies: {
         title: "Technologies",
@@ -84,6 +164,46 @@ const workItems = {
     bigtitle: "EFEF",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
+    showcase: {
+      keyfeatures: {
+        title: "Key Features",
+        content: [
+          "Multi-Vendor Platform: Complete marketplace solution with vendor management",
+          "MVC Architecture: Scalable and maintainable code structure",
+          "Cloud Integration: Azure DevOps for seamless deployment and scaling",
+          "API Development: RESTful services with HttpClient optimization",
+        ],
+      },
+      technologiesused: {
+        title: "Technologies Used",
+        content: [
+          {
+            part: "Frontend",
+            cont: ["React", "HTML5", "CSS3", "JS"],
+          },
+          {
+            part: "BackEnd",
+            cont: ["C#", ".Net Core", "Rest API"],
+          },
+          {
+            part: "Database & Clousd",
+            cont: ["Azure", "SQL Server", "Devops"],
+          },
+        ],
+      },
+      overview: {
+        title: "Project Overview",
+        timeline: "Jan 2025 - Feb 2025",
+        company: "Associated with Bilgeadam",
+        description:
+          "I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
+        highlights: [
+          "High Performance Architecture",
+          "Secure Payment Integration",
+          "Responsive Mobile Design",
+        ],
+      },
+    },
     tabs: {
       technologies: {
         title: "Technologies",
