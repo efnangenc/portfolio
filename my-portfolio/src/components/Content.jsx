@@ -134,6 +134,8 @@
 // export default Content;
 
 import { useEffect, useRef } from "react";
+import React from "react";
+
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
 import { useLanguage } from "../providers/LanguageProvider";
@@ -267,7 +269,7 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
           >
             {item.id !== "home" && (
               <h2 style={{ backgroundColor: item.color }}>
-                {t("YoureHere")} -- {t(item.label)} {t("Section")}
+                {t("YoureHere")} -> {t(item.label)} {t("Section")}
                 <p>{item.no}</p>
               </h2>
             )}

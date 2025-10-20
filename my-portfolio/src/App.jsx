@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import React from "react";
 import "./styles/App.scss";
 import { useLanguage } from "./providers/LanguageProvider";
 import Navi from "./components/Navi.jsx";
@@ -9,7 +10,7 @@ function App() {
   const [active, setActive] = useState("home");
   const [isVisible, setIsVisible] = useState("home");
   const [isMobileVisible, setMobileIsVisible] = useState("home");
-  
+
   // Sadece navbar ref'i gerekli
   const BarRef = useRef(null);
 

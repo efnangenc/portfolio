@@ -1,5 +1,7 @@
 import "../styles/Home.scss";
 import path from "../assets/oO.png"
+import React from "react";
+
 
 function Home() {
   return (

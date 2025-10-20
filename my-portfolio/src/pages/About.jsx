@@ -1,5 +1,7 @@
 import "../styles/About.scss";
 import CardHead from "../components/CardHead";
+import React from "react";
+
 import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 

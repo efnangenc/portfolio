@@ -20,7 +20,12 @@ export function LanguageProvider({ children }) {
 
   // 5) t fonksiyonu: verilen anahtara (key) göre çeviri döndürüyor
   //    messages[lang][key] yoksa key'i geri döndürüyor (basit fallback)
-  const t = (key) => messages[lang][key] || key;  //messages[lang]?.[key] ?? key
+  // const t = (key) => messages[lang][key] || key;  //messages[lang]?.[key] ?? key
+  const t = (key) => {
+  if (typeof key !== "string") return key; // güvenlik: key yoksa kendisini döndür
+  return key.split('.').reduce((obj, k) => obj?.[k], messages[lang]) ?? key;
+};
+
 
   // 6) Provider üzerinden value (lang, setLang, t) paylaşılıyor
   // value, children bileşenlere aktarılacak şey.

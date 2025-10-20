@@ -9,7 +9,7 @@
   "Career": "Career",
   "Contact": "Contact",
   "AboutText": "As a passionate developer, I create user-focused solutions using modern technologies. I write high-quality code at every stage, from frontend to backend, from design to deployment.",
-  "YoureHere": "You are here!!!",
+  "YoureHere": "You are here",
   "Section": "Section",
 
   "experiences": [
@@ -17,7 +17,7 @@
       "title": "Software Development Intern",
       "company": "BilgeAdam Technology",
       "type": "Full-time",
-      "duration": "Jun 2024 - Mar 2025 · 10 months",
+      "duration": "Jun 2024 - Mar 2025",
       "location": "Ankara, Turkey · On-site",
       "description": "Developed Back-End applications using ASP.NET Core and Entity Framework Core while designing modern and dynamic user interfaces with HTML5, CSS3, and JavaScript. Applied Object-Oriented Programming (OOP) principles and SOLID design patterns to deliver high-quality and maintainable software solutions.",
       "skills": [
@@ -42,7 +42,7 @@
       "title": "Engineer Intern",
       "company": "RHI Magnesita",
       "type": "Internship",
-      "duration": "Jan 2023 - Feb 2023 · 2 months",
+      "duration": "Jan 2023 - Feb 2023",
       "location": "Eskişehir, Turkey · On-site",
       "description": "Collaborated with colleagues to implement a new production tracking system that increased efficiency and reduced downtime. Cooperated with cross-functional teams to streamline production processes.",
       "skills": [
@@ -61,7 +61,7 @@
       "title": "Engineer Intern",
       "company": "ENTES Elektronik",
       "type": "Internship",
-      "duration": "Jul 2022 - Aug 2022 · 2 months",
+      "duration": "Jul 2022 - Aug 2022",
       "location": "İstanbul, Turkey · On-site",
       "description": "Implemented rigorous quality control measures, reducing product defects within the first month. Diagnosed and resolved technical issues on PCB boards, resulting in a 20% reduction in production downtime.",
       "skills": [

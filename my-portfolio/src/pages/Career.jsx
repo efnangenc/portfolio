@@ -1,5 +1,7 @@
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
+import React from "react";
+
 import useExperiencesData from "../data/careerItems";
 import "../styles/Career.scss";
 import path from "../assets/eman.png";

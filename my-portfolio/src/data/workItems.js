@@ -2,7 +2,7 @@ const workItems = {
   1: {
     id: "item1",
     title: "E-Commerce Platform",
-    bigtitle: "EFEF",
+    bigtitle: "BEAM",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
     showcase: {
@@ -20,14 +20,14 @@ const workItems = {
         content: [
           {
             part: "Frontend",
-            cont: ["React", "HTML5", "CSS3", "JS", "Bootstrap"],
+            cont: ["HTML5", "CSS3", "JS", "Bootstrap"],
           },
           {
-            part: "BackEnd",
+            part: "Backend",
             cont: ["C#", ".Net Core", "Rest API"],
           },
           {
-            part: "Database & Clousd",
+            part: "Database & Cloud",
             cont: ["Azure", "SQL Server", "Devops"],
           },
         ],
@@ -37,10 +37,10 @@ const workItems = {
         timeline: "Jan 2025 - Feb 2025",
         company: "Associated with Bilgeadam",
         description:
-          "I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
+          "My team and I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, Designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, We created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
         highlights: [
           "High Performance Architecture",
-          "Secure Payment Integration",
+          "Layered Architecture Pattern",
           "Responsive Mobile Design",
         ],
       },
@@ -81,7 +81,7 @@ const workItems = {
   },
   2: {
     id: "item2",
-    title: "Mobile Dashboard",
+    title: "Diet Tracking Program",
     bigtitle: "EFEF",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
@@ -100,7 +100,7 @@ const workItems = {
         content: [
           {
             part: "Frontend",
-            cont: ["React", "HTML5", "CSS3", "JS"],
+            cont: ["VSForm", "HTML5", "CSS3", "JS"],
           },
           {
             part: "BackEnd",
@@ -108,7 +108,7 @@ const workItems = {
           },
           {
             part: "Database & Clousd",
-            cont: ["Azure", "SQL Server", "Devops"],
+            cont: ["Github", "SQL Server"],
           },
         ],
       },
@@ -117,7 +117,7 @@ const workItems = {
         timeline: "Jan 2025 - Feb 2025",
         company: "Associated with Bilgeadam",
         description:
-          "I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
+          "We developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database. Utilizing the MVC architecture, I designed a scalable application framework and developed an intuitive front-end using modern web technologies. Through seamless API integration, I created a robust multi-vendor platform, focusing on efficient data communication and user experience.",
         highlights: [
           "High Performance Architecture",
           "Secure Payment Integration",

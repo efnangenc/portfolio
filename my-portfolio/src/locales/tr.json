@@ -9,7 +9,7 @@
   "Career": "Tecrübe",
   "Contact": "İletişim",
   "AboutText": "Tutkulu bir geliştirici olarak, modern teknolojilerle kullanıcı odaklı çözümler üretiyorum. Frontend'den backend'e, tasarımdan deployment'a kadar her aşamada kaliteli kod yazıyorum.",
-  "YoureHere": "Şu an buradasınız.",
+  "YoureHere": "Buradasınız",
   "Section": "Bölümü",
 
   "experiences": [
@@ -17,7 +17,7 @@
       "title": "Yazılım Geliştirme Stajyeri",
       "company": "BilgeAdam Teknoloji",
       "type": "Tam zamanlı",
-      "duration": "Haz 2024 - Mar 2025 · 10 ay",
+      "duration": "Haz 2024 - Mar 2025",
       "location": "Ankara, Türkiye · Ofiste",
       "description": "ASP.NET Core ve Entity Framework Core kullanarak Back-End uygulamaları geliştirdim. HTML5, CSS3 ve JavaScript ile modern ve dinamik kullanıcı arayüzleri tasarladım. Nesne Yönelimli Programlama (OOP) prensipleri ve SOLID tasarım kalıplarını uygulayarak kaliteli ve sürdürülebilir yazılım çözümleri ürettim.",
       "skills": [
@@ -39,10 +39,10 @@
       ]
     },
     {
-      "title": "Mühendis Stajyeri",
+      "title": "Elektrik Elektonik Mühendis Stajyeri",
       "company": "RHI Magnesita",
       "type": "Staj",
-      "duration": "Oca 2023 - Şub 2023 · 2 ay",
+      "duration": "Oca 2023 - Şub 2023",
       "location": "Eskişehir, Türkiye · Ofiste",
       "description": "Verimliliği artıran ve duruş sürelerini azaltan yeni bir üretim takip sistemi geliştirilmesine katkıda bulundum. Üretim süreçlerini iyileştirmek için çapraz fonksiyonel ekiplerle işbirliği yaptım.",
       "skills": [
@@ -58,10 +58,10 @@
       ]
     },
     {
-      "title": "Mühendis Stajyeri",
+      "title": "Elektrik Elektonik Mühendis Stajyeri",
       "company": "ENTES Elektronik",
       "type": "Staj",
-      "duration": "Tem 2022 - Ağu 2022 · 2 ay",
+      "duration": "Tem 2022 - Ağu 2022",
       "location": "İstanbul, Türkiye · Ofiste",
       "description": "Katı kalite kontrol önlemleri uygulayarak ilk ay içinde ürün hatalarını azalttım. PCB kartlarında teknik sorunları teşhis edip çözdüm, üretim duruşlarında %20 azalma sağladım.",
       "skills": [

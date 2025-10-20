@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
 import socialLinks from "../data/contactItems";
+import React from "react";
+
 import "../styles/Contact.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 import { sendEmail } from "../services/mailService";

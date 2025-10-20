@@ -1,5 +1,7 @@
 import { useLanguage } from "../providers/LanguageProvider";
 import "../styles/CardHead.scss"
+import React from "react";
+
 
 function CardHead({ item }) {
   const { t, lang, setLang } = useLanguage();
