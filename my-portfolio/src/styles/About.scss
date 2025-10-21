@@ -88,59 +88,64 @@
         }
         .banner-visual {
           position: relative;
+          flex: 1 1 300px;
           width: 100%;
-          max-width: 35%; /* örnek */
+          max-width: 35%;
           aspect-ratio: 4/3;
-          min-height: 50dvh; /* snippet div yüksekliğine göre */
-          // overflow: hidden;
+          min-height: 50dvh;
           border-radius: 1rem;
-        }
+          overflow: hidden;
 
-        .banner-visual img {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          top: 0;
-          left: 0;
-          opacity: 0;
-          animation: fade 8s infinite;
-        }
+          // background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+          background-size: cover;
+          background-position: center;
 
-        .banner-visual img:nth-child(1) {
-          animation-delay: 0s;
-        }
-        .banner-visual img:nth-child(2) {
-          animation-delay: 4s;
-        }
-        .banner-visual img:nth-child(3) {
-          animation-delay: 8s;
-        }
+          animation: fade-background 3s infinite;
 
-        @keyframes fade {
-          0% {
-            opacity: 0;
-          }
-          8% {
-            opacity: 1;
-          }
-          33% {
-            opacity: 1;
-          }
-          41% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 0;
-          }
+          // img {
+          //   position: absolute;
+          //   inset: 0;
+          //   width: 100%;
+          //   height: 100%;
+          //   object-fit: cover;
+          //   top: 0;
+          //   left: 0;
+          //   opacity: 0;
+          //   animation: fade 3s infinite;
+          // }
+
+          // img:nth-child(1) {
+          //   animation-delay: 0s;
+          // }
+          // img:nth-child(2) {
+          //   animation-delay: 1s;
+          // }
+          // img:nth-child(3) {
+          //   animation-delay: 2s;
+          // }
+
+          // @keyframes fade-background {
+          //   0% {
+          //     background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+          //   }
+          //   33% {
+          //     background-image: url("https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg");
+          //   }
+          //   66% {
+          //     background-image: url("https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg");
+          //   }
+          //   100% {
+          //     background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+          //   }
+          // }
         }
       }
     }
 
     // Skills Section
     .about-skills {
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      // background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      background: #34495e65;
       color: white;
       display: flex;
       flex-direction: column;
@@ -313,7 +318,6 @@
       .about-banner .banner-content .banner-visual {
         // background-color: red;
         min-height: 35dvh;
-
       }
       .mission-block {
         display: flex;

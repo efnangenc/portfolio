@@ -48,7 +48,7 @@ function About() {
               </div>
             </div>
             <div className="banner-visual">
-              <img
+              {/* <img
                 src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg"
                 alt="foto1"
                 loading="eager"
@@ -62,7 +62,7 @@ function About() {
                 src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
                 alt="foto3"
                 loading="eager"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -98,19 +98,19 @@ function About() {
 
           <div className="mission-content">
             <div className="mission-section">
-              <h3>I am building</h3>
-              <p>Raw Materials to:</p>
+              <h3>Deliver high-impact solutions</h3>
+              <p>Efficient, scalable, and reliable software</p>
             </div>
 
             <div className="mission-section">
-              <h3>Performance</h3>
-              <p>Optimize edilmiş, hızlı çözümler</p>
+              <h3>Performance drives my process</h3>
+              <p>Clean code, fast response, smooth UX</p>
             </div>
 
             <div className="mission-section">
-              <h3>Design a better thing</h3>
+              <h3>Transforming ideas into impact</h3>
               <p>
-                Go to that <span className="highlight">way forward.</span>
+                Powered by<span className="highlight"> precision</span>{" "}
               </p>
             </div>
           </div>
