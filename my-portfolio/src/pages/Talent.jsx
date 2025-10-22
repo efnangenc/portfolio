@@ -115,12 +115,7 @@ function Talent() {
                           ></div>
                         </div> */}
 
-                        {/* Experience Years */}
-                        <div className="skill-experience">
-                          {/* <span className="experience-text">
-                            {index % 5 === 0 ? "3+ years" : index % 4 === 0 ? "2+ years" : index % 3 === 0 ? "1+ years" : "Learning"}
-                          </span> */}
-                        </div>
+                      
 
                         {/* Hover Details */}
                         <div className="skill-details">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 
 import CardHead from "../components/CardHead";
@@ -7,11 +7,41 @@ import projectsData from "../data/workItems";
 import "../styles/Work.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
+function useScrollDebugger(openItem, activeTab) {
+  const [lastScroll, setLastScroll] = useState(window.scrollY);
+
+  useEffect(() => {
+    const currentScroll = window.scrollY;
+
+    console.groupCollapsed(
+      `%c[SCROLL DEBUG]`,
+      "color: #00bcd4; font-weight: bold;"
+    );
+    console.log("🧩 Open Item:", openItem || "none");
+    console.log("📍 Current Scroll:", currentScroll);
+    console.log("📦 Last Scroll:", lastScroll);
+    console.log("🧠 Active Tabs:", activeTab);
+    console.groupEnd();
+
+    // Eğer scroll farkı varsa uyarı verelim
+    if (Math.abs(currentScroll - lastScroll) > 20) {
+      console.warn(
+        `%c⚠️ Scroll drift detected! (${lastScroll} → ${currentScroll})`,
+        "color: #ff1744; font-weight: bold;"
+      );
+    }
+
+    setLastScroll(currentScroll);
+  }, [openItem, activeTab]);
+}
+
 function Work() {
   const workItem = menuItems.find((item) => item.id === "work");
   const [openItem, setOpenItem] = useState(null);
   const [activeTab, setActiveTab] = useState({});
   const { t, lang, setLang } = useLanguage();
+
+  useScrollDebugger(openItem, activeTab);
 
   const toggleItem = (itemId) => {
     const idStr = String(itemId);
@@ -133,9 +163,9 @@ function Work() {
                                     <span className="timeline-period">
                                       {card.timeline}
                                     </span>
-                                    <span className="timeline-company">
+                                    {/* <span className="timeline-company">
                                       {card.company}
-                                    </span>
+                                    </span> */}
                                   </div>
                                   <p className="project-description">
                                     {card.description}
@@ -195,11 +225,6 @@ function Work() {
                             }
                             onClick={() => toggleTab(projectId, tabIndex)}
                           >
-                            {/* <span className="tab-icon">
-                              {tabIndex === 0 && "🛠️"}
-                              {tabIndex === 1 && "🎨"}
-                              {tabIndex === 2 && "⚙️"}
-                            </span> */}
                             {project.tabs[tabKey].title}
                           </div>
                         ))}
@@ -211,21 +236,16 @@ function Work() {
                             {activeTab[projectId] === tabIndex && (
                               <div className="content active-content">
                                 <div className="content-list">
-                                  {project.tabs[tabKey].content.map(
+                                  {/* {project.tabs[tabKey].content.map(
                                     (item, index) => (
                                       <span
                                         key={index}
                                         className="content-item"
                                       >
-                                        <span className="item-icon">
-                                          {tabIndex === 0 && "⚡"}
-                                          {tabIndex === 1 && "🎨"}
-                                          {tabIndex === 2 && "🔧"}
-                                        </span>
                                         {item}
                                       </span>
                                     )
-                                  )}
+                                  )} */}
                                 </div>
                               </div>
                             )}
