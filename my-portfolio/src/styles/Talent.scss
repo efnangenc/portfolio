@@ -80,10 +80,7 @@
 
   .talent-container {
     margin-top: 2dvh;
-    // color: #f3efd3;
-    // min-height: 70vh;
     border-radius: 0 0 2rem 2rem;
-    // background: linear-gradient(145deg, #2c3e50, #34495e);
     background: #6f5c78;
     box-shadow: 0 8px 20px rgba(71, 69, 69, 0.3);
     display: flex;
@@ -92,18 +89,13 @@
     overflow: visible;
     padding-top: 4rem;
 
-    // Enhanced Tabs
     .tabs {
       display: flex;
       justify-content: space-between;
-      // padding: 1rem;
-      // background: rgba(121, 182, 163, 0.151);
-      // backdrop-filter: blur(10px);
       border-radius: 2rem 2rem 0 0;
       z-index: 10;
       position: absolute;
       top: -2rem;
-      // padding: 0 1rem;
 
       width: 100%;
       .tab-item {
@@ -116,25 +108,9 @@
         transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         position: relative;
         // overflow: hidden;
-
-        // &::before {
-        //   content: '';
-        //   position: absolute;
-        //   top: 0;
-        //   left: -100%;
-        //   width: 100%;
-        //   height: 100%;
-        //   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        //   transition: left 0.5s ease;
-        // }
-
         &:hover {
           // background: rgba(255, 255, 255, 0.15);
-          // transform: translateY(-2px);
-
-          // &::before {
-          //   left: 100%;
-          // }
+          transform: translateY(-2px);
         }
 
         &.active-tab {
@@ -151,14 +127,12 @@
 
         .tab-content {
           display: flex;
-          flex-direction: column;
+          justify-content: center;
           align-items: center;
-          gap: 0.5rem;
 
           .tab-text {
             font-size: 0.9rem;
             font-weight: 600;
-            text-align: center;
           }
         }
       }
@@ -168,9 +142,7 @@
     .content-tabs {
       // flex: 1;
       display: flex;
-      // align-items: center;
       justify-content: center;
-      // padding: 0.5rem;
 
       .active-content {
         width: 90%;
@@ -182,12 +154,14 @@
             font-size: clamp(1.5rem, 4vw, 3rem);
             font-weight: 700;
             color: #ecf0f1; //başlık
-            margin-bottom: 3rem;
+            // color: purple;
+            margin-bottom: 5%;
+            margin-top: 1%;
           }
 
           .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
+            // text-align: center;
+            // margin-bottom: 3rem;
 
             .section-description {
               font-size: 1.1rem;
@@ -206,46 +180,47 @@
             margin-bottom: 3rem;
 
             .skill-card {
-              position: relative;
+              // position: relative;
               display: flex;
               justify-content: center;
+              align-items: center;
               background: rgba(255, 255, 255, 0.1);
-              backdrop-filter: blur(10px);
+              // backdrop-filter: blur(10px);
               border-radius: 1.5rem;
               padding: 2rem;
-              position: relative;
               overflow: hidden;
-              transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-              border: 1px solid rgba(255, 255, 255, 0.1);
               min-height: 10dvh;
+              max-height: 20dvh;
               transition: all 0.5s ease;
 
-              &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
-                background-size: 200% 100%;
-                animation: gradient-flow 3s linear infinite;
-              }
+              // &::before {
+              //   content: "";
+              //   position: absolute;
+              //   top: 0;
+              //   left: 0;
+              //   right: 0;
+              //   height: 3px;
+              //   background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+              //   background-size: 200% 100%;
+              //   animation: gradient-flow 3s linear infinite;
+              //   opacity: 0.8;
+              //   transition: opacity 0.6s ease;
+              // }
 
               .skill-header {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                // margin-bottom: 1.5rem;
-
+                text-align: center;
+                z-index: 1;
+                transition: all 0.5s ease;
 
                 .skill-info {
-                  // flex: 1;
-
                   .skill-name {
                     font-size: 1.2rem;
                     font-weight: 700;
                     color: #ecf0f1;
+                    transition: all 0.5s ease;
                   }
                 }
               }
@@ -285,76 +260,67 @@
 
               .skill-details {
                 position: absolute;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: flex-end;
-                // align-items: flex-start;
-                bottom: 1rem;
-                display: flex;
-                justify-content: center;
-                // left: 1.5rem;
-                // right: 1.5rem;
+                bottom: 2rem;
+                left: 2rem;
+                right: 2rem;
+                text-align: center;
                 opacity: 0;
-                transform: translateY(-10px);
-                transition: all 0.3s ease;
+                transform: translateY(20px) scale(0.9);
+                transition: all 0.5s ease;
+                z-index: 1;
 
                 .skill-description {
                   // justify-content: flex-end;
                   font-size: 0.9rem;
-                  // color: #bdc3c7;
-                  color: red;
+                  color: #bdc3c7;
+                  // color: red;
                   line-height: 1.5;
+                  font-weight: 400;
+                  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
                   // margin-bottom: 0.1rem;
                 }
               }
 
               &:hover {
-                justify-content: flex-start;
-                align-items: flex-start;
+                justify-content: center;
+                // justify-content: space-between;
+                // align-items: flex-start;
+                align-items: stretch;
+                padding-top: 0;
                 transform: translateY(-8px) scale(1.02);
                 background: rgba(255, 255, 255, 0.15);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                // box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
                 transition: all 0.5s ease; // smooth geçiş
+                // border-color: black;
+
+                &::before {
+                  opacity: 1;
+                  height: 5px;
+                }
+
+                &::after {
+                  opacity: 0;
+                }
+
+                .skill-header {
+                  transform: translateY(-5px);
+                  transition: all 0.5s ease;
+
+                  .skill-name {
+                    // position: absolute;
+                    font-size: 1.8rem;
+                    // color: red;
+                    // text-shadow: 0 3px 15px rgba(102, 126, 234, 0.6);
+                  }
+                }
 
                 .skill-details {
                   opacity: 1;
-                  // transform: translateY(0);
-                }
-                .skill-header {
-                  transition: all 0.5s ease; // smooth geçiş
+                  transform: translateY(0) scale(1);
                 }
               }
             }
           }
-
-          // // Category Summary
-          // .category-summary {
-          //   .summary-stats {
-          //     display: flex;
-          //     justify-content: center;
-          //     gap: 3rem;
-
-          //     .stat-item {
-          //       text-align: center;
-
-          //       .stat-number {
-          //         display: block;
-          //         font-size: 2.5rem;
-          //         font-weight: 800;
-          //         color: #667eea;
-          //         line-height: 1;
-          //       }
-
-          //       .stat-label {
-          //         display: block;
-          //         font-size: 0.9rem;
-          //         color: #bdc3c7;
-          //         margin-top: 0.5rem;
-          //         font-weight: 500;
-          //       }
-          //     }
-          //   }
-          // }
         }
       }
     }
@@ -798,11 +764,12 @@
 }
 
 @keyframes gradient-flow {
-  0% {
-    background-position: 0% 0%;
-  }
+  0%,
   100% {
-    background-position: 200% 0%;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 

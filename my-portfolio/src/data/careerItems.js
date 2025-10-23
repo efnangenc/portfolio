@@ -23,6 +23,7 @@ export default function useExperiencesData() {
         "CSS",
         "OOP",
         "SOLID",
+        "Agile Scrum"
       ],
       achievements: [
         t("experiences.0.achievements.1"),

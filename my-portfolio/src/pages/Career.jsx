@@ -48,38 +48,8 @@ function Career() {
             <h2>Career Journey</h2>
             <p>From Hardware to Software: A Path of Continuous Learning</p>
           </div>
-          <div className="plan-visual">
-            {/* <div className="growth-chart">
-              <div className="chart-bar" data-height="30%">
-                <span className="bar-label">2022</span>
-              </div>
-              <div className="chart-bar" data-height="60%">
-                <span className="bar-label">2023</span>
-              </div>
-              <div className="chart-bar" data-height="90%">
-                <span className="bar-label">2024</span>
-              </div>
-              <div className="chart-bar future" data-height="100%">
-                <span className="bar-label">2025+</span>
-              </div>
-            </div> */}
-          </div>
         </div>
       </div>
-
-      {/* Video Section */}
-      {/* <div className="video-wrapper">
-        <video autoPlay muted loop>
-          <source src={video} type="video/mp4" />
-          Tarayıcınız video elementini desteklemiyor.
-        </video>
-        <div className="video-overlay">
-          <div className="video-text">
-            <h3>Innovation in Motion</h3>
-            <p>Crafting digital experiences with passion and precision</p>
-          </div>
-        </div>
-      </div> */}
 
       {/* Enhanced Career Timeline */}
       <div className="career-route">
@@ -112,7 +82,7 @@ function Career() {
                         <h4 className="job-title">{exp.title}</h4>
                         <div className="company-info">
                           <span className="company">{exp.company}</span>
-                          <span className="job-type">{exp.type}</span>
+                          {/* <span className="job-type">{exp.type}</span> */}
                         </div>
                         <div className="duration-location">
                           <span className="duration">{exp.duration}</span>
@@ -125,7 +95,6 @@ function Career() {
                       <p className="description">{exp.description}</p>
 
                       <div className="achievements">
-                        {/* <h5>Key Achievements:</h5> */}
                         <ul>
                           {exp.achievements.map((achievement, i) => (
                             <li key={i}>{achievement}</li>
