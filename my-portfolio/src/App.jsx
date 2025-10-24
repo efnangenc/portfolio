@@ -8,6 +8,7 @@ import Content from "./components/Content.jsx";
 function App() {
   const { t, lang, setLang } = useLanguage();
   const [active, setActive] = useState("home");
+  const [MobileActive, setMobileActive] = useState("home");
   const [isVisible, setIsVisible] = useState("home");
   const [isMobileVisible, setMobileIsVisible] = useState("home");
 
@@ -33,6 +34,7 @@ function App() {
           className="navi"
           active={isVisible}
           setActive={setActive}
+          setMobileActive={setMobileActive}
           BarRef={BarRef}
         />
         <Content

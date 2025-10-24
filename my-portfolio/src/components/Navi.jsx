@@ -3,8 +3,8 @@ import "../styles/Navi.scss";
 import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Navi({ active, setActive, BarRef }) {
-  const { t, lang, setLang } = useLanguage();
+function Navi({ active, setActive, setMobileActive, BarRef }) {
+  const { t } = useLanguage();
 
   return (
     <nav className="navi" ref={BarRef}>
@@ -17,6 +17,7 @@ function Navi({ active, setActive, BarRef }) {
           }`}
           onClick={() => {
             setActive(item.id);
+            setMobileActive(item.id);
             document
               .getElementById(item.id)
               ?.scrollIntoView({ behavior: "smooth" });

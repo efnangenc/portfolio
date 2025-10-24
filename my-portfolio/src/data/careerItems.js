@@ -26,9 +26,9 @@ export default function useExperiencesData() {
         "Agile Scrum"
       ],
       achievements: [
+        t("experiences.0.achievements.0"),
         t("experiences.0.achievements.1"),
         t("experiences.0.achievements.2"),
-        t("experiences.0.achievements.3"),
       ],
       color: "#667eea",
       icon: "💻",
@@ -48,9 +48,9 @@ export default function useExperiencesData() {
         "Team Collaboration",
       ],
       achievements: [
+        t("experiences.1.achievements.0"),
         t("experiences.1.achievements.1"),
         t("experiences.1.achievements.2"),
-        t("experiences.1.achievements.3"),
       ],
       color: "#f39c12",
       icon: "⚙️",
@@ -71,9 +71,9 @@ export default function useExperiencesData() {
         "Production Optimization",
       ],
       achievements: [
+        t("experiences.2.achievements.0"),
         t("experiences.2.achievements.1"),
         t("experiences.2.achievements.2"),
-        t("experiences.2.achievements.3"),
       ],
       color: "#e74c3c",
       icon: "🔧",

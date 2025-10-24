@@ -102,42 +102,42 @@
 
           animation: fade-background 3s infinite;
 
-          // img {
-          //   position: absolute;
-          //   inset: 0;
-          //   width: 100%;
-          //   height: 100%;
-          //   object-fit: cover;
-          //   top: 0;
-          //   left: 0;
-          //   opacity: 0;
-          //   animation: fade 3s infinite;
-          // }
+          img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: fade 3s infinite;
+          }
 
-          // img:nth-child(1) {
-          //   animation-delay: 0s;
-          // }
-          // img:nth-child(2) {
-          //   animation-delay: 1s;
-          // }
-          // img:nth-child(3) {
-          //   animation-delay: 2s;
-          // }
+          img:nth-child(1) {
+            animation-delay: 0s;
+          }
+          img:nth-child(2) {
+            animation-delay: 1s;
+          }
+          img:nth-child(3) {
+            animation-delay: 2s;
+          }
 
-          // @keyframes fade-background {
-          //   0% {
-          //     background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
-          //   }
-          //   33% {
-          //     background-image: url("https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg");
-          //   }
-          //   66% {
-          //     background-image: url("https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg");
-          //   }
-          //   100% {
-          //     background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
-          //   }
-          // }
+          @keyframes fade-background {
+            0% {
+              background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+            }
+            33% {
+              background-image: url("https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg");
+            }
+            66% {
+              background-image: url("https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg");
+            }
+            100% {
+              background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+            }
+          }
         }
       }
     }
@@ -233,7 +233,8 @@
       // border: 1px solid #ddd;
       // border-radius: 1rem;
       color: #111;
-      // height: 50dvh;
+      min-height: 50dvh;
+      max-height: 95dvh;
 
       /* Sol taraf (sidebar gibi) */
       .mission-sidebar {

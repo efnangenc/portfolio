@@ -7,37 +7,13 @@ import { useLanguage } from "../providers/LanguageProvider";
 
 function About() {
   const aboutItem = menuItems.find((item) => item.id === "about");
-  const { t, lang, setLang } = useLanguage();
-
-  const defaultData = [
-    {
-      id: 1,
-      icon: "🚀",
-      title: "Performance",
-      description: "Optimize edilmiş, hızlı çözümler",
-    },
-    {
-      id: 2,
-      icon: "🎨",
-      title: "Modern Design",
-      description: "Kullanıcı deneyimi odaklı tasarım",
-    },
-    {
-      id: 3,
-      icon: "⚡",
-      title: "Scalability",
-      description: "Büyüyen projeler için esnek yapılar",
-    },
-  ];
-
-  const showcaseData = defaultData;
+  const { t } = useLanguage();
 
   return (
     <div className="container">
       <CardHead item={aboutItem} />
 
       <div className="about">
-        {/* Hero Banner */}
         <div className="about-banner">
           <div className="banner-content">
             <div className="name-title">
@@ -48,7 +24,7 @@ function About() {
               </div>
             </div>
             <div className="banner-visual">
-              {/* <img
+                <img
                 src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg"
                 alt="foto1"
                 loading="eager"
@@ -62,36 +38,29 @@ function About() {
                 src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
                 alt="foto3"
                 loading="eager"
-              /> */}
+              />  
             </div>
           </div>
         </div>
 
-        {/* Skills & Experience */}
         <div className="about-skills">
           <div className="skills-content">
             <div className="skills-text">
               <h3>Crafting Digital Experiences</h3>
-              <p>
-                {/* Tutkulu bir geliştirici olarak, modern teknolojilerle kullanıcı
-                odaklı çözümler üretiyorum. Frontend'den backend'e, tasarımdan
-                deployment'a kadar her aşamada kaliteli kod yazıyorum. */}
-                {t("AboutText")}
-              </p>
+              <p>{t("AboutText")}</p>
             </div>
           </div>
         </div>
 
-        {/* Interactive Showcase */}
         <div className="mission-block">
           <div className="mission-sidebar">
             <div className="step">Mission</div>
             <div className="step">
-              {/* <span className="step-number">01</span> */}
+              <span className="step-number">01</span>
               Challenge
             </div>
             <div className="step">
-              {/* <span className="step-number">02</span> */}
+              <span className="step-number">02</span>
               Goal
             </div>
           </div>
@@ -114,7 +83,7 @@ function About() {
               </p>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   );

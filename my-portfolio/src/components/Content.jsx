@@ -1,250 +1,81 @@
-// import { useEffect, useRef } from "react";
-// import menuItems from "../data/menuItems.js";
-// import "../styles/Content.scss";
-
-// function Content({
-//   setIsVisible,
-//   setMobileIsVisible,
-//   BarRef,
-//   setProgressWidth,
-// }) {
-//   const itemRefs = useRef([]); // tüm section’ları saklayacağız
-
-//   useEffect(() => {
-//     let observer;
-//     let mobileObserver;
-
-//     observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             const sectionId = entry.target.id;
-//             // console.log(entry.target);
-//             console.log(entry.target.id, entry.intersectionRatio);
-
-//             if (window.innerWidth > 768) setIsVisible(sectionId); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
-//           }
-//         });
-//       },
-//       {
-//         threshold: 0.3,
-//         // threshold: [0, 0.25, 0.5, 0.75, 1.0],
-//         rootMargin: "0px",
-//         scrollMargin: "0px",
-//       }
-//     );
-
-//     mobileObserver = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             const sectionId = entry.target.id;
-
-//             if (window.innerWidth <= 768) {
-//               setMobileIsVisible(sectionId);
-
-//               // Navbar scroll hesaplama - sadece mobilde
-//               const currentIndex = menuItems.findIndex(
-//                 (item) => item.id === sectionId
-//               );
-//               const totalItems = menuItems.length;
-
-//               // Navbar'ın scroll edilebilir genişliğini hesapla
-//               if (navbarRef?.current) {
-//                 const navbar = navbarRef.current;
-//                 const maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
-//                 const scrollPosition =
-//                   (currentIndex / (totalItems - 1)) * maxScrollLeft;
-
-//                 // Navbar'ı smooth scroll et
-//                 navbar.scrollTo({
-//                   left: scrollPosition,
-//                   behavior: "smooth",
-//                 });
-
-//                 console.log(
-//                   `Mobile Active: ${sectionId}, Navbar Scroll: ${scrollPosition}px`
-//                 );
-//               }
-//             }
-//           }
-//         });
-//       },
-//       {
-//         threshold: 0.1,
-//       }
-//     );
-
-//     itemRefs.current.forEach((el) => {
-//       if (el) {
-//         observer.observe(el); //izlediklerimi observer değişkenine ekle
-//         mobileObserver.observe(el);
-//       }
-//     });
-
-//     return () => {
-//       observer?.disconnect(); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
-//       mobileObserver?.disconnect();
-//     };
-//   }, [setIsVisible, setMobileIsVisible, BarRef, setProgressWidth]);
-
-//   //   useEffect(() => {
-//   //   if (containerRef.current) {
-//   //     containerRef.current.scrollLeft = scrollAmount;
-//   //   }
-//   // }, [scrollAmount]);
-
-//   // ✅ Doğru - callback ref kullan
-//   const setRef = (id) => (el) => {
-//     if (el) {
-//       const index = itemRefs.current.findIndex((item) => item?.id === id);
-//       if (index === -1) {
-//         itemRefs.current.push(el);
-//       } else {
-//         itemRefs.current[index] = el;
-//       }
-//     }
-//   };
-
-//   return (
-//     <div className="content">
-//       {menuItems.map((item, index) => {
-//         const Component = item.Component; // referansı çekiyoruz
-//         return (
-//           <div
-//             key={item.id}
-//             id={item.id}
-//             // ref={(el) => (itemRefs.current[index] = el)}
-//             ref={setRef(item.id)}
-//             className="content__item"
-//           >
-//             {item.id !== "home" && (
-//               <h2 style={{ backgroundColor: item.color }}>
-//                 Şu an buradasınız -- {item.label} Section
-//                 <p>{item.no}</p>
-//               </h2>
-//             )}
-//             <Component />
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
-// export default Content;
-
-import { useEffect, useRef } from "react";
-import React from "react";
-
+import { useEffect, useRef, useState } from "react";
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
-import { useLanguage } from "../providers/LanguageProvider";
 
-function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
-  const itemRefs = useRef([]);
-  const { t, lang, setLang } = useLanguage();
+function Content({ setIsVisible, setMobileIsVisible, navbarRef }) {
+  const itemRefs = useRef([]); // tüm section’ları saklayacağız
+  const [mobileActive, setMobileActive] = useState(null); // ✅ aktif section state
 
   useEffect(() => {
-    let mobileObserver;
+    if (!itemRefs.current) return;
+
+    // Ekran genişliğine göre threshold seç
+    const isMobile = window.innerWidth <= 768;
+    // const threshold = isMobile ? 0.2 : 0.3;
+
+    // let observer;
+    // let mobileObserver;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        let maxRatio = 0;
-        let mostVisible = null;
-        // let sectionId = null;
-
         entries.forEach((entry) => {
-          if (entry.intersectionRatio > maxRatio) {
-            maxRatio = entry.intersectionRatio;
-            mostVisible = entry.target;
-            // sectionId = entry.target.id;
-            console.log(entry.target.id, entry.intersectionRatio);
-            console.warn(mostVisible.id);
+          if (!entry.isIntersecting) return;
+          const sectionId = entry.target.id;
 
-            // if (window.innerWidth > 768) setIsVisible(sectionId);
+          if (entry.isIntersecting) {
+            // console.log(entry.target);
+            console.log(entry.target.id, entry.intersectionRatio);
+
+            if (!isMobile) {
+              setIsVisible(sectionId);
+            } // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
+            else {
+              setMobileIsVisible(sectionId);
+              setMobileActive(sectionId);
+            }
           }
         });
-        if (mostVisible) setIsVisible(mostVisible.id);
       },
       {
-        // threshold: [0, 0.25, 0.5, 0.75, 1],
-        threshold: 0.3,
-        rootMargin: "0px 0px -20% 0px",
-        // scrollMargin: "0px",
+        threshold: 0.1,
+        // threshold: [0, 0.25, 0.5, 0.75, 1.0],
+        rootMargin: "0px",
+        scrollMargin: "0px",
       }
     );
 
-    const timer = setTimeout(() => {
-      itemRefs.current.forEach((el) => observer.observe(el));
+    itemRefs.current.forEach((el) => {
+      if (el) {
+        observer.observe(el); //izlediklerimi observer değişkenine ekle
+      }
+    });
 
-      const images = document.querySelectorAll(".about-banner img");
-      images.forEach((img) => {
-        img.addEventListener("load", () => {
-          observer.disconnect();
-          itemRefs.current.forEach((el) => observer.observe(el));
-        });
-      });
-      return () => {
-        clearTimeout(timer);
-        observer?.disconnect();
-        mobileObserver?.disconnect();
-      };
-    }, 300);
-    return () => clearTimeout(timer);
+    return () => {
+      observer?.disconnect(); // çalışır - parent component'e hangi section'ın aktif olduğu bildirilir
+    };
+  }, [setIsVisible, setMobileIsVisible, navbarRef]);
 
-    // mobileObserver = new IntersectionObserver(
-    //   (entries) => {
-    //     entries.forEach((entry) => {
-    //       if (entry.isIntersecting) {
-    //         const sectionId = entry.target.id;
+  useEffect(() => {
+    if (!mobileActive || !navbarRef.current) return;
+    const navbar = navbarRef.current;
+    const activeItem = navbar.querySelector(".navi__item.active");
+    if (!activeItem) return;
 
-    //         if (window.innerWidth <= 768) {
-    //           setMobileIsVisible(sectionId);
+    const scrollPosition =
+      activeItem.offsetLeft -
+      navbar.clientWidth / 2 +
+      activeItem.clientWidth / 2;
 
-    //           // Navbar scroll hesaplama - sadece mobilde
-    //           const currentIndex = menuItems.findIndex(
-    //             (item) => item.id === sectionId
-    //           );
-    //           const totalItems = menuItems.length;
+    navbar.scrollTo({ left: scrollPosition, behavior: "smooth" });
+  }, [setMobileIsVisible]);
 
-    //           if (BarRef?.current) {
-    //             const navbar = BarRef.current;
-    //             const maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
-    //             const scrollPosition =
-    //               (currentIndex / (totalItems - 1)) * maxScrollLeft;
+  //   useEffect(() => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollLeft = scrollAmount;
+  //   }
+  // }, [scrollAmount]);
 
-    //             navbar.scrollTo({
-    //               left: scrollPosition,
-    //               behavior: "smooth",
-    //             });
-
-    //             console.log(
-    //               `Mobile Active: ${sectionId}, Navbar Scroll: ${scrollPosition}px`
-    //             );
-    //             console.log("Window width:", window.innerWidth);
-    //             console.log(
-    //               "Content items:",
-    //               document.querySelectorAll(".content__item").length
-    //             );
-    //             console.log("Navbar ref:", document.querySelector(".navi"));
-    //           }
-    //         }
-    //       }
-    //     });
-    //   },
-    //   {
-    //     threshold: 0.4,
-    //   }
-    // );
-
-    // itemRefs.current.forEach((el) => {
-    //   if (el) {
-    //     observer.observe(el);
-    //     mobileObserver.observe(el);
-    //   }
-    // });
-  }, [setIsVisible, setMobileIsVisible, BarRef]);
-
+  // ✅ Doğru - callback ref kullan
   const setRef = (id) => (el) => {
     if (el) {
       const index = itemRefs.current.findIndex((item) => item?.id === id);
@@ -253,23 +84,24 @@ function Content({ setIsVisible, setMobileIsVisible, BarRef }) {
       } else {
         itemRefs.current[index] = el;
       }
-    }
+    } else return;
   };
 
   return (
     <div className="content">
       {menuItems.map((item, index) => {
-        const Component = item.Component;
+        const Component = item.Component; // referansı çekiyoruz
         return (
           <div
             key={item.id}
             id={item.id}
+            // ref={(el) => (itemRefs.current[index] = el)}
             ref={setRef(item.id)}
             className="content__item"
           >
             {item.id !== "home" && (
               <h2 style={{ backgroundColor: item.color }}>
-                {t("YoureHere")} -> {t(item.label)} {t("Section")}
+                Şu an buradasınız -- {item.label} Section
                 <p>{item.no}</p>
               </h2>
             )}
