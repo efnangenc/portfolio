@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
+import { useLanguage } from "../providers/LanguageProvider";
 
 function Content({ setIsVisible, setMobileIsVisible, navbarRef }) {
   const itemRefs = useRef([]); // tüm section’ları saklayacağız
   const [mobileActive, setMobileActive] = useState(null); // ✅ aktif section state
+  const { t, lang, setLang } = useLanguage();
 
   useEffect(() => {
     if (!itemRefs.current) return;
@@ -101,7 +103,7 @@ function Content({ setIsVisible, setMobileIsVisible, navbarRef }) {
           >
             {item.id !== "home" && (
               <h2 style={{ backgroundColor: item.color }}>
-                Şu an buradasınız -- {item.label} Section
+                {t("YoureHere")} -- {t(item.label)} {t("Section")}
                 <p>{item.no}</p>
               </h2>
             )}

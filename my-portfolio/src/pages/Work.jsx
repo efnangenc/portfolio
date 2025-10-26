@@ -3,58 +3,34 @@ import React from "react";
 
 import CardHead from "../components/CardHead";
 import menuItems from "../data/menuItems";
-import projectsData from "../data/workItems";
+import workItemsData from "../data/workItems";
 import "../styles/Work.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function useScrollDebugger(openItem, activeTab) {
-  const [lastScroll, setLastScroll] = useState(window.scrollY);
-
-  useEffect(() => {
-    const currentScroll = window.scrollY;
-
-    console.groupCollapsed(
-      `%c[SCROLL DEBUG]`,
-      "color: #00bcd4; font-weight: bold;"
-    );
-    console.log("🧩 Open Item:", openItem || "none");
-    console.log("📍 Current Scroll:", currentScroll);
-    console.log("📦 Last Scroll:", lastScroll);
-    console.log("🧠 Active Tabs:", activeTab);
-    console.groupEnd();
-
-    // Eğer scroll farkı varsa uyarı verelim
-    if (Math.abs(currentScroll - lastScroll) > 20) {
-      console.warn(
-        `%c⚠️ Scroll drift detected! (${lastScroll} → ${currentScroll})`,
-        "color: #ff1744; font-weight: bold;"
-      );
-    }
-
-    setLastScroll(currentScroll);
-  }, [openItem, activeTab]);
-}
-
 function Work() {
   const workItem = menuItems.find((item) => item.id === "work");
-  const [openItem, setOpenItem] = useState(null);
+  const [openItems, setOpenItems] = useState({});
   const [activeTab, setActiveTab] = useState({});
+  // const { workItems } = workItemsData();
   const { t, lang, setLang } = useLanguage();
-
-  useScrollDebugger(openItem, activeTab);
+  const workItems = workItemsData(t);
+  
 
   const toggleItem = (itemId) => {
-    const idStr = String(itemId);
-    const isOpen = openItem === idStr;
-    setOpenItem(isOpen ? null : idStr);
+    // const idStr = String(itemId);
+    // const isOpen = openItem === idStr;
+    setOpenItems((prev) => ({
+      ...prev,
+      [itemId]: !prev[itemId], // toggle
+    }));
 
-    if (!isOpen) {
-      setActiveTab((prev) => ({ ...prev, [idStr]: 0 }));
-    }
+    // if (!isOpen) {
+    //   setActiveTab((prev) => ({ ...prev, [idStr]: 0 }));
+    // }
   };
 
   const toggleTab = (itemId, tabIndex) => {
-    const idStr = String(itemId);
+    // const idStr = String(itemId);
     setActiveTab((prev) => ({ ...prev, [idStr]: tabIndex }));
   };
 
@@ -62,15 +38,17 @@ function Work() {
     <div className="work">
       <CardHead item={workItem} />
       <div className="projects">
-        {Object.keys(projectsData).map((key) => {
-          const project = projectsData[key];
+        {Object.keys(workItems).map((key) => {
+          const project = workItems[key];
           const projectId = String(project.id);
+          const isOpen = !!openItems[projectId];
+
 
           return (
             <div key={projectId} className={`project-item ${projectId}`}>
               <div
                 className={`project-card ${
-                  openItem === projectId ? "expanded" : ""
+                  isOpen ? "expanded" : ""
                 }`}
               >
                 {/* Project Header */}
@@ -86,7 +64,7 @@ function Work() {
                   </div>
                 </div>
 
-                {openItem === projectId && (
+                {isOpen && (
                   <>
                     <div className="project-ss">
                       <img src={project.image} alt={project.title} />
@@ -212,7 +190,7 @@ function Work() {
                       )}
                     </div>
 
-                    {/* Tab Container */}
+                    {/* Tab Container
                     <div className="tab-container">
                       <div className="tabs">
                         {Object.keys(project.tabs).map((tabKey, tabIndex) => (
@@ -245,14 +223,14 @@ function Work() {
                                         {item}
                                       </span>
                                     )
-                                  )} */}
+                                  )}
                                 </div>
                               </div>
                             )}
                           </div>
                         ))}
-                      </div>
-                    </div>
+                      </div> 
+                    </div>*/}
                   </>
                 )}
               </div>

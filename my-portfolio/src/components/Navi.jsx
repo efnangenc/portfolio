@@ -3,7 +3,7 @@ import "../styles/Navi.scss";
 import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Navi({ active, setActive, setMobileActive, BarRef }) {
+function Navi({ active, setActive, setMobileActive, BarRef, isMobileVisible }) {
   const { t } = useLanguage();
 
   return (
@@ -12,8 +12,11 @@ function Navi({ active, setActive, setMobileActive, BarRef }) {
         <div
           key={item.id} //home
           // ref={BarRef}
-          className={`navi__item  ${
-            active === item.id && item.id !== "home" ? "active" : ""
+          className={`navi__item ${
+            (active === item.id || isMobileVisible === item.id) &&
+            item.id !== "home"
+              ? "active"
+              : ""
           }`}
           onClick={() => {
             setActive(item.id);

@@ -4,8 +4,6 @@ import React from "react";
 
 import useExperiencesData from "../data/careerItems";
 import "../styles/Career.scss";
-import path from "../assets/eman.png";
-import video from "../assets/SPACE TYPE GENERATOR - Google Chrome 2025-09-14 19-45-47.mp4.mp4";
 import { useLanguage } from "../providers/LanguageProvider";
 
 function Career() {
@@ -13,7 +11,7 @@ function Career() {
   const { t, lang, setLang } = useLanguage();
   const { experiences } = useExperiencesData();
 
-  console.log("EXPERIENCES TYPE:", typeof experiences, Array.isArray(experiences), experiences);
+  // console.log("EXPERIENCES TYPE:", typeof experiences, Array.isArray(experiences), experiences);
 
 
   // const futureGoals = [

@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import "./styles/App.scss";
 import { useLanguage } from "./providers/LanguageProvider";
 import Navi from "./components/Navi.jsx";
 import Content from "./components/Content.jsx";
+import Settings from "./components/Settings.jsx";
 
 function App() {
   const { t, lang, setLang } = useLanguage();
@@ -11,24 +12,14 @@ function App() {
   const [MobileActive, setMobileActive] = useState("home");
   const [isVisible, setIsVisible] = useState("home");
   const [isMobileVisible, setMobileIsVisible] = useState("home");
+  // Navbar scroll state
 
   // Sadece navbar ref'i gerekli
   const BarRef = useRef(null);
 
   return (
     <>
-      <div className="languageCont">
-        {/* <p>{t("click")}</p> */}
-        <button className="langButton" onClick={() => setLang("tr")}>
-          🇹🇷 Türkçe
-        </button>
-        <button className="langButton" onClick={() => setLang("en")}>
-          🇬🇧 English
-        </button>
-        {/* <p>Şu anki dil: {lang}</p> */}
-      </div>
-
-      <br />
+      <Settings/>
       <div className="layout">
         <Navi
           className="navi"
@@ -36,6 +27,7 @@ function App() {
           setActive={setActive}
           setMobileActive={setMobileActive}
           BarRef={BarRef}
+          isMobileVisible={isVisible}
         />
         <Content
           className="content"

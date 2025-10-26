@@ -1,6 +1,6 @@
 #root {
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@
   flex-direction: row;
   width: 99dvw;
   min-height: 95dvh;
-
+  
   .navi {
     position: fixed;
     width: 14%;
@@ -19,36 +19,10 @@
   .content {
     margin-left: 17.5%;
     min-height: 100dvh;
-    padding: 2.5rem 1rem;
     flex-grow: 1;
     // overflow-x: hidden;
     // overflow-y: hidden;
   }
-}
-.languageCont {
-  position: fixed;
-  z-index: 900000;
-}
-
-.langButton {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-.langButton:hover {
-  border-color: red;
-}
-
-.langButton:focus,
-.langButton:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 
@@ -63,7 +37,7 @@
     overflow-x: hidden;
     box-sizing: border-box;
 
-    .navi{
+    .navi {
       width: 100%;
       // box-sizing: border-box;
     }
@@ -85,8 +59,8 @@
       // gap:2rem;
       // margin-left: 2rem;
       // padding-bottom: 70px; /* navinin yüksekliği kadar boşluk bırak ki üstüne binmesin */
-    
-      .content-item{
+
+      .content-item {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -96,12 +70,5 @@
       }
     }
   }
-  .languageCont {
-    height: 1rem;
-  }
-  .langButton{
-    padding: 0;
-    // background-color: red;
-  }
+  
 }
-

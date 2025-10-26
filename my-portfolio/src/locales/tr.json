@@ -77,5 +77,157 @@
         "Kaizen prensipleriyle süreçler iyileştirildi"
       ]
     }
+  ],
+  "works": [
+    {
+      "title": "E-Ticaret Platform",
+      "bigtitle": "BEAM",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      "showcase": {
+        "keyfeatures": {
+          "title": "Ana Özellikler",
+          "content": [
+            "Alışveriş sepeti fonksiyonelliği",
+            "Ütün değerlendirme ve yorum",
+            "Wishlist system",
+            "MAil bildirimleri",
+            "Mobile responsive design"
+          ]
+        },
+        "technologiesused": {
+          "title": "Kullanılan teknolojiler",
+          "content": [
+            {
+              "part": "Frontend",
+              "cont": ["HTML5", "CSS3", "JS", "Bootstrap"]
+            },
+            { "part": "Backend", "cont": ["C#", ".Net Core", "Rest API"] },
+            {
+              "part": "Database & Cloud",
+              "cont": ["Azure", "SQL Server", "Devops"]
+            }
+          ]
+        },
+        "overview": {
+          "title": "Proje Değerlendirmesi",
+          "timeline": "Ocak 2025 - Şubat 2025",
+          "company": "Associated with Bilgeadam",
+          "description": "My team and I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database...",
+          "highlights": [
+            "High Performance Architecture",
+            "Layered Architecture Pattern",
+            "Responsive Mobile Design"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Portfolio Sitesi",
+      "bigtitle": "PORTFOY",
+      "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
+      "showcase": {
+        "keyfeatures": {
+          "title": "Key Features",
+          "content": [
+            "Animated UI transitions",
+            "Dynamic content with React hooks",
+            "Responsive grid layout",
+            "Lightweight routing system"
+          ]
+        },
+        "technologiesused": {
+          "title": "Kullanılan teknolojiler",
+          "content": [
+            {
+              "part": "Frontend",
+              "cont": ["React", "SCSS", "Vite", "Framer Motion"]
+            },
+            { "part": "Integration", "cont": ["EmailJS", "GitHub Pages"] }
+          ]
+        },
+        "overview": {
+          "title": "Project Overview",
+          "timeline": "Mar 2025 - Apr 2025",
+          "company": "Personal Project",
+          "description": "A fully responsive personal portfolio built with React and Vite. The website showcases projects, career timeline, and integrated contact form.",
+          "highlights": [
+            "Deployed via GitHub Pages",
+            "Animated sections with Framer Motion",
+            "Internationalization with i18next"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Task Yönetim Uygulaması",
+      "bigtitle": "TASK",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
+      "showcase": {
+        "keyfeatures": {
+          "title": "Key Features",
+          "content": [
+            "Kanban board layout",
+            "Drag-and-drop tasks",
+            "User authentication system",
+            "Real-time updates"
+          ]
+        },
+        "technologiesused": {
+          "title": "Technologies Used",
+          "content": [
+            { "part": "Frontend", "cont": ["Vue.js", "Vuetify", "Pinia"] },
+            { "part": "Backend", "cont": ["Django REST Framework"] }
+          ]
+        },
+        "overview": {
+          "title": "Project Overview",
+          "timeline": "May 2025 - Jun 2025",
+          "company": "Personal Project",
+          "description": "TaskFlow is a web-based productivity app that allows users to manage tasks using a visual Kanban interface with drag-and-drop functionality.",
+          "highlights": [
+            "Authentication via JWT",
+            "Optimized API structure",
+            "Dark/light mode support"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Weather Dashboard",
+      "bigtitle": "SKYLINE",
+      "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
+      "showcase": {
+        "keyfeatures": {
+          "title": "Key Features",
+          "content": [
+            "Live weather updates",
+            "Location-based forecasting",
+            "7-day outlook graph",
+            "Temperature and humidity analytics"
+          ]
+        },
+        "technologiesused": {
+          "title": "Technologies Used",
+          "content": [
+            {
+              "part": "Frontend",
+              "cont": ["React", "Chart.js", "Tailwind CSS"]
+            },
+            { "part": "API", "cont": ["OpenWeatherMap", "Axios"] }
+          ]
+        },
+        "overview": {
+          "title": "Project Overview",
+          "timeline": "Jul 2025 - Aug 2025",
+          "company": "Personal Project",
+          "description": "Skyline is a real-time weather dashboard that fetches and visualizes climate data through modern chart libraries.",
+          "highlights": [
+            "Responsive and accessible design",
+            "Real-time weather API integration",
+            "Clean visual charts"
+          ]
+        }
+      }
+    }
   ]
 }

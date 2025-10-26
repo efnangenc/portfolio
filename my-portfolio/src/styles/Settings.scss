@@ -1,0 +1,105 @@
+.languageCont {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1rem;
+
+  &.hidden {
+    transform: translateY(-120%);
+  }
+
+  &.visible {
+    transform: translateY(0);
+  }
+
+  .language-navbar {
+    display: flex;
+    align-items: center;
+    // gap: 2rem;
+
+    // Background ve styling
+    // background: rgba(255, 255, 255, 0.445);
+    // backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    
+    // background: rgba(255, 255, 255, 0.589);
+    // box-shadow: 0px 0px 100px 40px rgb(255, 255, 255);
+    
+    .language-buttons {
+      display: flex;
+      gap: 0.5rem;
+      .langButton {
+        padding: 0.5rem 1.25rem;
+        border: none;
+        border-radius: 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        // Default state
+        background: transparent;
+        color: #d3d3d3;
+
+        // Hover state
+        &:hover {
+          //   background: rgba(102, 126, 234, 0.1);
+
+          color: #667eea;
+          transform: translateY(-2px);
+        }
+
+        // Active state (selected language)
+        &.active {
+          //   background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+          border: solid 1px black;
+          //   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        // // Active (click) state
+        // &:active {
+        //   transform: translateY(0);
+        // }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .languageCont {
+    // Full width on mobile
+    left: 0;
+    right: 0;
+    padding: 1rem;
+
+    .language-navbar {
+      width: 100%;
+      justify-content: center;
+      padding: 0.6rem 1rem;
+      border-radius: 0; // Square edges on mobile
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+
+      .navbar-brand {
+        display: none; // Hide brand on mobile
+      }
+
+      .language-buttons {
+        flex: 1;
+        justify-content: center;
+
+        .langButton {
+          flex: 1;
+          max-width: 150px;
+          padding: 0.5rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}

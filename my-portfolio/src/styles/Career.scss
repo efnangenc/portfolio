@@ -45,7 +45,6 @@
     }
   }
 
-  
   // Enhanced Career Route - Timeline
   .career-route {
     position: relative;
@@ -68,7 +67,8 @@
         top: 0;
         bottom: 0;
         width: 4px;
-        background: linear-gradient(to bottom, #667eea, #764ba2, #667eea);
+        // background: linear-gradient(to bottom, #667eea, #764ba2, #667eea);
+        background: #787c8d;
         border-radius: 2px;
         z-index: 1;
       }
@@ -81,17 +81,17 @@
         text-align: center;
         position: relative;
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100px;
-          height: 3px;
-          background: linear-gradient(90deg, #667eea, #764ba2);
-          border-radius: 2px;
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: -10px;
+        //   left: 50%;
+        //   transform: translateX(-50%);
+        //   width: 100px;
+        //   height: 3px;
+        //   background: linear-gradient(90deg, #667eea, #764ba2);
+        //   border-radius: 2px;
+        // }
       }
 
       // Experience Items
