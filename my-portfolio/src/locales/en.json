@@ -81,18 +81,18 @@
   ],
   "works": [
     {
-      "title": "E-Commerce Platform",
+      "title": "E-Commerce WebPage Project",
       "bigtitle": "BEAM",
       "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
           "content": [
-            "Shopping cart functionality",
-            "Product reviews and ratings",
-            "Wishlist system",
-            "Email notifications",
-            "Mobile responsive design"
+            "SOLID Principles & Clean Layered Architecture",
+            "Role-Based Authentication and Authorization System (JWT)",
+            "Admin Panel with Full CRUD Management",
+            "Cloud Integration via Azure DevOps and SQL Server",
+            "High Performance and Scalable Backend Design"
           ]
         },
         "technologiesused": {
@@ -100,12 +100,15 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": ["HTML5", "CSS3", "JS", "Bootstrap"]
+              "cont": ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
             },
-            { "part": "Backend", "cont": ["C#", ".Net Core", "Rest API"] },
             {
-              "part": "Database & Cloud",
-              "cont": ["Azure", "SQL Server", "Devops"]
+              "part": "Backend & API",
+              "cont": ["C#", ".Net Core", "Rest API", "Postman and Swagger"]
+            },
+            {
+              "part": "Database & DevOps",
+              "cont": ["Azure Cloud Services", "SQL Server", "Github"]
             }
           ]
         },
@@ -113,27 +116,30 @@
           "title": "Project Overview",
           "timeline": "Jan 2025 - Feb 2025",
           "company": "Associated with Bilgeadam",
-          "description": "My team and I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database...",
+          "description": "As a team of four, we developed a comprehensive e-commerce platform in one month of intensive work. Collaborating closely with our Scrum Master through sprints and regular meetings, we managed the project efficiently. Throughout the process, the Product Owner's requirements were prioritized, and the platform was implemented with a scalable, dynamic, and clean architecture. The platform was deployed using Azure DevOps cloud database.",
+
           "highlights": [
-            "High Performance Architecture",
-            "Layered Architecture Pattern",
-            "Responsive Mobile Design"
+            "Dynamic shopping cart and order tracking",
+            "Product review and rating functionality",
+            "Mobile responsive design",
+            "Access control and permissions management"
           ]
         }
       }
     },
     {
-      "title": "Portfolio Website",
+      "title": "Portfolio",
       "bigtitle": "PORTFOY",
       "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
           "content": [
-            "Animated UI transitions",
-            "Dynamic content with React hooks",
-            "Responsive grid layout",
-            "Lightweight routing system"
+            "Dynamic content management and state optimization using React Hooks",
+            "Responsive and performance-focused layout design",
+            "Visibility-based optimization with Intersection Observer",
+            "Integrated contact form with EmailJS",
+            "Multi-theme and multi-language support"
           ]
         },
         "technologiesused": {
@@ -141,70 +147,50 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": ["React", "SCSS", "Vite", "Framer Motion"]
+              "cont": [
+                "React",
+                "Vite",
+                "HTML5",
+                "CSS3",
+                "SCSS",
+                "Framer Motion"
+              ]
             },
-            { "part": "Integration", "cont": ["EmailJS", "GitHub Pages"] }
+            {
+              "part": "Integration & Features",
+              "cont": ["EmailJS", "i18n"]
+            },
+            {
+              "part": "Version Control & Deployment",
+              "cont": ["GitHub", "GitHub Pages"]
+            }
           ]
         },
         "overview": {
           "title": "Project Overview",
           "timeline": "Mar 2025 - Apr 2025",
           "company": "Personal Project",
-          "description": "A fully responsive personal portfolio built with React and Vite. The website showcases projects, career timeline, and integrated contact form.",
+          "description": "A fully responsive personal portfolio developed with React and Vite. The website showcases my projects, career timeline, and integrated contact form. Developed individually and deployed via GitHub Pages.",
           "highlights": [
-            "Deployed via GitHub Pages",
-            "Animated sections with Framer Motion",
-            "Internationalization with i18next"
+            "Live deployment via GitHub Pages",
+            "Interactive user experience with user-friendly interface"
           ]
         }
       }
     },
     {
-      "title": "Task Management App",
+      "title": "Flow Project",
       "bigtitle": "FLOW",
       "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
           "content": [
-            "Kanban board layout",
-            "Drag-and-drop tasks",
             "User authentication system",
-            "Real-time updates"
-          ]
-        },
-        "technologiesused": {
-          "title": "Technologies Used",
-          "content": [
-            { "part": "Frontend", "cont": ["Vue.js", "Vuetify", "Pinia"] },
-            { "part": "Backend", "cont": ["Django REST Framework"] }
-          ]
-        },
-        "overview": {
-          "title": "Project Overview",
-          "timeline": "May 2025 - Jun 2025",
-          "company": "Personal Project",
-          "description": "TaskFlow is a web-based productivity app that allows users to manage tasks using a visual Kanban interface with drag-and-drop functionality.",
-          "highlights": [
-            "Authentication via JWT",
-            "Optimized API structure",
-            "Dark/light mode support"
-          ]
-        }
-      }
-    },
-    {
-      "title": "Weather Dashboard",
-      "bigtitle": "SKYLINE",
-      "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
-      "showcase": {
-        "keyfeatures": {
-          "title": "Key Features",
-          "content": [
-            "Live weather updates",
-            "Location-based forecasting",
-            "7-day outlook graph",
-            "Temperature and humidity analytics"
+            "Full CRUD operations for data management",
+            "State management using reducers",
+            "Routing with React Router for seamless navigation",
+            "Responsive and visually appealing CSS-focused design"
           ]
         },
         "technologiesused": {
@@ -212,20 +198,80 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": ["React", "Chart.js", "Tailwind CSS"]
+              "cont": ["React", "Vite", "SCSS/CSS3", "HTML5"]
             },
-            { "part": "API", "cont": ["OpenWeatherMap", "Axios"] }
+            {
+              "part": "State & Routing",
+              "cont": ["Reducer pattern", "React Router"]
+            },
+            {
+              "part": "Version Control & Deployment",
+              "cont": ["GitHub"]
+            }
           ]
         },
         "overview": {
           "title": "Project Overview",
-          "timeline": "Jul 2025 - Aug 2025",
+          "timeline": "March 2025",
           "company": "Personal Project",
-          "description": "Skyline is a real-time weather dashboard that fetches and visualizes climate data through modern chart libraries.",
+          "description": "Flow is a beginner-level web project built with React, focusing mainly on CSS and styling. It demonstrates basic CRUD operations and routing, showcasing a simple yet functional user interface.",
           "highlights": [
-            "Responsive and accessible design",
-            "Real-time weather API integration",
-            "Clean visual charts"
+            "Clean and modular React components",
+            "Fully styled with CSS and SCSS",
+            "Interactive form elements for data management",
+            "Persistent user data stored in browser localStorage"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Diet Track App",
+      "bigtitle": "TRACK",
+      "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
+      "showcase": {
+        "keyfeatures": {
+          "title": "Key Features",
+          "content": [
+            "Secure login with user authentication",
+            "CRUD operations for diet and meal tracking",
+            "Clean Layered Architecture for modular design",
+            "Real-time data updates with form-based inputs",
+            "Admin Panel with Full CRUD Management"
+          ]
+        },
+        "technologiesused": {
+          "title": "Technologies Used",
+          "content": [
+            {
+              "part": "Frontend",
+              "cont": ["HTML5", "CSS3", "JavaScript", "VS Form"]
+            },
+            {
+              "part": "Backend & API",
+              "cont": [
+                "C#",
+                ".NET Core",
+                "Entity Framework Core",
+                "REST API",
+                "Postman"
+              ]
+            },
+            {
+              "part": "Database",
+              "cont": ["MSSQL"]
+            }
+          ]
+        },
+        "overview": {
+          "title": "Project Overview",
+          "timeline": "July 2025 - August 2025",
+          "company": "Personal Project",
+          "description": "Diet Track App is a web-based application that allows users to track their daily diets and meals. The project uses layered architecture and secure user authentication. CRUD operations and real-time form-based inputs ensure a smooth user experience.",
+          "highlights": [
+            "Modular and maintainable code structure with layered architecture",
+            "CRUD operations for diet and meal tracking",
+            "User authentication and authorization system",
+            "Form-based data entry and responsive interface"
           ]
         }
       }

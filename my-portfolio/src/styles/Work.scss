@@ -170,7 +170,7 @@
               overflow: hidden;
               // text-overflow: ellipsis;
               color: transparent; // içi boş, sadece kenar çizgisi olacak
-              -webkit-text-stroke: 2px rgb(211, 24, 24); // çizgi kalınlığı ve rengi
+              // -webkit-text-stroke: 2px rgb(211, 24, 24); // çizgi kalınlığı ve rengi
               text-shadow: none; // gölgeyi kapatalım ki çizgi net görünsün
             }
 
@@ -235,7 +235,7 @@
             position: relative;
             // overflow: hidden;
             transition: transform 0.3s ease;
-
+            // max-width: 20dvw;
             &:hover {
               transform: scale(1.009);
             }

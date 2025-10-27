@@ -7,9 +7,10 @@
   // position: fixed;
   height: 94dvh;
   top: 2dvh;
-  left: 3dvh; 
+  left: 3dvh;
 
-  color: #CBC8C4; //font rengi
+  color: #e7e4df; //font rengi
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.15);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-feature-settings: "ss02";
@@ -54,15 +55,17 @@
     &.active {
       flex: 3;
       background-color: #92a746;
-       text-shadow: rgba(189, 184, 184, 0.603) 1px 2px 3px;
+      text-shadow: rgba(189, 184, 184, 0.603) 1px 2px 3px;
       .text,
       .no {
         font-size: 3rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.15);
       }
     }
     &:hover {
       background-color: transparent; // opsiyonel hover efekti
       border: solid 1px rgb(63, 62, 62);
+      
     }
   }
 }

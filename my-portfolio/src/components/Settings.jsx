@@ -4,7 +4,7 @@ import { useLanguage } from "../providers/LanguageProvider";
 // import { useTheme } from "../providers/ThemeProvider";
 import menuItems from "../data/menuItems";
 
-function Settings({theme, setTheme}) {
+function Settings({ theme, setTheme }) {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { lang, setLang } = useLanguage();
@@ -57,39 +57,17 @@ function Settings({theme, setTheme}) {
         </div>
       </div>
 
-      {/* <div className="theme-section">
-        <h3>Tema Seçimi</h3>
-        <div className="theme-buttons">
-          {["pastel", "dark", "ocean"].map((theme) => (
-            <button
-              key={theme}
-              className={`theme-btn ${currentTheme === theme ? "active" : ""}`}
-              onClick={() => changeTheme(theme)}
-            >
-              {theme.charAt(0).toUpperCase() + theme.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        <ul className="preview-list">
-          {menuItems.map((item) => (
-            <li key={item.id} style={{ color: item.color }}>
-              ● {item.label || item.id}
-            </li>
-          ))}
-        </ul>
-      </div> */}
-      {/* Tema değiştirici butonlar */}
-      <div style={{ margin: "20px" }}>
+      <div className="themes" style={{ margin: "20px" }}>
         {["pastel", "dark", "ocean"].map((themeName) => (
           <button
+            className="theme-button"
             key={themeName}
             onClick={() => {
-              console.log("Tema tıklandı:", themeName);
+              // console.log("Tema tıklandı:", themeName);
               setTheme(themeName);
             }}
           >
-            {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
+            {/* {themeName.charAt(0).toUpperCase()} */}
           </button>
         ))}
       </div>

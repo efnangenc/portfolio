@@ -38,8 +38,8 @@ function Content({ setIsVisible, setMobileIsVisible, navbarRef, menuItems }) {
         });
       },
       {
-        threshold: 0.1,
-        // threshold: [0, 0.25, 0.5, 0.75, 1.0],
+        // threshold: 0.3,
+        threshold: [0, 0.25, 0.5, 0.75, 1.0],
         rootMargin: "0px",
         scrollMargin: "0px",
       }

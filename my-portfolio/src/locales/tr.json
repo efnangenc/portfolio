@@ -81,59 +81,66 @@
   ],
   "works": [
     {
-      "title": "E-Ticaret Platform",
+      "title": "E-Ticaret Web Sitesi Projesi",
       "bigtitle": "BEAM",
       "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
       "showcase": {
         "keyfeatures": {
           "title": "Ana Özellikler",
           "content": [
-            "Alışveriş sepeti fonksiyonelliği",
-            "Ütün değerlendirme ve yorum",
-            "Wishlist system",
-            "MAil bildirimleri",
-            "Mobile responsive design"
+            "SOLID Prensipleri ve Temiz Katmanlı Mimari",
+            "Rol Tabanlı Kimlik Doğrulama ve Yetkilendirme Sistemi (JWT)",
+            "Tam CRUD Yönetimine Sahip Yönetici Paneli",
+            "Azure DevOps ve SQL Server ile Bulut Entegrasyonu",
+            "Yüksek Performanslı ve Ölçeklenebilir Backend Tasarımı"
           ]
         },
         "technologiesused": {
-          "title": "Kullanılan teknolojiler",
+          "title": "Kullanılan Teknolojiler",
           "content": [
             {
               "part": "Frontend",
-              "cont": ["HTML5", "CSS3", "JS", "Bootstrap"]
+              "cont": ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
             },
-            { "part": "Backend", "cont": ["C#", ".Net Core", "Rest API"] },
             {
-              "part": "Database & Cloud",
-              "cont": ["Azure", "SQL Server", "Devops"]
+              "part": "Backend & API",
+              "cont": ["C#", ".NET Core", "REST API", "Postman ve Swagger"]
+            },
+            {
+              "part": "Veritabanı & DevOps",
+              "cont": ["Azure Bulut Servisleri", "SQL Server", "GitHub"]
             }
           ]
         },
         "overview": {
-          "title": "Proje Değerlendirmesi",
+          "title": "Proje Genel Bakışı",
           "timeline": "Ocak 2025 - Şubat 2025",
-          "company": "Associated with Bilgeadam",
-          "description": "My team and I developed a comprehensive e-commerce platform integrated with Azure DevOps cloud database...",
+          "company": "Bilgeadam ile İşbirliği",
+          "description": "Dört kişilik bir ekiple, bir ay süren yoğun çalışmayla kapsamlı bir e-ticaret platformu geliştirdik. Scrum Master ile sprintler ve düzenli toplantılar aracılığıyla proje yönetimini sürdürdük. Tüm süreç boyunca Product Owner'ın talepleri ön planda tutuldu ve proje, ölçeklenebilir, dinamik ve temiz bir mimari ile hayata geçirildi. Platform, Azure DevOps bulut veritabanı ile deploy edildi.",
+
           "highlights": [
-            "High Performance Architecture",
-            "Layered Architecture Pattern",
-            "Responsive Mobile Design"
+            "Dinamik alışveriş sepeti ve sipariş takibi",
+            "Ürün inceleme ve puanlama sistemi",
+            "Mobil uyumlu tasarım",
+            "Erişim kontrolü ve yetki yönetimi"
           ]
         }
       }
     },
+
     {
-      "title": "Portfolio Sitesi",
+      "title": "Portfolio",
       "bigtitle": "PORTFOY",
       "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
           "content": [
-            "Animated UI transitions",
-            "Dynamic content with React hooks",
-            "Responsive grid layout",
-            "Lightweight routing system"
+            "React Hooks ile dinamik içerik yönetimi ve state optimizasyonu",
+            "Responsive ve performans odaklı layout tasarımı",
+            "Intersection Observer ile görünürlük bazlı optimizasyon",
+            "EmailJS ile entegre çalışan iletişim formu",
+            "Çoklu tema ve dil desteği"
           ]
         },
         "technologiesused": {
@@ -141,91 +148,136 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": ["React", "SCSS", "Vite", "Framer Motion"]
+              "cont": [
+                "React",
+                "Vite",
+                "HTML5",
+                "CSS3",
+                "SCSS",
+                "Framer Motion"
+              ]
             },
-            { "part": "Integration", "cont": ["EmailJS", "GitHub Pages"] }
+            {
+              "part": "Integration & Features",
+              "cont": ["EmailJS", "i18n"]
+            },
+            {
+              "part": "Version Control & Deployment",
+              "cont": ["GitHub", "GitHub Pages"]
+            }
           ]
         },
         "overview": {
           "title": "Project Overview",
           "timeline": "Mar 2025 - Apr 2025",
           "company": "Personal Project",
-          "description": "A fully responsive personal portfolio built with React and Vite. The website showcases projects, career timeline, and integrated contact form.",
+          "description": "React ve Vite kullanılarak geliştirilmiş tamamen responsive kişisel portföy. Web sitesi, projelerimi, kariyer geçmişimi ve entegre iletişim formunu gösteriyor. Temel olarak tek başıma geliştirildi ve GitHub Pages üzerinden deploy edildi.",
           "highlights": [
-            "Deployed via GitHub Pages",
-            "Animated sections with Framer Motion",
-            "Internationalization with i18next"
+            "GitHub Pages üzerinden canlı deploy",
+            "Kullanıcı dostu arayüz ile etkileşimli deneyim"
           ]
         }
       }
     },
     {
-      "title": "Task Yönetim Uygulaması",
-      "bigtitle": "TASK",
+      "title": "Flow Proje",
+      "bigtitle": "FLOW",
       "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
       "showcase": {
         "keyfeatures": {
-          "title": "Key Features",
+          "title": "Öne Çıkan Özellikler",
           "content": [
-            "Kanban board layout",
-            "Drag-and-drop tasks",
-            "User authentication system",
-            "Real-time updates"
+            "Kullanıcı doğrulama sistemi",
+            "Tam CRUD işlemleri ile veri yönetimi",
+            "Reducer kullanarak state yönetimi",
+            "React Router ile kesintisiz sayfa navigasyonu",
+            "Responsive ve görsel olarak çekici CSS odaklı tasarım"
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Kullanılan Teknolojiler",
           "content": [
-            { "part": "Frontend", "cont": ["Vue.js", "Vuetify", "Pinia"] },
-            { "part": "Backend", "cont": ["Django REST Framework"] }
+            {
+              "part": "Frontend",
+              "cont": ["React", "Vite", "SCSS/CSS3", "HTML5"]
+            },
+            {
+              "part": "State & Routing",
+              "cont": ["Reducer yapısı", "React Router"]
+            },
+            {
+              "part": "Versiyon Kontrol & Deployment",
+              "cont": ["GitHub"]
+            }
           ]
         },
         "overview": {
-          "title": "Project Overview",
-          "timeline": "May 2025 - Jun 2025",
-          "company": "Personal Project",
-          "description": "TaskFlow is a web-based productivity app that allows users to manage tasks using a visual Kanban interface with drag-and-drop functionality.",
+          "title": "Proje Hakkında",
+          "timeline": "Mart 2025",
+          "company": "Kişisel Proje",
+          "description": "Flow, React ile geliştirilmiş bir başlangıç seviyesinde web projesidir ve ağırlıklı olarak CSS ve stil üzerine odaklanmıştır. Basit CRUD işlemleri ve routing özelliklerini gösteren, fonksiyonel ve kullanıcı dostu bir arayüz sunar.",
           "highlights": [
-            "Authentication via JWT",
-            "Optimized API structure",
-            "Dark/light mode support"
+            "Temiz ve modüler React bileşenleri",
+            "Tamamen CSS ve SCSS ile tasarlandı",
+            "Veri yönetimi için etkileşimli form elemanları",
+            "Tarayıcı localStorage ile veri kalıcılığı"
           ]
         }
       }
     },
     {
-      "title": "Weather Dashboard",
-      "bigtitle": "SKYLINE",
+      "title": "Diet Track App",
+      "bigtitle": "TRACK",
       "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
       "showcase": {
         "keyfeatures": {
-          "title": "Key Features",
+          "title": "Öne Çıkan Özellikler",
           "content": [
-            "Live weather updates",
-            "Location-based forecasting",
-            "7-day outlook graph",
-            "Temperature and humidity analytics"
+            "Kullanıcı doğrulama sistemi ile güvenli giriş",
+            "CRUD işlemleri ile diyet ve yemek takibi",
+            "Katmanlı mimari ile düzenli ve modüler yapı",
+            "Gerçek zamanlı veri güncellemeleri ve form tabanlı girişler",
+            "Responsive ve kullanıcı dostu arayüz"
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Kullanılan Teknolojiler",
           "content": [
             {
               "part": "Frontend",
-              "cont": ["React", "Chart.js", "Tailwind CSS"]
+              "cont": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Form tabanlı arayüzler (VS Form)"
+              ]
             },
-            { "part": "API", "cont": ["OpenWeatherMap", "Axios"] }
+            {
+              "part": "Backend & API",
+              "cont": [
+                "C#",
+                ".NET Core",
+                "Entity Framework Core",
+                "REST API",
+                "Postman"
+              ]
+            },
+            {
+              "part": "Database",
+              "cont": ["Microsoft SQL Server (MSSQL)"]
+            }
           ]
         },
         "overview": {
-          "title": "Project Overview",
-          "timeline": "Jul 2025 - Aug 2025",
-          "company": "Personal Project",
-          "description": "Skyline is a real-time weather dashboard that fetches and visualizes climate data through modern chart libraries.",
+          "title": "Proje Hakkında",
+          "timeline": "Temmuz 2025 - Ağustos 2025",
+          "company": "Kişisel Proje",
+          "description": "Diet Track App, kullanıcıların günlük diyetlerini ve öğünlerini takip edebildiği bir web uygulamasıdır. Projede katmanlı mimari ve güvenli kullanıcı doğrulama sistemi kullanılmıştır. CRUD işlemleri ve gerçek zamanlı form tabanlı girişler ile kullanıcı deneyimi ön planda tutulmuştur.",
           "highlights": [
-            "Responsive and accessible design",
-            "Real-time weather API integration",
-            "Clean visual charts"
+            "Katmanlı mimari ile modüler ve sürdürülebilir kod yapısı",
+            "CRUD işlemleri ile diyet ve yemek takibi",
+            "Kullanıcı doğrulama ve yetkilendirme sistemi",
+            "Form tabanlı veri girişleri ve responsive arayüz"
           ]
         }
       }

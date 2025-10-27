@@ -69,7 +69,10 @@ function Work({ menuItems }) {
                       </div>
                     </div>
 
-                    <div className="big-title">
+                    <div
+                      style={{ WebkitTextStroke: `2px ${sub2} ` }}
+                      className="big-title"
+                    >
                       <div className="title-content">
                         <h1>{project.bigtitle}</h1>
                         {/* <div className="title-decoration">
@@ -132,7 +135,7 @@ function Work({ menuItems }) {
                                   <h3>{card.title}</h3>
                                 </div>
                                 <div className="card-content">
-                                  <div className="project-timeline">
+                                  <div style={{ backgroundColor: sub1,  filter: "brightness(90%)"}}  className="project-timeline">
                                     <span className="timeline-period">
                                       {card.timeline}
                                     </span>

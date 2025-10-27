@@ -6,6 +6,8 @@
   transform: translateY(0);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
 
   &.hidden {
     transform: translateY(-120%);
@@ -81,7 +83,73 @@
     opacity: 0.8;
   }
 }
+// .themes {
+//   // background-color: red;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: stretch;
+//   gap: 1rem;
 
+//   .theme-button {
+//     color: black;
+//     border-radius: 2rem;
+//     width: 2.5rem;
+//     height: 2.2rem;
+//     // background-color: yellow;
+//     transition: all 0.3s ease;
+//     &:hover {
+//       transform: translateY(-2px);
+//     }
+//   }
+// }
+.themes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  // padding: 1rem;
+  // background: rgba(255, 255, 255, 0.05);
+  // backdrop-filter: blur(10px);
+  border-radius: 3rem;
+  // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+  //   inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  .theme-button {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.459);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+    //   inset 0 2px 5px rgba(255, 255, 255, 0.3);
+    // overflow: hidden;
+
+    // Pastel Theme (1. çocuk)
+    &:nth-child(1) {
+      background-color: #9c86a760;
+    }
+
+    // Dark Theme (2. çocuk)
+    &:nth-child(2) {
+      background-color: #2f635254;
+    }
+
+    // Ocean Theme (3. çocuk)
+    &:nth-child(3) {
+      background-color: #d7aa7754;
+    }
+
+    // Hover effect
+    &:hover {
+      transform: translateY(-8px) scale(1.15);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 0 30px currentColor,
+        inset 0 2px 5px rgba(255, 255, 255, 0.4);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .languageCont {
     // Full width on mobile
