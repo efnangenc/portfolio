@@ -1,56 +1,37 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Settings.scss";
-import React from "react";
 import { useLanguage } from "../providers/LanguageProvider";
+// import { useTheme } from "../providers/ThemeProvider";
+import menuItems from "../data/menuItems";
 
-function Settings() {
+function Settings({theme, setTheme}) {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const { t, lang, setLang } = useLanguage();
+  const { lang, setLang } = useLanguage();
+  // const { currentTheme, themeMenuItems, changeTheme } = useTheme();
+  // const [theme, setTheme] = useState("pastel"); // varsayılan tema
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // Scroll threshold - minimum hareket miktarı
       const scrollThreshold = 10;
 
-      if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
-        return; // Küçük hareketleri ignore et
-      }
+      if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) return;
 
-      // Yukarı scroll → navbar göster
-      if (currentScrollY < lastScrollY) {
-        setNavbarVisible(true);
-      }
-      // Aşağı scroll → navbar gizle
-      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // 100px'den sonra gizle (en üstte hep görünsün)
+      if (currentScrollY < lastScrollY) setNavbarVisible(true);
+      else if (currentScrollY > lastScrollY && currentScrollY > 100)
         setNavbarVisible(false);
-      }
 
-      // En üstteyse her zaman göster
-      if (currentScrollY < 50) {
-        setNavbarVisible(true);
-      }
+      if (currentScrollY < 50) setNavbarVisible(true);
 
       setLastScrollY(currentScrollY);
     };
 
-    // Throttle için timeout
-    let ticking = false;
     const scrollListener = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
+      window.requestAnimationFrame(handleScroll);
     };
 
     window.addEventListener("scroll", scrollListener, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", scrollListener);
     };
@@ -58,23 +39,62 @@ function Settings() {
 
   return (
     <div className={`languageCont ${navbarVisible ? "visible" : "hidden"}`}>
+      {/* Dil Seçimi */}
       <div className="language-navbar">
         <div className="language-buttons">
           <button
             className={`langButton ${lang === "tr" ? "active" : ""}`}
             onClick={() => setLang("tr")}
           >
-            {/* 🇹🇷 */} Türkçe
+            Türkçe
           </button>
           <button
             className={`langButton ${lang === "en" ? "active" : ""}`}
             onClick={() => setLang("en")}
           >
-            {/* 🇬🇧 */} English
+            English
           </button>
         </div>
+      </div>
+
+      {/* <div className="theme-section">
+        <h3>Tema Seçimi</h3>
+        <div className="theme-buttons">
+          {["pastel", "dark", "ocean"].map((theme) => (
+            <button
+              key={theme}
+              className={`theme-btn ${currentTheme === theme ? "active" : ""}`}
+              onClick={() => changeTheme(theme)}
+            >
+              {theme.charAt(0).toUpperCase() + theme.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <ul className="preview-list">
+          {menuItems.map((item) => (
+            <li key={item.id} style={{ color: item.color }}>
+              ● {item.label || item.id}
+            </li>
+          ))}
+        </ul>
+      </div> */}
+      {/* Tema değiştirici butonlar */}
+      <div style={{ margin: "20px" }}>
+        {["pastel", "dark", "ocean"].map((themeName) => (
+          <button
+            key={themeName}
+            onClick={() => {
+              console.log("Tema tıklandı:", themeName);
+              setTheme(themeName);
+            }}
+          >
+            {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
+          </button>
+        ))}
       </div>
     </div>
   );
 }
+
 export default Settings;

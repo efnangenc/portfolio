@@ -1,14 +1,15 @@
 import { useState } from "react";
 import CardHead from "../components/CardHead";
-import menuItems from "../data/menuItems";
+// import menuItems from "../data/menuItems";
 import React from "react";
 
 import skillsData from "../data/skillsData";
 import "../styles/Talent.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Talent() {
+function Talent({menuItems}) {
   const talentItem = menuItems.find((item) => item.id === "talent");
+  const [main, sub1, sub2, sub3] = talentItem.colors;
   const [toggleState, setToggleState] = useState(1);
   const { t, lang, setLang } = useLanguage();
 
@@ -28,7 +29,7 @@ function Talent() {
       <CardHead item={talentItem} />
 
       {/* Enhanced Slogan Section */}
-      <div className="slogan">
+      <div style={{backgroundColor:sub1}} className="slogan">
         <div className="slogan-content">
           <div className="slogan-text">
             <h2 className="slogan-title">
@@ -51,11 +52,12 @@ function Talent() {
         </div>
       </div>
 
-      <div className="talent-container">
+      <div style={{backgroundColor:sub2}} className="talent-container">
         {/* Enhanced Tabs */}
         <div className="tabs">
           {Object.keys(skillsData).map((key, i) => (
             <div
+             style={{backgroundColor:sub2}}
               key={i}
               className={toggleState === i ? "tab-item active-tab" : "tab-item"}
               onClick={() => toggleTab(i)}

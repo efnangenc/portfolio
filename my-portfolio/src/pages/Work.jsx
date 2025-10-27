@@ -1,20 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 
 import CardHead from "../components/CardHead";
-import menuItems from "../data/menuItems";
 import workItemsData from "../data/workItems";
 import "../styles/Work.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Work() {
+function Work({ menuItems }) {
   const workItem = menuItems.find((item) => item.id === "work");
+  const [main, sub1, sub2, sub3] = workItem.colors;
   const [openItems, setOpenItems] = useState({});
   const [activeTab, setActiveTab] = useState({});
-  // const { workItems } = workItemsData();
   const { t, lang, setLang } = useLanguage();
   const workItems = workItemsData(t);
-  
 
   const toggleItem = (itemId) => {
     // const idStr = String(itemId);
@@ -43,14 +41,9 @@ function Work() {
           const projectId = String(project.id);
           const isOpen = !!openItems[projectId];
 
-
           return (
             <div key={projectId} className={`project-item ${projectId}`}>
-              <div
-                className={`project-card ${
-                  isOpen ? "expanded" : ""
-                }`}
-              >
+              <div className={`project-card ${isOpen ? "expanded" : ""}`}>
                 {/* Project Header */}
                 <div
                   className="project-header"
@@ -100,6 +93,7 @@ function Work() {
                           if (cardKey === "technologiesused") {
                             return (
                               <div
+                                style={{ backgroundColor: sub1 }}
                                 key={cardIndex}
                                 className="showcase-card tech-card"
                               >
@@ -130,6 +124,7 @@ function Work() {
                           if (cardKey === "overview") {
                             return (
                               <div
+                                style={{ backgroundColor: sub1 }}
                                 key={cardIndex}
                                 className="showcase-card overview-card"
                               >
@@ -166,6 +161,7 @@ function Work() {
                           // Default: features gibi düz liste
                           return (
                             <div
+                              style={{ backgroundColor: sub1 }}
                               key={cardIndex}
                               className="showcase-card features-card"
                             >

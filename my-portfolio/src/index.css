@@ -14,6 +14,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root.pastel {
+  background-color: #F5E8CA;
+}
+
+#root.dark {
+  background-color: #2F2F2F;
+}
+
+#root.ocean {
+  background-color: #98B0B6;
+}
+
 body {
   margin: 0;
   display: flex;

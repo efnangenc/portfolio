@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Navi.scss";
-import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Navi({ active, setActive, setMobileActive, BarRef, isMobileVisible }) {
+function Navi({ active, setActive, setMobileActive, BarRef, isMobileVisible, menuItems }) {
   const { t } = useLanguage();
 
   return (

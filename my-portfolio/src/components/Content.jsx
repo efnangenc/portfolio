@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import menuItems from "../data/menuItems.js";
 import "../styles/Content.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Content({ setIsVisible, setMobileIsVisible, navbarRef }) {
+function Content({ setIsVisible, setMobileIsVisible, navbarRef, menuItems }) {
   const itemRefs = useRef([]); // tüm section’ları saklayacağız
   const [mobileActive, setMobileActive] = useState(null); // ✅ aktif section state
   const { t, lang, setLang } = useLanguage();
@@ -107,7 +106,7 @@ function Content({ setIsVisible, setMobileIsVisible, navbarRef }) {
                 <p>{item.no}</p>
               </h2>
             )}
-            <Component />
+            <Component menuItems={menuItems} />
           </div>
         );
       })}

@@ -2,11 +2,12 @@ import "../styles/About.scss";
 import CardHead from "../components/CardHead";
 import React from "react";
 
-import menuItems from "../data/menuItems.js";
+// import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function About() {
+function About({ menuItems }) {
   const aboutItem = menuItems.find((item) => item.id === "about");
+  const [main, sub1, sub2, sub3] = aboutItem.colors;
   const { t } = useLanguage();
 
   return (
@@ -24,7 +25,7 @@ function About() {
               </div>
             </div>
             <div className="banner-visual">
-                <img
+              <img
                 src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg"
                 alt="foto1"
                 loading="eager"
@@ -38,12 +39,13 @@ function About() {
                 src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
                 alt="foto3"
                 loading="eager"
-              />  
+              />
             </div>
           </div>
         </div>
 
-        <div className="about-skills">
+        <div style={{backgroundColor:sub1}} className="about-skills">
+        {/* <div  className="about-skills"> */}
           <div className="skills-content">
             <div className="skills-text">
               <h3>Crafting Digital Experiences</h3>
@@ -52,7 +54,7 @@ function About() {
           </div>
         </div>
 
-        <div className="mission-block">
+        <div style={{backgroundColor:sub2}} className="mission-block">
           <div className="mission-sidebar">
             <div className="step">Mission</div>
             <div className="step">
@@ -83,7 +85,7 @@ function About() {
               </p>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   );

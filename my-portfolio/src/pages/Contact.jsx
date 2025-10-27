@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import CardHead from "../components/CardHead";
-import menuItems from "../data/menuItems";
+// import menuItems from "../data/menuItems";
 import socialLinks from "../data/contactItems";
 import React from "react";
 
@@ -9,8 +9,9 @@ import { useLanguage } from "../providers/LanguageProvider";
 import { sendEmail } from "../services/mailService";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function Contact() {
+function Contact({ menuItems }) {
   const contactItem = menuItems.find((item) => item.id === "contact");
+  const [main, sub1, sub2, sub3] = contactItem.colors;
   const { t } = useLanguage();
   const formRef = useRef();
   const [captchaValue, setCaptchaValue] = useState(null);
@@ -65,7 +66,7 @@ function Contact() {
     <div className="contact">
       <CardHead item={contactItem} />
 
-      <div className="cont-text">
+      <div style={{ backgroundColor: sub1 }} className="cont-text">
         <div className="text-container">
           <div className="text-line">
             <span className="lets">Let's</span>
@@ -90,7 +91,7 @@ function Contact() {
       </div>
 
       <div className="contact-form-section">
-        <div className="form-container">
+        <div style={{ backgroundColor: sub2 }} className="form-container">
           <div className="form-header">
             <h2>Get In Touch</h2>
             <p>
@@ -190,7 +191,7 @@ function Contact() {
         </div>
 
         <div className="contact-info">
-          <div className="info-section">
+          <div style={{ backgroundColor: sub3 }} className="info-section">
             <h3>Let's Connect</h3>
             <p>
               I'm always interested in new opportunities, exciting projects, and
@@ -198,7 +199,7 @@ function Contact() {
             </p>
           </div>
 
-          <div className="social-links">
+          <div style={{ backgroundColor: sub3 }} className="social-links">
             <h4>Find Me Online</h4>
             <div className="social-grid">
               {socialLinks.map((link, index) => (
@@ -217,7 +218,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="contact-details">
+          <div style={{ backgroundColor: sub3 }} className="contact-details">
             <h4>Direct Contact</h4>
             <div className="detail-item">
               <span className="detail-icon">📧</span>

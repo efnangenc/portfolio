@@ -1,18 +1,18 @@
 import CardHead from "../components/CardHead";
-import menuItems from "../data/menuItems";
+// import menuItems from "../data/menuItems";
 import React from "react";
 
 import useExperiencesData from "../data/careerItems";
 import "../styles/Career.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Career() {
+function Career({ menuItems }) {
   const careerItem = menuItems.find((item) => item.id === "career");
+  const [main, sub1, sub2, sub3] = careerItem.colors;
   const { t, lang, setLang } = useLanguage();
   const { experiences } = useExperiencesData();
 
   // console.log("EXPERIENCES TYPE:", typeof experiences, Array.isArray(experiences), experiences);
-
 
   // const futureGoals = [
   //   {
@@ -40,7 +40,7 @@ function Career() {
       <CardHead item={t(careerItem)} />
 
       {/* Career Plan Section */}
-      <div className="career-plan">
+      <div style={{ backgroundColor: sub1 }} className="career-plan">
         <div className="plan-content">
           <div className="plan-header">
             <h2>Career Journey</h2>
@@ -50,7 +50,7 @@ function Career() {
       </div>
 
       {/* Enhanced Career Timeline */}
-      <div className="career-route">
+      <div style={{ backgroundColor: sub2 }} className="career-route">
         <div className="timeline-container">
           {/* Timeline Line */}
           <div className="timeline-line"></div>
@@ -116,15 +116,17 @@ function Career() {
                         <div className="skill-tags">
                           <div className="skill-tags-track">
                             {/* Skills'i 2 kere tekrarla - sonsuz döngü için */}
-                            {[...exp.skills, ...exp.skills, ...exp.skills].map((skill, i) => (
-                              <span
-                                key={i}
-                                className="skill-tag"
-                                style={{ backgroundColor: exp.color }}
-                              >
-                                {skill}
-                              </span>
-                            ))}
+                            {[...exp.skills, ...exp.skills, ...exp.skills].map(
+                              (skill, i) => (
+                                <span
+                                  key={i}
+                                  className="skill-tag"
+                                  style={{ backgroundColor: exp.color }}
+                                >
+                                  {skill}
+                                </span>
+                              )
+                            )}
                           </div>
                         </div>
                       </div>
