@@ -1,3 +1,4 @@
+
 .container {
   .about {
     display: flex;
@@ -126,16 +127,16 @@
 
           @keyframes fade-background {
             0% {
-              background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+              background-image: url("dist/assets/portrait5.png");
             }
             33% {
-              background-image: url("https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg");
+              background-image: url("dist/assets/portrait2.png");
             }
             66% {
-              background-image: url("https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg");
+              background-image: url("dist/assets/portrait3.png");
             }
             100% {
-              background-image: url("https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg");
+              background-image: url("dist/assets/portrait4.png");
             }
           }
         }

@@ -26,18 +26,18 @@ function About({ menuItems }) {
             </div>
             <div className="banner-visual">
               <img
-                src="https://i.pinimg.com/1200x/08/30/b2/0830b2a711fc53167562d967ad53dc83.jpg"
-                alt="foto1"
+                // src="dist/assets/portrait1"
+                // alt="foto1"
                 loading="eager"
               />
               <img
-                src="https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg"
-                alt="foto2"
+                // src="https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg"
+                // alt="foto2"
                 loading="eager"
               />
               <img
-                src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
-                alt="foto3"
+                // src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
+                // alt="foto3"
                 loading="eager"
               />
             </div>

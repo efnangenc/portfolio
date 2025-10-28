@@ -49,10 +49,32 @@ function Work({ menuItems }) {
                   className="project-header"
                   onClick={() => toggleItem(projectId)}
                 >
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
+                  <div
+                    style={{ backgroundColor: sub2 }}
+                    className="project-image"
+                  >
+                    {/* <img src={project.image} alt={project.title} /> */}
                     <div className="image-project-title">
                       <h3>{project.title}</h3>
+                      {/* ✅ YENİ: Toggle Ok İkonu */}
+                      <div className="toggle-icon">
+                        <svg
+                          className={`arrow-icon ${isOpen ? "rotated" : ""}`}
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 9L12 15L18 9"
+                            stroke="white"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -63,9 +85,9 @@ function Work({ menuItems }) {
                       <img src={project.image} alt={project.title} />
                       <div className="project-overlay">
                         {/* <div className="project-meta">
-                          <span className="project-type">Full Stack Development</span>
-                          <span className="project-status">Live Project</span>
-                        </div> */}
+                            <span className="project-type">Full Stack Development</span>
+                            <span className="project-status">Live Project</span>
+                          </div> */}
                       </div>
                     </div>
 
@@ -76,13 +98,13 @@ function Work({ menuItems }) {
                       <div className="title-content">
                         <h1>{project.bigtitle}</h1>
                         {/* <div className="title-decoration">
-                          <div className="decoration-line"></div>
-                          <div className="decoration-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div> */}
+                            <div className="decoration-line"></div>
+                            <div className="decoration-dots">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                          </div> */}
                       </div>
                     </div>
 
@@ -135,13 +157,19 @@ function Work({ menuItems }) {
                                   <h3>{card.title}</h3>
                                 </div>
                                 <div className="card-content">
-                                  <div style={{ backgroundColor: sub1,  filter: "brightness(90%)"}}  className="project-timeline">
+                                  <div
+                                    style={{
+                                      backgroundColor: sub1,
+                                      filter: "brightness(90%)",
+                                    }}
+                                    className="project-timeline"
+                                  >
                                     <span className="timeline-period">
                                       {card.timeline}
                                     </span>
                                     {/* <span className="timeline-company">
-                                      {card.company}
-                                    </span> */}
+                                        {card.company}
+                                      </span> */}
                                   </div>
                                   <p className="project-description">
                                     {card.description}
@@ -150,9 +178,11 @@ function Work({ menuItems }) {
                                     {card.highlights.map((highlight, i) => (
                                       <div key={i} className="highlight-item">
                                         <span className="highlight-icon">
-                                          ⚡
+                                          ◽
                                         </span>
-                                        <span>{highlight}</span>
+                                        <span style={{ color: sub2 }}>
+                                          {highlight}
+                                        </span>
                                       </div>
                                     ))}
                                   </div>
@@ -188,48 +218,82 @@ function Work({ menuItems }) {
                         }
                       )}
                     </div>
-
-                    {/* Tab Container
-                    <div className="tab-container">
-                      <div className="tabs">
-                        {Object.keys(project.tabs).map((tabKey, tabIndex) => (
-                          <div
-                            key={tabIndex}
-                            className={
-                              activeTab[projectId] === tabIndex
-                                ? "tab-item active-tab"
-                                : "tab-item"
-                            }
-                            onClick={() => toggleTab(projectId, tabIndex)}
-                          >
-                            {project.tabs[tabKey].title}
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="tab-content">
-                        {Object.keys(project.tabs).map((tabKey, tabIndex) => (
-                          <div key={tabIndex} className="content-panel">
-                            {activeTab[projectId] === tabIndex && (
-                              <div className="content active-content">
-                                <div className="content-list">
-                                  {/* {project.tabs[tabKey].content.map(
-                                    (item, index) => (
-                                      <span
-                                        key={index}
-                                        className="content-item"
-                                      >
-                                        {item}
+                    {project.screenshots &&
+                      project.screenshots.some(
+                        (s) => s.url && s.url.trim() !== ""
+                      ) && (
+                        <div className="project-screenshots-gallery">
+                          {/* <div className="gallery-header">
+                              <h3>Proje Ekran Görüntüleri</h3>
+                            </div> */}
+                          <div className="screenshots-container">
+                            {project.screenshots.map((screenshot, index) => (
+                              <div key={index} className="screenshot-item">
+                                <div className="screenshot-wrapper">
+                                  <img
+                                    src={screenshot.url}
+                                    alt={
+                                      screenshot.caption ||
+                                      `${project.title} Screenshot ${index + 1}`
+                                    }
+                                  />
+                                  {/* <div className="screenshot-overlay">
+                                      <span className="screenshot-number">
+                                        #{index + 1}
                                       </span>
-                                    )
-                                  )}
+                                    </div> */}
                                 </div>
+                                {/* {screenshot.caption && (
+                                    <p className="screenshot-caption">
+                                      {screenshot.caption}
+                                    </p>
+                                  )} */}
                               </div>
-                            )}
+                            ))}
                           </div>
-                        ))}
-                      </div> 
-                    </div>*/}
+                        </div>
+                      )}
+                    {/* Tab Container
+                      <div className="tab-container">
+                        <div className="tabs">
+                          {Object.keys(project.tabs).map((tabKey, tabIndex) => (
+                            <div
+                              key={tabIndex}
+                              className={
+                                activeTab[projectId] === tabIndex
+                                  ? "tab-item active-tab"
+                                  : "tab-item"
+                              }
+                              onClick={() => toggleTab(projectId, tabIndex)}
+                            >
+                              {project.tabs[tabKey].title}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="tab-content">
+                          {Object.keys(project.tabs).map((tabKey, tabIndex) => (
+                            <div key={tabIndex} className="content-panel">
+                              {activeTab[projectId] === tabIndex && (
+                                <div className="content active-content">
+                                  <div className="content-list">
+                                    {/* {project.tabs[tabKey].content.map(
+                                      (item, index) => (
+                                        <span
+                                          key={index}
+                                          className="content-item"
+                                        >
+                                          {item}
+                                        </span>
+                                      )
+                                    )}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div> 
+                      </div>*/}
                   </>
                 )}
               </div>

@@ -2,7 +2,7 @@ const themes = {
   pastel: {
     home: ["#F5E8CA", "#E8D9B5", "#DCCCA0", "#CDBF8C"],
     about: ["#A7BC78", "#34495e65", "#f3ede7", "#7E9350"],
-    work: ["#C7A6AE", "#9fadb6", "#a8506cff", "#9E7886"],
+    work: ["#C7A6AE", "#9fadb6", "#2c3e50", "#9E7886"],
     talent: ["#B8CEC5", "#764ba25e", "#6f5c78", "#889F97"],
     career: ["#D2C49D", "#bdc3c7", "#c2c3a8", "#AC9B72"],
     contact: ["#6F5C78", "#667eea65", "#8ca9c7", "#2c3e50"],

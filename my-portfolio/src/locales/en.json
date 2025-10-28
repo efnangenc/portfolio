@@ -83,7 +83,17 @@
     {
       "title": "E-Commerce WebPage Project",
       "bigtitle": "BEAM",
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      "image": "dist/assets/foto2ss.png",
+      "screenshots": [
+        {
+          "url": "dist/assets/foto3ss.png",
+          "caption": "Açıklmaa"
+        },
+        {
+          "url": "dist/assets/foto1ss.png",
+          "caption": "Açıklama2"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
@@ -131,6 +141,16 @@
       "title": "Portfolio",
       "bigtitle": "PORTFOY",
       "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
+      "screenshots": [
+        {
+          "url": "",
+          "caption": "Açıklmaa3aa"
+        },
+        {
+          "url": "",
+          "caption": "Açıklama24"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
@@ -138,8 +158,7 @@
             "Dynamic content management and state optimization using React Hooks",
             "Responsive and performance-focused layout design",
             "Visibility-based optimization with Intersection Observer",
-            "Integrated contact form with EmailJS",
-            "Multi-theme and multi-language support"
+            "Integrated contact form with EmailJS"
           ]
         },
         "technologiesused": {
@@ -147,14 +166,7 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": [
-                "React",
-                "Vite",
-                "HTML5",
-                "CSS3",
-                "SCSS",
-                "Framer Motion"
-              ]
+              "cont": ["React", "Vite", "HTML5", "CSS3", "SCSS"]
             },
             {
               "part": "Integration & Features",
@@ -173,7 +185,8 @@
           "description": "A fully responsive personal portfolio developed with React and Vite. The website showcases my projects, career timeline, and integrated contact form. Developed individually and deployed via GitHub Pages.",
           "highlights": [
             "Live deployment via GitHub Pages",
-            "Interactive user experience with user-friendly interface"
+            "Interactive user experience with user-friendly interface",
+            "Multi-theme and multi-language support"
           ]
         }
       }
@@ -181,7 +194,17 @@
     {
       "title": "Flow Project",
       "bigtitle": "FLOW",
-      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
+      "image": "dist/assets/foto5ss.png",
+      "screenshots": [
+        {
+          "url": "dist/assets/foto4ss.png",
+          "caption": "Açıklmaa5"
+        },
+        {
+          "url": "dist/assets/foto5ss.png",
+          "caption": "Açıklama26"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
@@ -227,7 +250,17 @@
     {
       "title": "Diet Track App",
       "bigtitle": "TRACK",
-      "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
+      "image": "dist/assets/foto6ss.png",
+      "screenshots": [
+        {
+          "url": "",
+          "caption": "Açıklmaa7"
+        },
+        {
+          "url": "",
+          "caption": "Açıklama28"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",

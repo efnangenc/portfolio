@@ -84,6 +84,16 @@
       "title": "E-Ticaret Web Sitesi Projesi",
       "bigtitle": "BEAM",
       "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      "screenshots": [
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklmaa"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklama2"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Ana Özellikler",
@@ -132,6 +142,16 @@
       "title": "Portfolio",
       "bigtitle": "PORTFOY",
       "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
+      "screenshots": [
+        {
+          "url": "",
+          "caption": "Açıklmaa"
+        },
+        {
+          "url": "",
+          "caption": "Açıklama2"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Key Features",
@@ -139,8 +159,7 @@
             "React Hooks ile dinamik içerik yönetimi ve state optimizasyonu",
             "Responsive ve performans odaklı layout tasarımı",
             "Intersection Observer ile görünürlük bazlı optimizasyon",
-            "EmailJS ile entegre çalışan iletişim formu",
-            "Çoklu tema ve dil desteği"
+            "EmailJS ile entegre çalışan iletişim formu"
           ]
         },
         "technologiesused": {
@@ -153,8 +172,7 @@
                 "Vite",
                 "HTML5",
                 "CSS3",
-                "SCSS",
-                "Framer Motion"
+                "SCSS"
               ]
             },
             {
@@ -174,7 +192,8 @@
           "description": "React ve Vite kullanılarak geliştirilmiş tamamen responsive kişisel portföy. Web sitesi, projelerimi, kariyer geçmişimi ve entegre iletişim formunu gösteriyor. Temel olarak tek başıma geliştirildi ve GitHub Pages üzerinden deploy edildi.",
           "highlights": [
             "GitHub Pages üzerinden canlı deploy",
-            "Kullanıcı dostu arayüz ile etkileşimli deneyim"
+            "Kullanıcı dostu arayüz ile etkileşimli deneyim",
+            "Çoklu tema ve dil desteği"
           ]
         }
       }
@@ -183,6 +202,16 @@
       "title": "Flow Proje",
       "bigtitle": "FLOW",
       "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
+      "screenshots": [
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklmaa"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklama2"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Öne Çıkan Özellikler",
@@ -228,7 +257,17 @@
     {
       "title": "Diet Track App",
       "bigtitle": "TRACK",
-      "image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=250&fit=crop",
+      "image": "",
+      "screenshots": [
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklmaa"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "caption": "Açıklama2"
+        }
+      ],
       "showcase": {
         "keyfeatures": {
           "title": "Öne Çıkan Özellikler",

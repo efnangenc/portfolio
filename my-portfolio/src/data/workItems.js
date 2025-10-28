@@ -10,6 +10,16 @@ function workItemsData(t) {
     title: t(`works.${i}.title`),
     bigtitle: t(`works.${i}.bigtitle`),
     image: t(`works.${i}.image`),
+    screenshots: [
+      {
+        url: t(`works.${i}.screenshots.0.url`),
+        caption: t(`works.${i}.screenshots.0.caption`),
+      },
+      {
+        url: t(`works.${i}.screenshots.1.url`),
+        caption: t(`works.${i}.screenshots.1.caption`),
+      },
+    ],
     showcase: {
       keyfeatures: {
         title: t(`works.${i}.showcase.keyfeatures.title`),
