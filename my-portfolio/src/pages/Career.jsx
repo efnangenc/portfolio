@@ -22,7 +22,7 @@ function Career({ menuItems }) {
       <div style={{ backgroundColor: sub1 }} className="career-plan">
         <div className="plan-content">
           <div className="plan-header">
-            <h2>{t("CareerJourney")}</h2>
+            <h2  style={{ color: sub1 }}>{t("CareerJourney")}</h2>
             <p>{t("From")}</p>
           </div>
         </div>

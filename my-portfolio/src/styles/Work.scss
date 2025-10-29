@@ -55,7 +55,7 @@
         }
 
         .project-image {
-          background-color: green;
+          // background-color: green;
           position: relative;
           height: 200px;
           overflow: hidden;
@@ -103,39 +103,6 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
-          }
-
-          .project-overlay {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-
-            .project-meta {
-              display: flex;
-              flex-direction: column;
-              gap: 0.5rem;
-
-              span {
-                background: rgba(255, 255, 255, 0.9);
-                padding: 0.5rem 1rem;
-                border-radius: 25px;
-                font-size: 0.9rem;
-                font-weight: 600;
-                text-align: center;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-              }
-
-              .project-type {
-                color: #667eea;
-              }
-
-              .project-status {
-                color: #27ae60;
-              }
-            }
           }
         }
         &.collapsed {
@@ -231,7 +198,7 @@
 
               h3 {
                 margin: 0;
-                color: #2c3e50;
+                // color: #2c3e50;
                 font-size: 1.5rem;
                 font-weight: 700;
               }
@@ -293,7 +260,7 @@
                 .tech-category {
                   padding-top: 0rem;
                   h4 {
-                    color: #2c3e50;
+                    // color: #2c3e50;
                     font-size: 1rem;
                     font-weight: 600;
                     text-transform: uppercase;
@@ -333,11 +300,9 @@
                   color: white;
                   max-height: 10dvh;
 
-
                   .feature-text {
                     max-height: 6dvh;
                     min-height: 2dvh;
-
                   }
                 }
               }
@@ -394,7 +359,6 @@
                     transform: scale(1);
                     filter: brightness(1);
                   }
-
                 }
               }
             }
@@ -403,7 +367,6 @@
       }
     }
   }
-
 
   // // Enhanced Tab Container
   // .tab-container {
@@ -561,7 +524,7 @@
           // overflow: hidden;
 
           .title-content h1 {
-            font-size: clamp(6  rem, 18dvw, 25rem);
+            font-size: clamp(6 rem, 18dvw, 25rem);
           }
         }
 

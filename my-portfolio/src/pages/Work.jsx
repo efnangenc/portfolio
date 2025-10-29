@@ -84,12 +84,6 @@ function Work({ menuItems }) {
                     {project.image ? (
                       <div className="project-ss">
                         <img src={project.image} alt={project.title} />
-                        <div className="project-overlay">
-                          {/* <div className="project-meta">
-                            <span className="project-type">Full Stack Development</span>
-                            <span className="project-status">Live Project</span>
-                          </div> */}
-                        </div>
                       </div>
                     ) : (
                       <div style={{ display: "none" }}></div>

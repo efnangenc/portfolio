@@ -157,6 +157,7 @@ function Contact({ menuItems }) {
             /> */}
             <div className="button">
               <button
+                style={{ backgroundColor: sub2 }}
                 type="submit"
                 className={`submit-btn ${isSubmitting ? "submitting" : ""}`}
                 disabled={isSubmitting}
@@ -167,7 +168,7 @@ function Contact({ menuItems }) {
                     {t("Sending")}
                   </>
                 ) : (
-                  "Send Message"
+                  t("SendMessage")
                 )}
               </button>
             </div>

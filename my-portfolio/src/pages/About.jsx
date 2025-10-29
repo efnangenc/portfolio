@@ -16,6 +16,18 @@ function About({ menuItems }) {
     "dist/assets/portrait3.png",
     "dist/assets/portrait4.png",
     "dist/assets/portrait5.png",
+    "dist/assets/portrait6.png",
+    "dist/assets/portrait7.png",
+    "dist/assets/portrait8.png",
+    "dist/assets/portrait9.png",
+    "dist/assets/portrait10.png",
+    "dist/assets/portrait11.png",
+    "dist/assets/portrait12.png",
+    "dist/assets/portrait13.png",
+    "dist/assets/portrait14.png",
+    "dist/assets/portrait15.png",
+    "dist/assets/portrait16.png",
+    // "dist/assets/portrait17.png",
     // istediğin kadar ekle
   ];
 
@@ -37,7 +49,7 @@ function About({ menuItems }) {
             <div className="name-title">
               <h1 className="name">Efnan Genç</h1>
               <div className="title-wrapper">
-                <h2 className="title">Fullstack Software Developer</h2>
+                <h2 style={{ color: sub3 }} className="title">Fullstack Software Developer</h2>
                 <div className="title-underline"></div>
               </div>
             </div>
@@ -89,7 +101,7 @@ function About({ menuItems }) {
             <div className="mission-section">
               <h3>{t("Trans")}</h3>
               <p>
-                {t("Poweredby")}<span className="highlight"> {t("precision")}</span>{" "}
+                {t("Poweredby")}<span style={{ color: sub3 }} className="highlight"> {t("precision")}</span>{" "}
               </p>
             </div>
           </div>

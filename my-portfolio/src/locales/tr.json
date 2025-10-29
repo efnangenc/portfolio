@@ -42,7 +42,8 @@
   "Connect": "Bağlantı kuralım",
   "Always": "Yeni fırsatlar, heyecan verici projeler ve diğer geliştiricilerle tanışmak her zaman ilgimi çekiyor. Bana ulaşmaktan çekinmeyin!",
   "Find": "Sosyal Medyada Ben",
-  "Direct": "Direkt",
+  "Direct": "Adreslerim",
+  "SendMessage" :"Mesajı Gönder",
 
   "experiences": [
     {
@@ -61,11 +62,11 @@
         "İletişim Becerileri"
       ],
       "achievements": [
-        "Ön yüz işlevselliğini ve kullanılabilirliği sağlamak için UI testleri gerçekleştirdi",
-        "Çeşitli UI bileşenleri için test senaryoları tasarladı ve dokümante etti",
-        "Test verilerini düzenlemek, sorunları takip etmek ve raporlamak için Excel kullandı",
-        "Yazılım sorunları için teknik destek ve çözüm sağladı",
-        "Yazılım hatalarını belirlemek ve çözmek için ekip üyeleriyle iş birliği yaptı"
+        "Ön yüz işlevselliğini ve kullanılabilirliği sağlamak için UI testleri gerçekleştirdim.",
+        "Çeşitli UI bileşenleri için test senaryoları tasarladı ve dokümante ettim.",
+        "Test verilerini düzenlemek, sorunları takip etmek ve raporlamak için Excel kullandım.",
+        "Yazılım sorunları için teknik destek ve çözüm sağladım.",
+        "Yazılım hatalarını belirlemek ve çözmek için ekip üyeleriyle iş birliği yaptım."
       ]
     },
     {
@@ -90,10 +91,10 @@
         "Agile"
       ],
       "achievements": [
-        "Katmanlı mimari kullanarak ölçeklenebilir ve test edilebilir bir Satış Yönetim Web Uygulamasının geliştirilmesine katkıda bulundu",
-        "RESTful API’ler tasarladı ve verimli veri yönetimi için SQL Server ile Azure bulut hizmetlerini entegre etti",
-        "Temiz ve sürdürülebilir kod için SOLID prensiplerini ve Dependency Injection’ı uyguladı",
-        "Sprintler ve günlük toplantılar aracılığıyla Agile Scrum ortamında iş birliği yaptı"
+        "Katmanlı mimari kullanarak ölçeklenebilir ve test edilebilir bir Satış Yönetim Web Uygulamasının geliştirilmesine katkıda bulundum.",
+        "RESTful API’ler tasarladı ve verimli veri yönetimi için SQL Server ile Azure bulut hizmetlerini entegre ettim.",
+        "Temiz ve sürdürülebilir kod için SOLID prensiplerini ve Dependency Injection’ı uyguladım.",
+        "Sprintler ve günlük toplantılar aracılığıyla Agile Scrum ortamında iş birliği yaptım."
       ]
     },
     {
@@ -113,12 +114,12 @@
         "Takım Çalışması"
       ],
       "achievements": [
-        "Gerçek zamanlı üretim takip sistemi geliştirilmesine yardımcı oldu",
-        "Operasyonel verimliliği artırmak için çapraz fonksiyonel ekiplerle iş birliği yaptı",
-        "Gerçek zamanlı veri izleme için Arduino tabanlı modülleri entegre etti",
-        "Elektrik arızası teşhis ve kalibrasyon süreçlerini destekledi",
-        "Önleyici bakım girişimleri ile ekipman duruş sürelerini azalttı",
-        "Düzenli bakım görevleri ile üretim güvenilirliğini destekledi"
+        "Gerçek zamanlı üretim takip sistemi geliştirilmesine yardımcı oldum.",
+        "Operasyonel verimliliği artırmak için çapraz fonksiyonel ekiplerle iş birliği yaptım.",
+        "Gerçek zamanlı veri izleme için Arduino tabanlı modülleri entegre ettim.",
+        "Elektrik arızası teşhis ve kalibrasyon süreçlerini destekledim.",
+        "Önleyici bakım girişimleri ile ekipman duruş sürelerini azalttım.",
+        "Düzenli bakım görevleri ile üretim güvenilirliğini destekledim."
       ]
     },
     {
@@ -139,9 +140,9 @@
         "İletişim Becerileri"
       ],
       "achievements": [
-        "Çalışma alanı organizasyonu ve verimliliği artırmak için 5S Kaizen prensiplerini uyguladı",
-        "PCB üretiminde küçük sorunların teşhis ve çözümüne yardımcı oldu",
-        "Üretim süreçlerinde küçük hataları azaltmak için kalite kontrol kontrollerine katkıda bulundu"
+        "Çalışma alanı organizasyonu ve verimliliği artırmak için 5S Kaizen prensiplerini uyguladım.",
+        "PCB üretiminde küçük sorunların teşhis ve çözümüne yardımcı oldum.",
+        "Üretim süreçlerinde küçük hataları azaltmak için kalite kontrol kontrollerine katkıda bulundum."
       ]
     }
   ],

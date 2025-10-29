@@ -140,7 +140,7 @@
         p {
           font-size: 1.2rem;
           color: #6c757d;
-          max-width: 500px;
+          max-width: 90%;
           margin: 0 auto;
           // line-height: 1.6;
         }
@@ -227,7 +227,7 @@
           align-items: center;
           justify-content: center;
           .submit-btn {
-            background: linear-gradient(135deg, #808dc5, #836b9bc0);
+            // background: linear-gradient(135deg, #808dc5, #836b9bc0);
             color: white;
             padding: 1.2rem 0rem;
             border: none;
@@ -235,6 +235,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
+            filter: brightness(75%);
             transition: all 0.3s ease;
 
             // gap: 0.5rem;
