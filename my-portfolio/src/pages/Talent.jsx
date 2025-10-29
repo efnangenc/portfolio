@@ -7,11 +7,12 @@ import skillsData from "../data/skillsData";
 import "../styles/Talent.scss";
 import { useLanguage } from "../providers/LanguageProvider";
 
-function Talent({menuItems}) {
+function Talent({ menuItems }) {
   const talentItem = menuItems.find((item) => item.id === "talent");
   const [main, sub1, sub2, sub3] = talentItem.colors;
   const [toggleState, setToggleState] = useState(1);
   const { t, lang, setLang } = useLanguage();
+  const { skills } = skillsData();
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -29,16 +30,11 @@ function Talent({menuItems}) {
       <CardHead item={talentItem} />
 
       {/* Enhanced Slogan Section */}
-      <div style={{backgroundColor:sub1}} className="slogan">
+      <div style={{ backgroundColor: sub1 }} className="slogan">
         <div className="slogan-content">
           <div className="slogan-text">
-            <h2 className="slogan-title">
-              Continuous Learning, Endless Growth
-            </h2>
-            <p className="slogan-subtitle">
-              Transforming ideas into digital reality through cutting-edge
-              technologies
-            </p>
+            <h2 className="slogan-title">{t("Continuous")}</h2>
+            <p className="slogan-subtitle">{t("SloganTalent")}</p>
           </div>
           {/* <div className="slogan-visual">
             <div className="floating-code">
@@ -52,37 +48,29 @@ function Talent({menuItems}) {
         </div>
       </div>
 
-      <div style={{backgroundColor:sub2}} className="talent-container">
-        {/* Enhanced Tabs */}
+      <div style={{ backgroundColor: sub2 }} className="talent-container">
+        {/* Tabs */}
         <div className="tabs">
-          {Object.keys(skillsData).map((key, i) => (
+          {skills.map((skill, i) => (
             <div
-             style={{backgroundColor:sub2}}
               key={i}
+              style={{ backgroundColor: sub2 }}
               className={toggleState === i ? "tab-item active-tab" : "tab-item"}
               onClick={() => toggleTab(i)}
             >
-              <div className="tab-content">
-                {/* <div className="tab-icon">
-                  {i === 0 && "💻"}
-                  {i === 1 && "🎨"} 
-                  {i === 2 && "⚙️"}
-                  {i === 3 && "📱"}
-                </div> */}
-                <span className="tab-text">{skillsData[key].title}</span>
-              </div>
+              <span className="tab-text">{skill.title}</span>
             </div>
           ))}
         </div>
 
         {/* Enhanced Tab Content */}
-        {Object.keys(skillsData).map((key, i) => (
+        {skills.map((key, i) => (
           <div key={i} className="content-tabs">
             {toggleState === i && (
               <div className="active-content">
                 <div className="skill-section">
                   {/* Section Header */}
-                  <h3 className="section-title">{skillsData[key].title}</h3>
+                  <h3 className="section-title">{key.title}</h3>
                   {/* <div className="section-header">
                     <p className="section-description">
                       {i === 0 &&
@@ -98,7 +86,7 @@ function Talent({menuItems}) {
 
                   {/* Skills Grid */}
                   <div className="skills-grid">
-                    {skillsData[key].skills.map((item, index) => (
+                    {skills[i].skills.map((item, index) => (
                       <div key={index} className="skill-card">
                         <div className="skill-header">
                           {/* <div className="skill-icon">{item.icon}</div> */}
@@ -117,10 +105,8 @@ function Talent({menuItems}) {
                           ></div>
                         </div> */}
 
-                      
-
                         {/* Hover Details */}
-                        <div className="skill-details">
+                        {/* <div className="skill-details">
                           <p className="skill-description">
                             {i === 0 &&
                               index === 0 &&
@@ -148,7 +134,7 @@ function Talent({menuItems}) {
                             ) &&
                               "Professional experience in modern development practices"}
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>

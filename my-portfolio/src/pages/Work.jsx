@@ -81,40 +81,33 @@ function Work({ menuItems }) {
 
                 {isOpen && (
                   <>
-                    <div className="project-ss">
-                      <img src={project.image} alt={project.title} />
-                      <div className="project-overlay">
-                        {/* <div className="project-meta">
+                    {project.image ? (
+                      <div className="project-ss">
+                        <img src={project.image} alt={project.title} />
+                        <div className="project-overlay">
+                          {/* <div className="project-meta">
                             <span className="project-type">Full Stack Development</span>
                             <span className="project-status">Live Project</span>
                           </div> */}
+                        </div>
                       </div>
-                    </div>
-
+                    ) : (
+                      <div style={{ display: "none" }}></div>
+                    )}
                     <div
                       style={{ WebkitTextStroke: `2px ${sub2} ` }}
                       className="big-title"
                     >
                       <div className="title-content">
                         <h1>{project.bigtitle}</h1>
-                        {/* <div className="title-decoration">
-                            <div className="decoration-line"></div>
-                            <div className="decoration-dots">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div> */}
                       </div>
                     </div>
 
-                    {/* Enhanced Project Cards */}
                     <div className="project-showcase">
                       {Object.keys(project.showcase).map(
                         (cardKey, cardIndex) => {
                           const card = project.showcase[cardKey];
 
-                          // Eğer card "technologiesused" ise farklı işleyelim
                           if (cardKey === "technologiesused") {
                             return (
                               <div
@@ -145,7 +138,6 @@ function Work({ menuItems }) {
                             );
                           }
 
-                          // Eğer card "overview" ise farklı işleyelim
                           if (cardKey === "overview") {
                             return (
                               <div
@@ -164,7 +156,7 @@ function Work({ menuItems }) {
                                     }}
                                     className="project-timeline"
                                   >
-                                    <span className="timeline-period">
+                                    <span style={{ color: sub2 }} className="timeline-period">
                                       {card.timeline}
                                     </span>
                                     {/* <span className="timeline-company">
@@ -237,11 +229,6 @@ function Work({ menuItems }) {
                                       `${project.title} Screenshot ${index + 1}`
                                     }
                                   />
-                                  {/* <div className="screenshot-overlay">
-                                      <span className="screenshot-number">
-                                        #{index + 1}
-                                      </span>
-                                    </div> */}
                                 </div>
                                 {/* {screenshot.caption && (
                                     <p className="screenshot-caption">

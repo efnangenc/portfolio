@@ -8,74 +8,140 @@
   "Talent": "Talent",
   "Career": "Career",
   "Contact": "Contact",
-  "AboutText": "As a passionate developer, I create user-focused solutions using modern technologies. I write high-quality code at every stage, from frontend to backend, from design to deployment.",
+  "AboutText": "As a developer, I deliver user-centered solutions using modern technologies, ensuring clean and maintainable code at every stage from design to deployment, frontend to backend.",
   "YoureHere": "You are here",
   "Section": "Section",
   "ProfessionalExperience": "Professional Experience",
+  "CraftingDigitalEx": "Independent in Ownership & Spirit",
+  "Mission": "Mission",
+  "Challange": "Challange",
+  "Goal": "Goal",
+  "Deliver": "Deliver high-impact solutions",
+  "Efficient": "Efficient, scalable, and reliable software",
+  "Performance": "Performance drives my process",
+  "Clean": "Clean code, fast response, smooth UX",
+  "Trans": "Transforming ideas into impact",
+  "Poweredby": "Powered by",
+  "precision": "precision",
+  "Continuous": "Continuous Learning, Endless Growth",
+  "SloganTalent": "Transforming ideas into digital reality through cutting-edge technologies",
+  "CareerJourney": "Career Journey",
+  "From": "From Hardware to Software: A Path of Continuous Learning",
+  "Lets": "Let's",
+  "Talk": "Talk About",
+  "Buss": "Business",
+  "GetInTouch": "Get In Touch",
+  "Ready": "Ready to start your next project? Let's create something amazing together!",
+  "Name": "Your Name *",
+  "Email": "Email Address *",
+  "Subject": "Subject",
+  "Message": "Message *",
+  "Success": "Message sent successfully! I'll get back to you soon.",
+  "Fill": "Please fill in all required fields or try again later.",
+  "Sending": "Sending...",
+  "Connect": "Let's Connect",
+  "Always": " I'm always interested in new opportunities, exciting projects, and meeting fellow developers. Feel free to reach out!",
+  "Find": "Find Me Online",
+  "Direct": "Direct Contact",
 
   "experiences": [
+    {
+      "title": "Software Support Assistant Specialist",
+      "company": "N2Mobil",
+      "type": "Full-time",
+      "duration": "Aug 2025 - ..",
+      "location": "Ankara, Turkey · On-Site",
+      "description": "",
+      "skills": [
+        "UI Test Automation",
+        "Playwright",
+        "Test Scenario Design",
+        "Excel for Data Analysis",
+        "Problem Solving",
+        "Communication Skills"
+      ],
+      "achievements": [
+        "Performed UI tests to ensure frontend functionality and usability",
+        "Designed and documented test scenarios for various UI components",
+        "Utilized Excel for organizing test data, tracking issues, and reporting results",
+        "Provided technical assistance and troubleshooting for software issues",
+        "Collaborated with team members to identify and resolve software defects efficiently"
+      ]
+    },
     {
       "title": "Software Development Intern",
       "company": "BilgeAdam Technology",
       "type": "Full-time",
-      "duration": "Jun 2024 - Mar 2025",
-      "location": "Ankara, Turkey · On-site",
-      "description": "Developed Back-End applications using ASP.NET Core and Entity Framework Core while designing modern and dynamic user interfaces with HTML5, CSS3, and JavaScript. Applied Object-Oriented Programming (OOP) principles and SOLID design patterns to deliver high-quality and maintainable software solutions.",
+      "duration": "Jan 2025 - Mar 2025",
+      "location": "Ankara, Turkey · Remote",
+      "description": "Worked on the development of a Sales Management Web Application using ASP.NET Core MVC and Entity Framework Core. Designed and implemented RESTful APIs, applied layered architecture, and integrated SQL Server for efficient data handling. Utilized Dependency Injection and Repository patterns to ensure maintainable and testable code. Built responsive and interactive front-end interfaces with HTML5, CSS3, and JavaScript, improving overall user experience. Participated in daily Agile stand-ups and sprint reviews.",
       "skills": [
         "C#",
+        "ASP.NET Core MVC",
+        "RESTful API",
+        "SQL Server",
         "JavaScript",
-        "ASP.NET Core",
-        "Entity Framework",
-        "MSSQL",
-        "Azure",
-        "HTML",
-        "CSS",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
         "OOP",
-        "SOLID Principles"
+        "SOLID Principles",
+        "Azure",
+        "Agile"
       ],
       "achievements": [
-        "Delivered 5+ full-stack web applications",
-        "Improved code quality by implementing SOLID principles",
-        "Collaborated in agile development environment"
+        "Contributed to the development of a scalable and testable Sales Management Web Application using layered architecture",
+        "Designed RESTful APIs and integrated SQL Server with Azure cloud services for efficient data handling",
+        "Applied SOLID principles and Dependency Injection for clean, maintainable code",
+        "Collaborated in Agile Scrum environment through sprints and daily stand-ups"
       ]
     },
     {
-      "title": "Engineer Intern",
+      "title": "Electrical Electronics Engineer Intern",
       "company": "RHI Magnesita",
       "type": "Full-time",
       "duration": "Jan 2023 - Feb 2023",
       "location": "Eskişehir, Turkey · On-site",
-      "description": "Collaborated with colleagues to implement a new production tracking system that increased efficiency and reduced downtime. Cooperated with cross-functional teams to streamline production processes.",
+      "description": "a",
       "skills": [
         "Arduino IDE",
+        "Embedded Systems",
+        "Sensor Data Collection",
+        "Electrical Troubleshooting",
         "Maintenance and Repair",
         "Production Systems",
         "Team Collaboration"
       ],
       "achievements": [
-        "Increased production efficiency by 15%",
-        "Reduced system downtime significantly",
-        "Successful electrical troubleshooting"
+        "Assisted in the development of a real-time production tracking system",
+        "Collaborated with cross-functional teams to enhance operational efficiency",
+        "Integrated Arduino-based modules for real-time data monitoring",
+        "Supported electrical diagnostics and calibration processes",
+        "Reduced equipment downtime through preventive maintenance initiatives",
+        "Supported production reliability through consistent maintenance tasks"
       ]
     },
     {
-      "title": "Engineer Intern",
+      "title": "Electrical Electronics Engineer Intern",
       "company": "ENTES Elektronik",
       "type": "Full-time",
       "duration": "Jul 2022 - Aug 2022",
       "location": "İstanbul, Turkey · On-site",
       "description": "Implemented rigorous quality control measures, reducing product defects within the first month. Diagnosed and resolved technical issues on PCB boards, resulting in a 20% reduction in production downtime.",
       "skills": [
-        "Analog Circuit Design",
-        "PCB Design",
-        "Quality Control",
         "5S Kaizen",
-        "Production Optimization"
+        "Production Optimization",
+        "Team Collaboration",
+        "Problem Solving",
+        "Process Improvement",
+        "Technical Troubleshooting",
+        "Quality Control",
+        "Communication Skills"
       ],
       "achievements": [
-        "Reduced product defects in first month",
-        "20% reduction in production downtime",
-        "Streamlined operations with Kaizen principles"
+        "Applied 5S Kaizen principles to improve workspace organization and efficiency",
+        "Assisted in diagnosing and resolving minor PCB production issues",
+        "Contributed to quality control checks to reduce minor defects in production processes"
       ]
     }
   ],
@@ -83,10 +149,10 @@
     {
       "title": "E-Commerce WebPage Project",
       "bigtitle": "BEAM",
-      "image": "dist/assets/foto2ss.png",
+      "image": "",
       "screenshots": [
         {
-          "url": "dist/assets/foto3ss.png",
+          "url": "dist/assets/foto2ss.png",
           "caption": "Açıklmaa"
         },
         {
@@ -106,7 +172,7 @@
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Core Technologies",
           "content": [
             {
               "part": "Frontend",
@@ -140,7 +206,7 @@
     {
       "title": "Portfolio",
       "bigtitle": "PORTFOY",
-      "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
+      "image": "",
       "screenshots": [
         {
           "url": "",
@@ -162,7 +228,7 @@
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Core Technologies",
           "content": [
             {
               "part": "Frontend",
@@ -170,7 +236,7 @@
             },
             {
               "part": "Integration & Features",
-              "cont": ["EmailJS", "i18n"]
+              "cont": ["EmailJS", "Saas", "Intersection Observer"]
             },
             {
               "part": "Version Control & Deployment",
@@ -182,11 +248,12 @@
           "title": "Project Overview",
           "timeline": "Mar 2025 - Apr 2025",
           "company": "Personal Project",
-          "description": "A fully responsive personal portfolio developed with React and Vite. The website showcases my projects, career timeline, and integrated contact form. Developed individually and deployed via GitHub Pages.",
+          "description": "A fully responsive personal portfolio developed with React and Vite, styled entirely with pure CSS. The project is built with a generic, scalable architecture, allowing easy expansion and reuse of components. The website showcases my projects, career timeline, and integrated contact form. Developed individually and deployed via GitHub Pages.",
           "highlights": [
             "Live deployment via GitHub Pages",
-            "Interactive user experience with user-friendly interface",
-            "Multi-theme and multi-language support"
+            "Multi-theme and multi-language support",
+            "Responsive design implemented purely with CSS",
+            "Generic and scalable component-based architecture"
           ]
         }
       }
@@ -194,7 +261,7 @@
     {
       "title": "Flow Project",
       "bigtitle": "FLOW",
-      "image": "dist/assets/foto5ss.png",
+      "image": "",
       "screenshots": [
         {
           "url": "dist/assets/foto4ss.png",
@@ -217,7 +284,7 @@
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Core Technologies",
           "content": [
             {
               "part": "Frontend",
@@ -250,7 +317,7 @@
     {
       "title": "Diet Track App",
       "bigtitle": "TRACK",
-      "image": "dist/assets/foto6ss.png",
+      "image": "",
       "screenshots": [
         {
           "url": "",
@@ -273,7 +340,7 @@
           ]
         },
         "technologiesused": {
-          "title": "Technologies Used",
+          "title": "Core Technologies",
           "content": [
             {
               "part": "Frontend",
@@ -308,6 +375,23 @@
           ]
         }
       }
+    }
+  ],
+  "talent": [
+    {
+      "title": "Languages & Web Technologies"
+    },
+    {
+      "title": "Frameworks & Libraries"
+    },
+    {
+      "title": "Databases & Cloud"
+    },
+    {
+      "title": "Software Development Principles"
+    },
+    {
+      "title": "Tools & Platforms"
     }
   ]
 }

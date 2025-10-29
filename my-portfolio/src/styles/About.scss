@@ -1,4 +1,3 @@
-
 .container {
   .about {
     display: flex;
@@ -102,43 +101,48 @@
           background-position: center;
 
           animation: fade-background 3s infinite;
-
-          img {
-            position: absolute;
-            inset: 0;
+          .fade-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            animation: fade 3s infinite;
+            transition: opacity 0.4s ease-in-out;
           }
+          // img {
+          //   position: absolute;
+          //   inset: 0;
+          //   width: 100%;
+          //   height: 100%;
+          //   object-fit: cover;
+          //   top: 0;
+          //   left: 0;
+          //   opacity: 0;
+          //   animation: fade 3s infinite;
+          // }
 
-          img:nth-child(1) {
-            animation-delay: 0s;
-          }
-          img:nth-child(2) {
-            animation-delay: 1s;
-          }
-          img:nth-child(3) {
-            animation-delay: 2s;
-          }
+          // img:nth-child(1) {
+          //   animation-delay: 0s;
+          // }
+          // img:nth-child(2) {
+          //   animation-delay: 1s;
+          // }
+          // img:nth-child(3) {
+          //   animation-delay: 2s;
+          // }
 
-          @keyframes fade-background {
-            0% {
-              background-image: url("dist/assets/portrait5.png");
-            }
-            33% {
-              background-image: url("dist/assets/portrait2.png");
-            }
-            66% {
-              background-image: url("dist/assets/portrait3.png");
-            }
-            100% {
-              background-image: url("dist/assets/portrait4.png");
-            }
-          }
+          // @keyframes fade-background {
+          //   0% {
+          //     background-image: url("dist/assets/portrait5.png");
+          //   }
+          //   33% {
+          //     background-image: url("dist/assets/portrait2.png");
+          //   }
+          //   66% {
+          //     background-image: url("dist/assets/portrait3.png");
+          //   }
+          //   100% {
+          //     background-image: url("dist/assets/portrait4.png");
+          //   }
+          // }
         }
       }
     }

@@ -2,6 +2,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 40px rgba(71, 69, 69, 0.3); */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

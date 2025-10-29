@@ -8,74 +8,140 @@
   "Talent": "Yetenekler",
   "Career": "Tecrübe",
   "Contact": "İletişim",
-  "AboutText": "Tutkulu bir geliştirici olarak, modern teknolojilerle kullanıcı odaklı çözümler üretiyorum. Frontend'den backend'e, tasarımdan deployment'a kadar her aşamada kaliteli kod yazıyorum.",
+  "AboutText": "Geliştirici olarak, modern teknolojilerle kullanıcı odaklı çözümler üretiyor, tasarımdan deploy’a, frontend’den backend’e kadar her aşamada kaliteli ve sürdürülebilir kod yazmaya özen gösteriyorum.",
   "YoureHere": "Buradasınız",
   "Section": "Bölümü",
   "ProfessionalExperience": "Profesyonel Tecrübeler",
+  "CraftingDigitalEx": "Bağımsızlık ve Sorumluluk Ruhu",
+  "Mission": "Misyon",
+  "Challange": "Görev",
+  "Goal": "Hedef",
+  "Deliver": "Yüksek etkili çözümler sunan",
+  "Efficient": "Verimli, ölçeklenebilir ve güvenilir yazılım",
+  "Performance": "Performans, süreci yönlendirir",
+  "Clean": "Temiz kod, hızlı yanıt ve akıcı kullanıcı deneyimi",
+  "Trans": "Fikirleri etkiye dönüştürmek",
+  "Poweredby": "Tam olarak",
+  "precision": "netlik ile",
+  "Continuous": "Sürekli Öğrenme, Sonsuz Büyüme",
+  "SloganTalent": "Fikirleri en son teknolojilerle dijital gerçekliğe dönüştürüyorum.",
+  "CareerJourney": "Kariyer Gelişimi",
+  "From": "Donanımdan Yazılıma: Sürekli Öğrenme Yolculuğu",
+  "Lets": "Hadi",
+  "Talk": "İş Hakkında",
+  "Buss": "Konuşalım",
+  "GetInTouch": "İletişime Geç",
+  "Ready": "Bir sonraki projenize başlamaya hazır mısınız? Birlikte harika bir şey yaratalım!",
+  "Name": "İsminiz *",
+  "Email": "Mail Adresiniz *",
+  "Subject": "Konu",
+  "Message": "Mesajınız *",
+  "Success": " Mesajınız başarıyla gönderildi! En kısa sürede size geri dönüş yapacağım.",
+  "Fill": "Lütfen gerekli alanları doldurun veya daha sonra tekrar deneyin.",
+  "Sending": "Gönderiliyor...",
+  "Connect": "Bağlantı kuralım",
+  "Always": "Yeni fırsatlar, heyecan verici projeler ve diğer geliştiricilerle tanışmak her zaman ilgimi çekiyor. Bana ulaşmaktan çekinmeyin!",
+  "Find": "Sosyal Medyada Ben",
+  "Direct": "Direkt",
 
   "experiences": [
     {
-      "title": "Yazılım Geliştirme Stajyeri",
-      "company": "BilgeAdam Teknoloji",
-      "type": "Tam zamanlı",
-      "duration": "Haz 2024 - Mar 2025",
+      "title": "Yazılım Destek Uzman Yardımcısı",
+      "company": "N2Mobil",
+      "type": "Tam Zamanlı",
+      "duration": "Ağustos 2025 - ..",
       "location": "Ankara, Türkiye · Ofiste",
-      "description": "ASP.NET Core ve Entity Framework Core kullanarak Back-End uygulamaları geliştirdim. HTML5, CSS3 ve JavaScript ile modern ve dinamik kullanıcı arayüzleri tasarladım. Nesne Yönelimli Programlama (OOP) prensipleri ve SOLID tasarım kalıplarını uygulayarak kaliteli ve sürdürülebilir yazılım çözümleri ürettim.",
+      "description": "",
       "skills": [
-        "C#",
-        "JavaScript",
-        "ASP.NET Core",
-        "Entity Framework",
-        "MSSQL",
-        "Azure",
-        "HTML",
-        "CSS",
-        "OOP",
-        "SOLID Prensipleri"
+        "UI Testi",
+        "Playwright",
+        "Test Senaryosu Tasarımı",
+        "Excel ile Veri Analizi",
+        "Problem Çözme",
+        "İletişim Becerileri"
       ],
       "achievements": [
-        "5'ten fazla full-stack web uygulaması geliştirildi",
-        "SOLID prensipleri ile kod kalitesi artırıldı",
-        "Çevik geliştirme ortamında işbirliği yapıldı"
+        "Ön yüz işlevselliğini ve kullanılabilirliği sağlamak için UI testleri gerçekleştirdi",
+        "Çeşitli UI bileşenleri için test senaryoları tasarladı ve dokümante etti",
+        "Test verilerini düzenlemek, sorunları takip etmek ve raporlamak için Excel kullandı",
+        "Yazılım sorunları için teknik destek ve çözüm sağladı",
+        "Yazılım hatalarını belirlemek ve çözmek için ekip üyeleriyle iş birliği yaptı"
       ]
     },
     {
-      "title": "Elektrik Elektonik Mühendis Stajyeri",
+      "title": "Yazılım Geliştirme Stajyeri",
+      "company": "BilgeAdam Technology",
+      "type": "Tam Zamanlı",
+      "duration": "Ocak 2025 - Mart 2025",
+      "location": "Ankara, Türkiye · Uzaktan",
+      "description": "ASP.NET Core MVC ve Entity Framework Core kullanarak Satış Yönetim Web Uygulaması geliştirdi. RESTful API’ler tasarladı ve uyguladı, katmanlı mimari uyguladı ve SQL Server ile verimli veri yönetimi sağladı. Bağımlılık enjeksiyonu ve Repository pattern ile sürdürülebilir ve test edilebilir kod yazdı. HTML5, CSS3 ve JavaScript ile duyarlı ve etkileşimli ön yüz arayüzleri geliştirdi. Günlük Agile toplantılarına ve sprint gözden geçirmelerine katıldı.",
+      "skills": [
+        "C#",
+        "ASP.NET Core MVC",
+        "RESTful API",
+        "SQL Server",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "OOP",
+        "SOLID Prensipleri",
+        "Azure",
+        "Agile"
+      ],
+      "achievements": [
+        "Katmanlı mimari kullanarak ölçeklenebilir ve test edilebilir bir Satış Yönetim Web Uygulamasının geliştirilmesine katkıda bulundu",
+        "RESTful API’ler tasarladı ve verimli veri yönetimi için SQL Server ile Azure bulut hizmetlerini entegre etti",
+        "Temiz ve sürdürülebilir kod için SOLID prensiplerini ve Dependency Injection’ı uyguladı",
+        "Sprintler ve günlük toplantılar aracılığıyla Agile Scrum ortamında iş birliği yaptı"
+      ]
+    },
+    {
+      "title": "Elektrik Elektronik Mühendis Stajyeri",
       "company": "RHI Magnesita",
-      "type": "Tam zamanlı",
-      "duration": "Oca 2023 - Şub 2023",
+      "type": "Tam Zamanlı",
+      "duration": "Ocak 2023 - Şubat 2023",
       "location": "Eskişehir, Türkiye · Ofiste",
-      "description": "Verimliliği artıran ve duruş sürelerini azaltan yeni bir üretim takip sistemi geliştirilmesine katkıda bulundum. Üretim süreçlerini iyileştirmek için çapraz fonksiyonel ekiplerle işbirliği yaptım.",
+      "description": "",
       "skills": [
         "Arduino IDE",
+        "Gömülü Sistemler",
+        "Sensör Veri Toplama",
+        "Elektrik Arızası Teşhisi",
         "Bakım ve Onarım",
         "Üretim Sistemleri",
         "Takım Çalışması"
       ],
       "achievements": [
-        "Üretim verimliliğinde %15 artış sağlandı",
-        "Sistem duruşları önemli ölçüde azaltıldı",
-        "Başarılı elektriksel arıza tespiti gerçekleştirildi"
+        "Gerçek zamanlı üretim takip sistemi geliştirilmesine yardımcı oldu",
+        "Operasyonel verimliliği artırmak için çapraz fonksiyonel ekiplerle iş birliği yaptı",
+        "Gerçek zamanlı veri izleme için Arduino tabanlı modülleri entegre etti",
+        "Elektrik arızası teşhis ve kalibrasyon süreçlerini destekledi",
+        "Önleyici bakım girişimleri ile ekipman duruş sürelerini azalttı",
+        "Düzenli bakım görevleri ile üretim güvenilirliğini destekledi"
       ]
     },
     {
-      "title": "Elektrik Elektonik Mühendis Stajyeri",
+      "title": "Elektrik Elektronik Mühendis Stajyeri",
       "company": "ENTES Elektronik",
-      "type": "Tam zamanlı",
-      "duration": "Tem 2022 - Ağu 2022",
+      "type": "Tam Zamanlı",
+      "duration": "Temmuz 2022 - Ağustos 2022",
       "location": "İstanbul, Türkiye · Ofiste",
-      "description": "Katı kalite kontrol önlemleri uygulayarak ilk ay içinde ürün hatalarını azalttım. PCB kartlarında teknik sorunları teşhis edip çözdüm, üretim duruşlarında %20 azalma sağladım.",
+      "description": "",
       "skills": [
-        "Analog Devre Tasarımı",
-        "PCB Tasarımı",
-        "Kalite Kontrol",
         "5S Kaizen",
-        "Üretim Optimizasyonu"
+        "Üretim Optimizasyonu",
+        "Takım Çalışması",
+        "Problem Çözme",
+        "Süreç İyileştirme",
+        "Teknik Arıza Çözümü",
+        "Kalite Kontrol",
+        "İletişim Becerileri"
       ],
       "achievements": [
-        "İlk ayda ürün hataları azaltıldı",
-        "Üretim duruşlarında %20 azalma sağlandı",
-        "Kaizen prensipleriyle süreçler iyileştirildi"
+        "Çalışma alanı organizasyonu ve verimliliği artırmak için 5S Kaizen prensiplerini uyguladı",
+        "PCB üretiminde küçük sorunların teşhis ve çözümüne yardımcı oldu",
+        "Üretim süreçlerinde küçük hataları azaltmak için kalite kontrol kontrollerine katkıda bulundu"
       ]
     }
   ],
@@ -83,14 +149,14 @@
     {
       "title": "E-Ticaret Web Sitesi Projesi",
       "bigtitle": "BEAM",
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      "image": "",
       "screenshots": [
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "dist/assets/foto2ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "dist/assets/foto1ss.png",
           "caption": "Açıklama2"
         }
       ],
@@ -141,7 +207,7 @@
     {
       "title": "Portfolio",
       "bigtitle": "PORTFOY",
-      "image": "https://i.pinimg.com/736x/7a/b6/6a/7ab66a2aebec39482b97c812c2532478.jpg",
+      "image": "",
       "screenshots": [
         {
           "url": "",
@@ -167,17 +233,11 @@
           "content": [
             {
               "part": "Frontend",
-              "cont": [
-                "React",
-                "Vite",
-                "HTML5",
-                "CSS3",
-                "SCSS"
-              ]
+              "cont": ["React", "Vite", "HTML5", "CSS3", "SCSS"]
             },
             {
               "part": "Integration & Features",
-              "cont": ["EmailJS", "i18n"]
+              "cont": ["EmailJS", "Saas", "Intersection Observer"]
             },
             {
               "part": "Version Control & Deployment",
@@ -189,11 +249,12 @@
           "title": "Project Overview",
           "timeline": "Mar 2025 - Apr 2025",
           "company": "Personal Project",
-          "description": "React ve Vite kullanılarak geliştirilmiş tamamen responsive kişisel portföy. Web sitesi, projelerimi, kariyer geçmişimi ve entegre iletişim formunu gösteriyor. Temel olarak tek başıma geliştirildi ve GitHub Pages üzerinden deploy edildi.",
+          "description": "React ve Vite ile geliştirilmiş, tamamen saf CSS ile tasarlanmış ve tamamen responsive kişisel portföy sitesi. Proje, bileşenlerin kolayca genişletilip yeniden kullanılabileceği ölçeklenebilir ve genel bir mimari üzerine kuruldu. Sitede projelerim, kariyer zaman çizelgem ve entegre iletişim formu yer alıyor. Proje tek başıma geliştirildi ve GitHub Pages üzerinden yayınlandı.",
           "highlights": [
-            "GitHub Pages üzerinden canlı deploy",
-            "Kullanıcı dostu arayüz ile etkileşimli deneyim",
-            "Çoklu tema ve dil desteği"
+            "GitHub Pages üzerinden canlı yayında",
+            "Çoklu tema ve çoklu dil desteği",
+            "Saf CSS ile uygulanmış responsive tasarım",
+            "Genel ve ölçeklenebilir bileşen tabanlı mimari"
           ]
         }
       }
@@ -201,14 +262,14 @@
     {
       "title": "Flow Proje",
       "bigtitle": "FLOW",
-      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
+      "image": "",
       "screenshots": [
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "dist/assets/foto4ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "dist/assets/foto5ss.png",
           "caption": "Açıklama2"
         }
       ],
@@ -260,11 +321,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "",
           "caption": "Açıklmaa"
         },
         {
-          "url": "https://i.pinimg.com/736x/64/25/3c/64253c190bc3651b07cc7e39c4808ed0.jpg",
+          "url": "",
           "caption": "Açıklama2"
         }
       ],
@@ -303,7 +364,7 @@
             },
             {
               "part": "Database",
-              "cont": ["Microsoft SQL Server (MSSQL)"]
+              "cont": ["MSSQL"]
             }
           ]
         },
@@ -320,6 +381,23 @@
           ]
         }
       }
+    }
+  ],
+  "talent": [
+    {
+      "title": "Yazılım Dilleri & Web Teknolojileri"
+    },
+    {
+      "title": "Framework & Kütüphaneler"
+    },
+    {
+      "title": "Veritabanı & Cloud"
+    },
+    {
+      "title": "Yazılım Geliştirme Prensipleri"
+    },
+    {
+      "title": "Araçlar ve Platformlar"
     }
   ]
 }

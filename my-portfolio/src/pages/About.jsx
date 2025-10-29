@@ -1,6 +1,6 @@
 import "../styles/About.scss";
 import CardHead from "../components/CardHead";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
@@ -9,6 +9,23 @@ function About({ menuItems }) {
   const aboutItem = menuItems.find((item) => item.id === "about");
   const [main, sub1, sub2, sub3] = aboutItem.colors;
   const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "dist/assets/portrait1.png",
+    "dist/assets/portrait2.png",
+    "dist/assets/portrait3.png",
+    "dist/assets/portrait4.png",
+    "dist/assets/portrait5.png",
+    // istediğin kadar ekle
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 500); // 0.5 saniyede bir değişim
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <div className="container">
@@ -26,62 +43,53 @@ function About({ menuItems }) {
             </div>
             <div className="banner-visual">
               <img
-                // src="dist/assets/portrait1"
-                // alt="foto1"
-                loading="eager"
-              />
-              <img
-                // src="https://i.pinimg.com/736x/6b/cf/cf/6bcfcf277778f5a2297adcdb30385843.jpg"
-                // alt="foto2"
-                loading="eager"
-              />
-              <img
-                // src="https://i.pinimg.com/736x/be/7a/82/be7a82fd48f568249d602d6ec65d0235.jpg"
-                // alt="foto3"
+                src={images[currentIndex]}
+                alt="portrait"
+                className="fade-image"
                 loading="eager"
               />
             </div>
           </div>
         </div>
 
-        <div style={{backgroundColor:sub1}} className="about-skills">
-        {/* <div  className="about-skills"> */}
+        <div style={{ backgroundColor: sub1 }} className="about-skills">
+          {/* <div  className="about-skills"> */}
           <div className="skills-content">
             <div className="skills-text">
-              <h3>Crafting Digital Experiences</h3>
+              <h3>{t("CraftingDigitalEx")}</h3>
               <p>{t("AboutText")}</p>
             </div>
           </div>
         </div>
 
-        <div style={{backgroundColor:sub2}} className="mission-block">
+        <div style={{ backgroundColor: sub2 }} className="mission-block">
           <div className="mission-sidebar">
-            <div className="step">Mission</div>
+            <div className="step">{t("Mission")}</div>
             <div className="step">
               <span className="step-number">01</span>
-              Challenge
+              {t("Challenge")}
             </div>
             <div className="step">
               <span className="step-number">02</span>
-              Goal
+              {t("Goal")}
             </div>
           </div>
 
           <div className="mission-content">
             <div className="mission-section">
-              <h3>Deliver high-impact solutions</h3>
-              <p>Efficient, scalable, and reliable software</p>
+              <h3>{t("Deliver")}</h3>
+              <p>{t("Efficient")}</p>
             </div>
 
             <div className="mission-section">
-              <h3>Performance drives my process</h3>
-              <p>Clean code, fast response, smooth UX</p>
+              <h3>{t("Performance")}</h3>
+              <p>{t("Clean")}</p>
             </div>
 
             <div className="mission-section">
-              <h3>Transforming ideas into impact</h3>
+              <h3>{t("Trans")}</h3>
               <p>
-                Powered by<span className="highlight"> precision</span>{" "}
+                {t("Poweredby")}<span className="highlight"> {t("precision")}</span>{" "}
               </p>
             </div>
           </div>

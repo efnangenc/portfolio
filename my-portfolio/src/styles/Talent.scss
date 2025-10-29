@@ -114,7 +114,6 @@
         }
 
         &.active-tab {
-          background: #6f5c78;
           color: white;
           transform: translateY(-7px);
           // box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
@@ -125,15 +124,14 @@
           }
         }
 
-        .tab-content {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .tab-text {
-            font-size: 0.9rem;
-            font-weight: 600;
-          }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .tab-text {
+          font-size: 0.9rem;
+          font-weight: 600;
+          // line-height: 1.5rem;
         }
       }
     }
@@ -153,8 +151,7 @@
             text-align: center;
             font-size: clamp(1.5rem, 4vw, 3rem);
             font-weight: 700;
-            color: #ecf0f1; //başlık
-            // color: purple;
+            color: #ecf0f1;
             margin-bottom: 5%;
             margin-top: 1%;
           }

@@ -14,27 +14,6 @@ function Career({ menuItems }) {
 
   // console.log("EXPERIENCES TYPE:", typeof experiences, Array.isArray(experiences), experiences);
 
-  // const futureGoals = [
-  //   {
-  //     title: "Senior Full Stack Developer",
-  //     timeline: "2025-2026",
-  //     description: "Lead complex projects and mentor junior developers",
-  //     color: "#2ecc71",
-  //   },
-  //   {
-  //     title: "Tech Lead / Solution Architect",
-  //     timeline: "2027-2028",
-  //     description: "Design scalable systems and guide technical decisions",
-  //     color: "#9b59b6",
-  //   },
-  //   {
-  //     title: "Engineering Manager",
-  //     timeline: "2029+",
-  //     description: "Build and lead high-performing development teams",
-  //     color: "#34495e",
-  //   },
-  // ];
-
   return (
     <div className="career">
       <CardHead item={t(careerItem)} />
@@ -43,8 +22,8 @@ function Career({ menuItems }) {
       <div style={{ backgroundColor: sub1 }} className="career-plan">
         <div className="plan-content">
           <div className="plan-header">
-            <h2>Career Journey</h2>
-            <p>From Hardware to Software: A Path of Continuous Learning</p>
+            <h2>{t("CareerJourney")}</h2>
+            <p>{t("From")}</p>
           </div>
         </div>
       </div>
@@ -83,19 +62,19 @@ function Career({ menuItems }) {
                           {/* <span className="job-type">{exp.type}</span> */}
                         </div>
                         <div className="duration-location">
-                          <span className="duration">{exp.duration}</span>
-                          <span className="location">{exp.location}</span>
+                          <span style={{ color: sub3 }} className="duration">{exp.duration}</span>
+                          <span style={{ color: sub3 }} className="location">{exp.location}</span>
                         </div>
                       </div>
                     </div>
 
                     <div className="card-body">
-                      <p className="description">{exp.description}</p>
+                      {/* <p className="description">{exp.description}</p> */}
 
                       <div className="achievements">
                         <ul>
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
+                            <li style={{ color: sub3 }} key={i}>{achievement}</li>
                           ))}
                         </ul>
                       </div>

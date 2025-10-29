@@ -69,15 +69,15 @@ function Contact({ menuItems }) {
       <div style={{ backgroundColor: sub1 }} className="cont-text">
         <div className="text-container">
           <div className="text-line">
-            <span className="lets">Let's</span>
+            <span className="lets">{t("Lets")}</span>
             <div className="text-decoration"></div>
           </div>
           <div className="text-line">
-            <span className="talk">Talk About</span>
+            <span className="talk">{t("Talk")}</span>
             <div className="text-decoration"></div>
           </div>
           <div className="text-line">
-            <span className="buss">Business</span>
+            <span className="buss">{t("Buss")}</span>
             <div className="text-decoration"></div>
           </div>
         </div>
@@ -93,36 +93,33 @@ function Contact({ menuItems }) {
       <div className="contact-form-section">
         <div style={{ backgroundColor: sub2 }} className="form-container">
           <div className="form-header">
-            <h2>Get In Touch</h2>
-            <p>
-              Ready to start your next project? Let's create something amazing
-              together!
-            </p>
+            <h2>{t("GetInTouch")}</h2>
+            <p>{t("Ready")}</p>
           </div>
 
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
               <div className="input-group top">
-                <div className="input-label">Your Name *</div>
+                <div className="input-label">{t("Name")}</div>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Your Name"
+                  placeholder="Efnan Genç"
                   className="form-input"
                   required
                 />
               </div>
 
               <div className="input-group top">
-                <div className="input-label">Email Address *</div>
+                <div className="input-label">{t("Email")}</div>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="your_email@example.com"
+                  placeholder="efnanefnan@example.com"
                   className="form-input"
                   required
                 />
@@ -130,7 +127,7 @@ function Contact({ menuItems }) {
             </div>
 
             <div className="input-group sub">
-              <div className="input-label">Subject</div>
+              <div className="input-label">{t("Subject")}</div>
               <input
                 type="text"
                 name="subject"
@@ -142,7 +139,7 @@ function Contact({ menuItems }) {
             </div>
 
             <div className="input-group sub">
-              <div className="input-label">Message *</div>
+              <div className="input-label">{t("Message")}</div>
               <textarea
                 name="message"
                 value={formData.message}
@@ -167,7 +164,7 @@ function Contact({ menuItems }) {
                 {isSubmitting ? (
                   <>
                     <span className="spinner"></span>
-                    Sending...
+                    {t("Sending")}
                   </>
                 ) : (
                   "Send Message"
@@ -177,14 +174,14 @@ function Contact({ menuItems }) {
             {submitStatus === "success" && (
               <div className="status-message success">
                 <span className="status-icon">✅</span>
-                Message sent successfully! I'll get back to you soon.
+                {t("Success")}
               </div>
             )}
 
             {submitStatus === "error" && (
               <div className="status-message error">
                 <span className="status-icon">❌</span>
-                Please fill in all required fields or try again later.
+                {t("Fill")}
               </div>
             )}
           </form>
@@ -192,15 +189,12 @@ function Contact({ menuItems }) {
 
         <div className="contact-info">
           <div style={{ backgroundColor: sub3 }} className="info-section">
-            <h3>Let's Connect</h3>
-            <p>
-              I'm always interested in new opportunities, exciting projects, and
-              meeting fellow developers. Feel free to reach out!
-            </p>
+            <h3>{t("Connect")}</h3>
+            <p>{t("Always")}</p>
           </div>
 
           <div style={{ backgroundColor: sub3 }} className="social-links">
-            <h4>Find Me Online</h4>
+            <h4>{t("Find")}</h4>
             <div className="social-grid">
               {socialLinks.map((link, index) => (
                 <a
@@ -219,18 +213,18 @@ function Contact({ menuItems }) {
           </div>
 
           <div style={{ backgroundColor: sub3 }} className="contact-details">
-            <h4>Direct Contact</h4>
+            <h4>{t("Direct")}</h4>
             <div className="detail-item">
               <span className="detail-icon">📧</span>
-              <span className="detail-text">efnan@example.com</span>
+              <span className="detail-text">genc.efnan4@gmail.com</span>
+            </div>
+            <div className="detail-item">
+              <span className="detail-icon">📧</span>
+              <span className="detail-text">genc.efnan04@gmail.com</span>
             </div>
             <div className="detail-item">
               <span className="detail-icon">📍</span>
-              <span className="detail-text">Ankara, Turkey</span>
-            </div>
-            <div className="detail-item">
-              <span className="detail-icon">🕐</span>
-              <span className="detail-text">Available Monday - Friday</span>
+              <span className="detail-text">Ankara, Eskişehir</span>
             </div>
           </div>
         </div>
