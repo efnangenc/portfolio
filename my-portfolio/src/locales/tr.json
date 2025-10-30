@@ -153,11 +153,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "dist/assets/foto2ss.png",
+          "url": "./public/assets/foto2ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "dist/assets/foto1ss.png",
+          "url": "./public/assets/foto1ss.png",
           "caption": "Açıklama2"
         }
       ],
@@ -266,11 +266,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "dist/assets/foto4ss.png",
+          "url": "./public/assets/foto4ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "dist/assets/foto5ss.png",
+          "url": "./public/assets/foto5ss.png",
           "caption": "Açıklama2"
         }
       ],

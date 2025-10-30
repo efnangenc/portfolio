@@ -2,7 +2,6 @@ import "../styles/About.scss";
 import CardHead from "../components/CardHead";
 import React, { useEffect, useState } from "react";
 
-// import menuItems from "../data/menuItems.js";
 import { useLanguage } from "../providers/LanguageProvider";
 
 function About({ menuItems }) {
@@ -11,24 +10,23 @@ function About({ menuItems }) {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    "dist/assets/portrait1.png",
-    "dist/assets/portrait2.png",
-    "dist/assets/portrait3.png",
-    "dist/assets/portrait4.png",
-    "dist/assets/portrait5.png",
-    "dist/assets/portrait6.png",
-    "dist/assets/portrait7.png",
-    "dist/assets/portrait8.png",
-    "dist/assets/portrait9.png",
-    "dist/assets/portrait10.png",
-    "dist/assets/portrait11.png",
-    "dist/assets/portrait12.png",
-    "dist/assets/portrait13.png",
-    "dist/assets/portrait14.png",
-    "dist/assets/portrait15.png",
-    "dist/assets/portrait16.png",
-    // "dist/assets/portrait17.png",
-    // istediğin kadar ekle
+    "./public/assets/portrait1.png",
+    "./public/assets/portrait2.png",
+    "./public/assets/portrait3.png",
+    "./public/assets/portrait4.png",
+    "./public/assets/portrait5.png",
+    "./public/assets/portrait6.png",
+    "./public/assets/portrait7.png",
+    "./public/assets/portrait8.png",
+    "./public/assets/portrait9.png",
+    "./public/assets/portrait10.png",
+    "./public/assets/portrait11.png",
+    "./public/assets/portrait12.png",
+    "./public/assets/portrait13.png",
+    "./public/assets/portrait14.png",
+    "./public/assets/portrait15.png",
+    "./public/assets/portrait16.png",
+    // "./public/assets/portrait17.png",
   ];
 
   useEffect(() => {
@@ -65,7 +63,6 @@ function About({ menuItems }) {
         </div>
 
         <div style={{ backgroundColor: sub1 }} className="about-skills">
-          {/* <div  className="about-skills"> */}
           <div className="skills-content">
             <div className="skills-text">
               <h3>{t("CraftingDigitalEx")}</h3>
