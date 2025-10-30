@@ -153,11 +153,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "./public/assets/foto2ss.png",
+          "url": "/portfolio/assets/foto2ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "./public/assets/foto1ss.png",
+          "url": "/portfolio/assets/foto1ss.png",
           "caption": "Açıklama2"
         }
       ],
@@ -266,11 +266,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "./public/assets/foto4ss.png",
+          "url": "/portfolio/assets/foto4ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "./public/assets/foto5ss.png",
+          "url": "/portfolio/assets/foto5ss.png",
           "caption": "Açıklama2"
         }
       ],
