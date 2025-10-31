@@ -57,15 +57,12 @@ function Settings({ theme, setTheme }) {
         </div>
       </div>
 
-      <div className="themes" style={{ margin: "20px" }}>
-        {["pastel", "dark", "ocean"].map((themeName) => (
+      <div className="themes">
+        {["pastel", "dark", "fall"].map((themeName) => (
           <button
-            className="theme-button"
             key={themeName}
-            onClick={() => {
-              // console.log("Tema tıklandı:", themeName);
-              setTheme(themeName);
-            }}
+            className={`theme-button ${theme === themeName ? "active" : ""}`}
+            onClick={() => setTheme(themeName)}
           >
             {/* {themeName.charAt(0).toUpperCase()} */}
           </button>

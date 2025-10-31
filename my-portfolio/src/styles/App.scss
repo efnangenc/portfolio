@@ -9,7 +9,7 @@
   flex-direction: row;
   width: 99dvw;
   min-height: 95dvh;
-  
+
   .navi {
     position: fixed;
     width: 14%;
@@ -18,13 +18,13 @@
 
   .content {
     margin-left: 17.5%;
+    max-width: 80dvw;
     min-height: 100dvh;
     flex-grow: 1;
     // overflow-x: hidden;
     // overflow-y: hidden;
   }
 }
-
 
 @media (min-width: 320px) and (max-width: 767px) {
   .layout {
@@ -47,7 +47,7 @@
       padding: 3rem 0.5rem;
       position: absolute;
       left: 2px;
-      margin: 0;
+      margin: 1rem 0;
       width: 100%;
       min-width: 0;
       max-width: 100%;
@@ -70,5 +70,4 @@
       }
     }
   }
-  
 }

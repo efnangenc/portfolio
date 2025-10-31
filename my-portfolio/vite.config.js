@@ -5,7 +5,7 @@ import { qrcode } from "vite-plugin-qrcode";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), qrcode()],
-  base: '/portfolio/',
+  base: '/',
   server: {
     host: true, // 🔑 QR kodun çalışması için gerekli
   },

@@ -28,7 +28,7 @@ export default function useExperiencesData() {
         t("experiences.0.achievements.4"),
       ],
       color: "#f8f8f85b",
-      icon: "💻",
+      icon: "*",
     },
     {
       id: 1,
@@ -58,7 +58,7 @@ export default function useExperiencesData() {
         t("experiences.1.achievements.3"),
       ],
       color: "#f8f8f85b",
-      icon: "💻",
+      icon: "*",
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ export default function useExperiencesData() {
         t("experiences.2.achievements.4"),
       ],
       color: "#f8f8f85b",
-      icon: "⚙️",
+      icon: "*",
     },
     {
       id: 3,
@@ -111,7 +111,7 @@ export default function useExperiencesData() {
         t("experiences.3.achievements.2"),
       ],
       color: "#f8f8f85b",
-      icon: "🔧",
+      icon: "*",
     },
   ];
 

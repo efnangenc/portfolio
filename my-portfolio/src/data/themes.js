@@ -15,7 +15,7 @@ const themes = {
     career: ["#55738D", "#78776C", "#8e928def", "#55626dff"],
     contact: ["#889BAE", "#4e5964ff", "#d4dad3ef", "#78776C"],
   },
-  ocean: {
+  fall: {
     home: ["#5e3721", "#D6C2A7", "#CBB292", "#3B2416"],
     about: ["#8d5c2f", "#D8CBBE", "#7A7B64", "#643819ff"], 
     work: ["#c8b38b", "#75705dff", "#584d3777", "#806F55"],

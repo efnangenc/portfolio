@@ -71,7 +71,7 @@
     },
     {
       "title": "Yazılım Geliştirme Stajyeri",
-      "company": "BilgeAdam Technology",
+      "company": "BilgeAdam Tech",
       "type": "Tam Zamanlı",
       "duration": "Ocak 2025 - Mart 2025",
       "location": "Ankara, Türkiye · Uzaktan",
@@ -153,11 +153,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "/portfolio/assets/foto2ss.png",
+          "url": "/assets/foto2ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "/portfolio/assets/foto1ss.png",
+          "url": "/assets/foto1ss.png",
           "caption": "Açıklama2"
         }
       ],
@@ -266,11 +266,11 @@
       "image": "",
       "screenshots": [
         {
-          "url": "/portfolio/assets/foto4ss.png",
+          "url": "/assets/foto4ss.png",
           "caption": "Açıklmaa"
         },
         {
-          "url": "/portfolio/assets/foto5ss.png",
+          "url": "/assets/foto5ss.png",
           "caption": "Açıklama2"
         }
       ],

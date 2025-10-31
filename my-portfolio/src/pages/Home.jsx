@@ -1,5 +1,5 @@
 import "../styles/Home.scss";
-import path from "/src/assets/oO.png";
+import path from "/assets/oO.png";
 import React from "react";
 
 

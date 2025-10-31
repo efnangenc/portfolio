@@ -10,8 +10,8 @@
       border-radius: 2rem;
       // min-height: 95dvh;
       box-shadow: 0 8px 20px rgba(71, 70, 70, 0.3);
-      overflow: hidden;
-      position: relative;
+      // overflow: hidden;
+      // position: relative;
     }
 
     // Hero Banner Section
@@ -107,7 +107,6 @@
             object-fit: cover;
             transition: opacity 0.4s ease-in-out;
           }
-         
         }
       }
     }
@@ -140,27 +139,16 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        // margin: 5.6vw;
-
-        // @media only screen and (max-width: 1023px) {
-        //   flex-direction: column;
-        //   align-items: center;
-        // }
+ 
 
         .skills-text {
           flex: 1;
           padding: 0 2vw;
 
-          // @media only screen and (max-width: 1023px) {
-          //   padding-right: 0;
-          //   margin-bottom: 0vw;
-          // }
+    
 
           h3 {
-            // font-size: clamp(2rem, 5vw, 3rem);
-            // margin-bottom: 1.5rem;
-            // color: #ecf0f1;
-            // font-weight: 700;
+ 
 
             font-size: 9vw;
             line-height: 10vw;
@@ -286,9 +274,70 @@
       }
     }
     @media (min-width: 320px) and (max-width: 767px) {
-      .about-banner .banner-content .banner-visual {
-        // background-color: red;
-        min-height: 35dvh;
+      .about-banner .banner-content {
+        display: flex;
+        flex-wrap: wrap; // mobilde alt satıra düşsün
+        gap: 1rem;
+        .name {
+          // color: red;
+          padding-top: 3rem;
+        }
+        .title {
+          margin: 2rem 0 3rem 0;
+        }
+        .banner-visual {
+          max-width: 100%;  
+          aspect-ratio: 16/9; 
+          min-height: 30dvh; 
+          margin-bottom: 0rem;
+          .fade-image {
+            object-fit: contain; 
+            object-position: center; 
+            transition: opacity 0.4s ease-in-out;
+          }
+        }
+      }
+      .about-skills {   
+        height: auto;
+        padding: 4rem 1rem;   
+        .skills-content {
+
+          .skills-text {
+            padding: 0;
+            text-align: center;
+
+            h3 {
+              font-size: clamp(2.5rem, 12vw, 4rem);
+              line-height: 1.2;
+              margin: 0 0 3rem 0;
+              text-indent: 0;
+              width: 100%;
+              background-image: none; 
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -1.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                height: 3px;
+                background: linear-gradient(
+                  90deg,
+                  transparent,
+                  rgba(255, 255, 255, 0.6),
+                  transparent
+                );
+                border-radius: 2px;
+              }
+            }
+
+            p {
+              font-size: clamp(0.95rem, 4vw, 1.1rem);
+              padding: 0 1rem;
+              margin: 0;
+            }
+          }
+        }
       }
       .mission-block {
         display: flex;

@@ -394,27 +394,33 @@
           // align-items: center;
           // justify-content: center;
 
-          .talent-container .tabs .tab-item &.active-tab {
+          &.active-tab {
             transform: translateY(-2px);
             // box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
           }
 
-          .tab-content {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.25rem;
+          // .tab-content {
+          //   flex-direction: column;
+          //   align-items: center;
+          //   justify-content: center;
+          //   gap: 0.25rem;
 
-            // TAB İSİMLERİNİ GİZLE - Sadece icon görünsün
-            .tab-text {
-              display: none; // İsimleri gizle
-            }
+          // TAB İSİMLERİNİ GİZLE - Sadece icon görünsün
+          .tab-text {
+            visibility: hidden;
+            position: absolute;
+          }
 
-            // Icon varsa göster (emoji veya svg)
-            // .tab-icon {
-            //   font-size: 1.5rem;
-            //   display: block;
-            // }
+          &::before {
+            content: "▫";
+            font-size: 1.8rem;
+            display: block;
+            transition: transform 0.2s ease;
+          }
+
+          &.active-tab::after {
+            content: "▫"; // aktif tab için farklı ikon
+            transform: scale(1.7); // opsiyonel büyütme
           }
         }
       }

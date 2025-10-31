@@ -3,6 +3,7 @@ import CardHead from "../components/CardHead";
 // import menuItems from "../data/menuItems";
 import React from "react";
 
+
 import skillsData from "../data/skillsData";
 import "../styles/Talent.scss";
 import { useLanguage } from "../providers/LanguageProvider";
